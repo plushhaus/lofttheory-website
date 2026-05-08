@@ -80,6 +80,7 @@ window.PRODUCTS = [
     description: "Pair of Poly & Bark Bo lounge chairs in cognac tan leather. New, still in the original box.",
     retailerUrl: "https://www.polyandbark.com/products/bo-leather-lounge-chair-cognac-tan",
     photos: [
+      "polyandbark-bo-lounger-chairs/00.jpg",
       "polyandbark-bo-lounger-chairs/09.jpg",
       "polyandbark-bo-lounger-chairs/10.jpg",
       "polyandbark-bo-lounger-chairs/01.jpg",
