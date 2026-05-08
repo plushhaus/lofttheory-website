@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-08 from MJ Flips · Website tab (4 active listings)
+   Last sync: 2026-05-08 from MJ Flips · Website tab (5 active listings)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -33,6 +33,11 @@
      photos       — array of filenames in /photos folder. First photo is the cover.
      featured     — true to show on the homepage (3 max). false otherwise.
      available    — true if still on the floor. false moves it to the Sold page.
+                    SYNC RULE: Available column in the MJ Flips · Website tab maps directly:
+                      "yes" → available: true   (shows on shop page + homepage if featured)
+                      "no"  → available: false  (moves to /sold.html)
+                    A product never gets removed from products.js — flipping available to false
+                    just relocates it. This preserves SEO, old links, and the sold archive.
      soldDate     — ISO date string "YYYY-MM-DD" for sold items (optional, sorts the Sold page)
 
    ========================================================================= */
@@ -138,6 +143,32 @@ window.PRODUCTS = [
     ],
     featured: true,
     available: true
+  },
+
+  {
+    id: "castlery-dalton-king-size-storage-bed",
+    name: "Castlery Dalton King Size Storage Bed",
+    brand: "Castlery",
+    category: "beds",
+    condition: "overstock",
+    color: "Beach Linen",
+    price: 1400,
+    retailPrice: 1900,
+    dimensions: "82.7\"W × 89.8\"D × 47.2\"H",
+    description: "Castlery Dalton storage bed in beach linen, king size. New in original packaging — never assembled. Features built-in storage under the platform.",
+    retailerUrl: "https://www.castlery.com/us/products/dalton-storage-bed?bed_frame_size=king&frame_cover=removable&material=beach_linen",
+    photos: [
+      "castlery-dalton-king-size-storage-bed/01.jpg",
+      "castlery-dalton-king-size-storage-bed/02.jpg",
+      "castlery-dalton-king-size-storage-bed/03.jpg",
+      "castlery-dalton-king-size-storage-bed/04.jpg",
+      "castlery-dalton-king-size-storage-bed/05.jpg",
+      "castlery-dalton-king-size-storage-bed/06.jpg",
+      "castlery-dalton-king-size-storage-bed/07.jpg",
+      "castlery-dalton-king-size-storage-bed/08.jpg"
+    ],
+    featured: true,
+    available: false
   }
 
 ];
