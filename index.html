@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LoftTheory.OC — Premium furniture, smarter prices.</title>
+<meta name="description" content="Premium furniture from brands like Castlery, West Elm, Poly &amp; Bark, and Albany Park — overstock and lightly-used pieces priced 30–60% under retail. Visit our Orange County showroom." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-deep: #F2ECE1;
+    --beige: #E8DFD3;
+    --taupe: #8B7355;
+    --terracotta: #d96a1f;        /* burnt orange — accents */
+    --terracotta-deep: #c2530f;   /* deep burnt orange — primary actions */
+    --ink: #2A2622;
+    --ink-soft: #5A5048;
+    --line: #DDD3C4;
+    --shadow: 0 1px 2px rgba(42, 38, 34, 0.04), 0 8px 24px rgba(42, 38, 34, 0.06);
+    --radius: 4px;
+    --radius-lg: 8px;
+    --max: 1200px;
+    --pad: clamp(20px, 5vw, 64px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+  }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    gap: 32px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+  }
+  .logo img { height: 56px; width: auto; display: block; }
+  @media (max-width: 600px) { .logo img { height: 44px; } }
+  .foot-brand .logo img { height: 70px; }
+  .nav-links {
+    display: none;
+    gap: 28px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-links a {
+    color: var(--ink-soft);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terracotta); }
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .btn-primary:hover { background: var(--terracotta-deep); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .btn-secondary:hover { background: var(--ink); color: var(--cream); }
+  .btn-link {
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    padding: clamp(110px, 16vw, 180px) 0 clamp(90px, 14vw, 160px);
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    /* Inward radial mask: video full at center, fades to transparent at edges */
+    -webkit-mask-image: radial-gradient(ellipse 80% 90% at center, #000 30%, transparent 95%);
+            mask-image: radial-gradient(ellipse 80% 90% at center, #000 30%, transparent 95%);
+    filter: saturate(0.95);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  /* Cream scrim — gentle behind text, transparent at edges */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 65% 50% at center,
+        rgba(250,247,242,0.55) 0%,
+        rgba(250,247,242,0.20) 55%,
+        rgba(250,247,242,0) 85%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 var(--pad);
+    z-index: 1;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(46px, 7.5vw, 88px);
+    font-weight: 300;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    margin-bottom: 26px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--terracotta);
+  }
+  .hero p.lede {
+    font-size: clamp(16px, 1.3vw, 18px);
+    color: var(--ink-soft);
+    margin: 0 auto 34px;
+    max-width: 560px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-fineprint {
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust {
+    padding: 32px 0 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--cream-deep);
+  }
+  .trust-label {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .trust-brands {
+    display: flex;
+    gap: clamp(12px, 3vw, 36px);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Every logo lives in a fixed-size box so they render as visually
+     equal regardless of the logo file's natural aspect ratio. */
+  .trust-brands a, .trust-brands span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 52px;
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    color: var(--taupe);
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .trust-brands a:hover { color: var(--ink); }
+  .trust-brands img {
+    max-height: 38px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.78;
+    filter: grayscale(0.4);
+    transition: opacity 0.2s, filter 0.2s;
+  }
+  .trust-brands a:hover img { opacity: 1; filter: grayscale(0); }
+  .trust-disclaimer {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.75;
+    font-style: italic;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+  }
+
+  /* ---------- SECTION BASE ---------- */
+  section { padding: clamp(64px, 10vw, 112px) 0; }
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+    max-width: 640px;
+  }
+  .section-head h2 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 300;
+  }
+  .section-head h2 em { font-style: italic; color: var(--terracotta); }
+  .section-head p { color: var(--ink-soft); font-size: 17px; }
+
+  /* ---------- CATEGORIES ---------- */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (min-width: 900px) {
+    .cat-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .cat-card {
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+  }
+  .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .cat-art {
+    aspect-ratio: 4 / 5;
+    background: var(--beige);
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-meta {
+    padding: 20px 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .cat-meta h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .cat-meta span {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- FEATURED ---------- */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 768px) {
+    .featured-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .product-art {
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+  }
+  .product-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .product:hover .product-art img { transform: scale(1.03); }
+  .product-art .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream-deep);
+    color: var(--taupe);
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .product-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--terracotta);
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .product-tag.return { background: var(--taupe); }
+  .product-tag.overstock { background: var(--ink); }
+  .product-tag.showroom { background: var(--terracotta-deep); }
+  .product-tag.open-box,
+  .product-tag.open-box-with-box,
+  .product-tag.open-box-no-box { background: var(--ink); }
+  .product-cta {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .product-cta:hover { color: var(--terracotta); border-color: var(--terracotta); }
+  .product h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .product-meta {
+    color: var(--ink-soft);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .product-meta .meta-brand {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+  }
+  .product-meta .brand-logo {
+    height: 20px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+  }
+  .product-meta .meta-dims {
+    line-height: 1.4;
+  }
+  .product-price {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    font-family: 'Fraunces', serif;
+  }
+  .price-now { font-size: 22px; color: var(--ink); font-weight: 500; }
+  .price-was { font-size: 15px; color: var(--ink-soft); text-decoration: line-through; }
+
+  /* ---------- WHY ---------- */
+  .why {
+    background: var(--cream-deep);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @media (min-width: 768px) {
+    .why-grid { grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  }
+  .why-card {
+    background: var(--cream);
+    padding: 36px 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+  }
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    color: var(--terracotta);
+  }
+  .why-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .why-card p { color: var(--ink-soft); font-size: 15px; }
+
+  /* ---------- SHOWROOM ---------- */
+  .showroom-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+  @media (min-width: 900px) {
+    .showroom-grid { grid-template-columns: 1fr 1.2fr; gap: 48px; }
+  }
+  .showroom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .showroom-info dl {
+    margin-top: 24px;
+    display: grid;
+    gap: 18px;
+  }
+  .showroom-info dt {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 4px;
+  }
+  .showroom-info dd {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .showroom-cta { margin-top: 32px; }
+  .map-placeholder {
+    aspect-ratio: 4 / 3;
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ---------- STEPS (bento card grid) ---------- */
+  .steps {
+    padding: clamp(88px, 12vw, 140px) 0;
+    background: var(--cream-deep);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Full-bleed container for the bento — cards stretch nearly to the viewport edges
+     instead of being centered in a narrow box. Padding scales with viewport width. */
+  .steps .container {
+    max-width: none;
+    width: 100%;
+    padding-left: clamp(20px, 4vw, 64px);
+    padding-right: clamp(20px, 4vw, 64px);
+    margin: 0;
+  }
+  /* Ambient soft glows behind the cards (subtle terracotta + warm clay) */
+  .steps::before,
+  .steps::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .steps::before {
+    top: 8%;
+    left: -8%;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(217,106,31,0.10), transparent 65%);
+    filter: blur(50px);
+  }
+  .steps::after {
+    bottom: -10%;
+    right: -8%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(199,184,166,0.30), transparent 65%);
+    filter: blur(60px);
+  }
+  .steps > .container,
+  .steps > .steps-head { position: relative; z-index: 1; }
+
+  .steps-head {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto clamp(56px, 7vw, 88px);
+    padding: 0 var(--pad);
+  }
+  .steps-head .eyebrow { margin-bottom: 18px; }
+  .steps-head h2 {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+  }
+  .steps-head h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--terracotta);
+  }
+  .steps-head p {
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  /* Three equal cards side by side */
+  .steps-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .steps-list { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  }
+
+  /* Doppel-style outer pad — gives the cards that subtle "framed" look */
+  .step-item {
+    background: rgba(42, 38, 34, 0.04);
+    padding: 8px;
+    border-radius: 32px;
+    box-shadow:
+      inset 0 0 0 1px rgba(42,38,34,0.06),
+      inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  .step-item.dark {
+    background: rgba(255,255,255,0.05);
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,0.10),
+      inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  /* Inner card */
+  .step-card {
+    background: var(--cream);
+    border-radius: 26px;
+    padding: clamp(32px, 3.5vw, 52px);
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,0.7),
+      inset 0 0 0 1px rgba(42,38,34,0.05),
+      0 30px 80px -40px rgba(40,32,20,0.14),
+      0 8px 24px -12px rgba(40,32,20,0.06);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .step-item.dark .step-card {
+    background: var(--ink);
+    color: var(--cream);
+    box-shadow:
+      inset 0 1px 1px rgba(255,255,255,0.10),
+      inset 0 0 0 1px rgba(255,255,255,0.06),
+      0 40px 100px -50px rgba(0,0,0,0.55);
+  }
+
+  /* Decorative corner glow on large card */
+  .step-item.large .step-card::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(217,106,31,0.22), transparent 65%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .step-item.full.dark .step-card::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 8%;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(217,106,31,0.20), transparent 65%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* Pill eyebrow with terracotta dot */
+  .step-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(42,38,34,0.04);
+    box-shadow:
+      inset 0 0 0 1px rgba(42,38,34,0.08),
+      0 1px 0 rgba(255,255,255,0.6);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-soft);
+    align-self: flex-start;
+    margin-bottom: 28px;
+  }
+  .step-eyebrow::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(217,106,31,0.20);
+  }
+  .step-item.dark .step-eyebrow {
+    background: rgba(250,247,242,0.08);
+    box-shadow: inset 0 0 0 1px rgba(250,247,242,0.14);
+    color: rgba(250,247,242,0.85);
+  }
+
+  /* Big italic title */
+  .step-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(30px, 3.5vw, 48px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .step-title em {
+    font-style: italic;
+    color: var(--terracotta);
+    font-weight: 400;
+  }
+  .step-item.medium .step-title {
+    font-size: clamp(26px, 2.6vw, 36px);
+  }
+  .step-item.dark .step-title { color: var(--cream); }
+
+  /* Description */
+  .step-desc {
+    font-size: clamp(14px, 1.05vw, 15px);
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin-bottom: 28px;
+  }
+  .step-item.dark .step-desc {
+    color: rgba(250,247,242,0.72);
+  }
+
+  /* Tag pills (small descriptors at the bottom of cards) */
+  .step-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+  .step-tag {
+    display: inline-flex;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(42,38,34,0.06);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .step-item.dark .step-tag {
+    background: rgba(250,247,242,0.08);
+    color: rgba(250,247,242,0.92);
+  }
+
+  /* Horizontal layout for the full-width Rehome card */
+  .step-card.horizontal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: end;
+  }
+  @media (min-width: 768px) {
+    .step-card.horizontal {
+      grid-template-columns: 1.2fr 1fr;
+      gap: clamp(32px, 5vw, 72px);
+      align-items: end;
+    }
+    .step-item.full .step-card { padding: clamp(40px, 5vw, 72px); }
+  }
+  .step-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--cream);
+    color: var(--ink);
+    align-self: flex-start;
+    margin-top: 12px;
+    transition: transform 0.15s ease, background 0.2s ease;
+  }
+  .step-card-cta:hover {
+    background: var(--terracotta);
+    color: var(--cream);
+    transform: translateY(-1px);
+  }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews {
+    padding: clamp(64px, 10vw, 112px) 0;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .reviews-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .reviews-head h2 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 300;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    margin-top: 12px;
+  }
+  .reviews-head h2 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+  .reviews-head .reviews-intro {
+    max-width: 380px;
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .review-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 768px) {
+    .review-grid {
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+    .review-card.featured { grid-column: span 7; }
+    .review-card.stats { grid-column: span 5; }
+    .review-card.third { grid-column: span 4; }
+  }
+  .review-card {
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: clamp(24px, 3vw, 36px);
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+  .review-card.dark {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: transparent;
+  }
+  .review-stars {
+    display: flex;
+    gap: 2px;
+    color: var(--terracotta);
+    margin-bottom: 18px;
+  }
+  .review-stars svg { width: 16px; height: 16px; }
+  .review-quote {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .review-card.featured .review-quote {
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.3;
+  }
+  .review-card.third .review-quote {
+    font-size: 16px;
+    line-height: 1.55;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+  .review-card.dark .review-quote { color: var(--cream); }
+  .review-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: auto;
+    padding-bottom: 20px;
+    font-weight: 500;
+  }
+  .review-source svg { width: 13px; height: 13px; opacity: 0.7; }
+  .review-card.dark .review-source { color: rgba(250,247,242,0.55); }
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .review-card.dark .review-author { color: rgba(250,247,242,0.7); }
+  .review-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--beige), var(--cream-deep));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .review-card.dark .review-avatar {
+    background: rgba(250,247,242,0.10);
+    color: var(--cream);
+    border: 1px solid rgba(250,247,242,0.18);
+  }
+  .review-author strong { color: var(--ink); font-weight: 600; }
+  .review-card.dark .review-author strong { color: var(--cream); }
+  .review-author .meta-sep { opacity: 0.4; margin: 0 6px; }
+  .review-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+    margin-top: 8px;
+  }
+  .review-stat {
+    background: var(--cream-deep);
+    border-radius: 6px;
+    padding: 18px;
+    border: 1px solid var(--line);
+  }
+  .review-stat-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .review-stat-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  .review-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: color 0.2s, border-color 0.2s;
+    margin-top: auto;
+  }
+  .review-cta-link:hover {
+    color: var(--terracotta);
+    border-color: var(--terracotta);
+  }
+
+  /* ---------- BOOKING ---------- */
+  .booking { background: var(--cream-deep); }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .booking-grid { grid-template-columns: 1fr 1.6fr; gap: 56px; }
+  }
+  .booking-info dl {
+    display: grid;
+    gap: 22px;
+    margin-top: 28px;
+  }
+  .booking-info dt {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .booking-info dd {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .booking-panel {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 8px;
+    box-shadow: var(--shadow);
+  }
+  .tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--cream-deep);
+    padding: 4px;
+    border-radius: var(--radius);
+    margin-bottom: 4px;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .tab-btn[aria-selected="true"] {
+    background: var(--cream);
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(42,38,34,0.06);
+  }
+  .tab-panel { display: none; padding: 4px; }
+  .tab-panel[data-active="true"] { display: block; }
+  .calendly-inline-widget {
+    min-width: 280px;
+    height: 700px;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list {
+    border-top: 1px solid var(--line);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--ink);
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--terracotta); }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+  .faq-item[open] .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    padding: 0 0 24px 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+    max-width: 720px;
+  }
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band {
+    background: var(--terracotta);
+    color: var(--cream);
+    text-align: center;
+  }
+  .cta-band h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+  .cta-band p {
+    color: rgba(250, 247, 242, 0.85);
+    margin-bottom: 32px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-band .btn-primary {
+    background: var(--cream);
+    color: var(--ink);
+  }
+  .cta-band .btn-primary:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--ink);
+    color: rgba(250, 247, 242, 0.7);
+    padding: 64px 0 32px;
+    font-size: 14px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 768px) {
+    .foot-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  }
+  .foot-brand .logo { color: var(--cream); margin-bottom: 16px; display: block; }
+  .foot-brand p { max-width: 320px; }
+  .foot-col h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--cream);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .foot-col ul { list-style: none; display: grid; gap: 10px; }
+  .foot-col a:hover { color: var(--terracotta); }
+  .foot-bottom {
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo.svg" alt="Loft Theory — Orange County"></a>
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sold.html">Sold</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#book">Visit us</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#book" class="btn btn-primary">Book a viewing</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="videos/interior_design.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-inner">
+    <span class="eyebrow">Overstock & like-new furniture</span>
+    <h1>Premium pieces, <em>smarter prices.</em></h1>
+    <p class="lede">Brand-new overstock alongside lightly-used returns and showroom samples — sourced direct from the brands you were already shopping. Every piece curated, inspected, and priced 30–60% under retail.</p>
+    <div class="hero-ctas">
+      <a href="#book" class="btn btn-primary">Book a viewing</a>
+      <a href="shop.html" class="btn btn-secondary">Browse the floor</a>
+    </div>
+    <p class="hero-fineprint">By appointment only · Free 30-min slots · Bring your dimensions</p>
+  </div>
+</header>
+
+<!-- ========== TRUST STRIP ========== -->
+<div class="trust">
+  <div class="container">
+    <span class="trust-label">Stocked from brands like</span>
+    <div class="trust-brands">
+      <a href="https://albanypark.com" target="_blank" rel="noopener">
+        <img src="logos/albanypark.svg" alt="Albany Park" onerror="this.outerHTML='Albany Park'">
+      </a>
+      <a href="https://lovesac.com" target="_blank" rel="noopener">
+        <img src="logos/lovesac-seeklogo.png" alt="Lovesac" onerror="this.outerHTML='Lovesac'">
+      </a>
+      <a href="https://westelm.com" target="_blank" rel="noopener">
+        <img src="logos/westlelm.svg" alt="West Elm" onerror="this.outerHTML='West Elm'">
+      </a>
+      <a href="https://castlery.com" target="_blank" rel="noopener">
+        <img src="logos/castlery.svg" alt="Castlery" onerror="this.outerHTML='Castlery'">
+      </a>
+      <a href="https://luluandgeorgia.com" target="_blank" rel="noopener">
+        <img src="logos/lulu%20and%20georgia.svg" alt="Lulu &amp; Georgia" onerror="this.outerHTML='Lulu &amp; Georgia'">
+      </a>
+      <a href="https://article.com" target="_blank" rel="noopener">
+        <img src="logos/article.svg" alt="Article" onerror="this.outerHTML='Article'">
+      </a>
+      <a href="https://polyandbark.com" target="_blank" rel="noopener">
+        <img src="logos/polyandbark.svg" alt="Poly &amp; Bark" onerror="this.outerHTML='Poly &amp; Bark'">
+      </a>
+      <a href="https://roveconcepts.com" target="_blank" rel="noopener">
+        <img src="logos/roveconcepts.svg" alt="Rove Concepts" onerror="this.outerHTML='Rove Concepts'">
+      </a>
+    </div>
+    <p class="trust-disclaimer">LoftTheory.OC is an independent reseller and is not affiliated with, endorsed by, or sponsored by the brands listed above. All product names, logos, and brands are property of their respective owners.</p>
+  </div>
+</div>
+
+<!-- ========== STEPS ========== -->
+<section class="steps" id="craft">
+  <div class="steps-head">
+    <span class="eyebrow">The LoftTheory difference</span>
+    <h2>Premium furniture, <em>three steps</em> to your living room.</h2>
+    <p>We work directly with the brands you already trust, hand-inspect every piece on the floor, and pass the savings straight through. Three steps, no middlemen, no markup.</p>
+  </div>
+
+  <div class="container">
+    <div class="steps-list">
+
+      <!-- 01 — Source -->
+      <article class="step-item">
+        <div class="step-card">
+          <span class="step-eyebrow">01 · Source</span>
+          <h3 class="step-title">Direct from the <em>brands.</em></h3>
+          <p class="step-desc">Castlery, West Elm, Albany Park, Poly &amp; Bark — we work with the same retailers you were already shopping. Their overstock, returns, and showroom samples become our floor.</p>
+          <div class="step-tags">
+            <span class="step-tag">Castlery</span>
+            <span class="step-tag">West Elm</span>
+            <span class="step-tag">Albany Park</span>
+            <span class="step-tag">Poly &amp; Bark</span>
+            <span class="step-tag">Lovesac</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 — Inspect -->
+      <article class="step-item">
+        <div class="step-card">
+          <span class="step-eyebrow">02 · Inspect</span>
+          <h3 class="step-title">Every piece, <em>by hand.</em></h3>
+          <p class="step-desc">Frames, fabric, hardware, joinery. Every item passes inspection before it makes the floor — and if there's a flaw, we tag it openly and price accordingly.</p>
+          <div class="step-tags">
+            <span class="step-tag">Hand-checked</span>
+            <span class="step-tag">Honestly tagged</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 — Rehome (dark for contrast) -->
+      <article class="step-item dark">
+        <div class="step-card">
+          <span class="step-eyebrow">03 · Rehome</span>
+          <h3 class="step-title">30 to 60% off <em>retail.</em></h3>
+          <p class="step-desc">Real savings on the actual furniture you were already shopping. Book a viewing, sit on the real thing, and walk it out the same day — no four-week shipping windows, no white-glove fees.</p>
+          <a href="#book" class="step-card-cta">
+            Book a viewing →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURED ========== -->
+<section id="featured">
+  <div class="container">
+    <div class="section-head" style="display:flex;flex-direction:row;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;max-width:none;">
+      <div style="max-width:640px;">
+        <span class="eyebrow">On the floor this week</span>
+        <h2>A few pieces we'd <em>fight you for.</em></h2>
+        <p>One-of-a-kind inventory that moves fast. Book ahead to confirm availability before you drive over.</p>
+      </div>
+      <a href="shop.html" class="btn btn-secondary">See all inventory</a>
+    </div>
+    <div class="featured-grid" id="featured-grid">
+      <!-- Cards rendered by JS from products.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ========== CATEGORIES ========== -->
+<section id="categories">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Shop the floor</span>
+      <h2>Four categories. <em>One floor.</em></h2>
+      <p>Inventory rotates weekly as new pieces come in from our retail partners. What's on the floor today may not be here tomorrow.</p>
+    </div>
+    <div class="cat-grid">
+
+      <a class="cat-card" href="shop.html?cat=couches">
+        <div class="cat-art">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+            <rect width="200" height="250" fill="#E8DFD3"/>
+            <rect x="20" y="130" width="160" height="80" fill="#C8745A" rx="10"/>
+            <rect x="25" y="105" width="50" height="40" fill="#C8745A" rx="8"/>
+            <rect x="80" y="105" width="40" height="40" fill="#C8745A" rx="8"/>
+            <rect x="125" y="105" width="50" height="40" fill="#C8745A" rx="8"/>
+            <ellipse cx="100" cy="218" rx="92" ry="5" fill="#2A2622" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="cat-meta"><h3>Couches</h3><span>Shop →</span></div>
+      </a>
+
+      <a class="cat-card" href="shop.html?cat=chairs">
+        <div class="cat-art">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+            <rect width="200" height="250" fill="#E8DFD3"/>
+            <rect x="60" y="80" width="80" height="100" fill="#8B7355" rx="14"/>
+            <rect x="55" y="160" width="90" height="50" fill="#8B7355" rx="6"/>
+            <rect x="60" y="200" width="10" height="20" fill="#5A5048"/>
+            <rect x="130" y="200" width="10" height="20" fill="#5A5048"/>
+            <ellipse cx="100" cy="225" rx="60" ry="4" fill="#2A2622" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="cat-meta"><h3>Chairs</h3><span>Shop →</span></div>
+      </a>
+
+      <a class="cat-card" href="shop.html?cat=tables">
+        <div class="cat-art">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+            <rect width="200" height="250" fill="#E8DFD3"/>
+            <rect x="30" y="130" width="140" height="14" fill="#A48962" rx="2"/>
+            <rect x="40" y="144" width="6" height="70" fill="#8B7355"/>
+            <rect x="154" y="144" width="6" height="70" fill="#8B7355"/>
+            <circle cx="100" cy="115" r="14" fill="#C8745A"/>
+            <ellipse cx="100" cy="220" rx="70" ry="4" fill="#2A2622" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="cat-meta"><h3>Tables</h3><span>Shop →</span></div>
+      </a>
+
+      <a class="cat-card" href="shop.html?cat=beds">
+        <div class="cat-art">
+          <svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+            <rect width="200" height="250" fill="#E8DFD3"/>
+            <rect x="20" y="100" width="160" height="100" fill="#F2ECE1" rx="6"/>
+            <rect x="20" y="80" width="160" height="40" fill="#8B7355" rx="6"/>
+            <rect x="50" y="130" width="40" height="50" fill="#C8745A" rx="4" opacity="0.6"/>
+            <rect x="110" y="130" width="40" height="50" fill="#C8745A" rx="4" opacity="0.6"/>
+            <ellipse cx="100" cy="210" rx="90" ry="4" fill="#2A2622" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="cat-meta"><h3>Beds</h3><span>Shop →</span></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY ========== -->
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why LoftTheory</span>
+      <h2>Better furniture, <em>better math.</em></h2>
+      <p>You shouldn't have to choose between paying full price for something new or settling for something worn out.</p>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 2v20M5 7l7-5 7 5M5 17l7 5 7-5"/>
+        </svg>
+        <h3>30 – 60% off retail</h3>
+        <p>Real savings on the same pieces — not knockoffs, not lookalikes. The exact furniture from the brands you were already shopping.</p>
+      </div>
+
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M9 12l2 2 4-4M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9 9 4 9 9z"/>
+        </svg>
+        <h3>Inspected, not &ldquo;as-is&rdquo;</h3>
+        <p>Every couch sat on, every drawer opened, every joint checked. We tell you exactly what we found and price accordingly.</p>
+      </div>
+
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 9l9-6 9 6v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <path d="M9 22V12h6v10"/>
+        </svg>
+        <h3>Take it home today</h3>
+        <p>No four-week lead times. If you love it on the floor, it's yours that afternoon. We help you load it and we deliver locally for a flat fee.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <span class="eyebrow">From our customers</span>
+        <h2>Five stars, <em>direct from Facebook.</em></h2>
+      </div>
+      <p class="reviews-intro">Read every review on our Facebook page. Then come see for yourself why the families we've worked with keep sending their friends.</p>
+    </div>
+
+    <div class="review-grid">
+
+      <!-- Featured big quote -->
+      <article class="review-card featured">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote class="review-quote">"Excellent experience buying a Castlery bookshelf from Mark! He was very responsive, honest, and the item was exactly as described. The bookshelf was in great condition, clean, and high quality. Mark even delivered it, which made the whole process incredibly convenient and stress-free. Super friendly and easy to work with — highly recommend and would gladly buy from him again."</blockquote>
+        <div class="review-source">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+          <span>Via Facebook</span>
+        </div>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <span><strong>Anthony</strong><span class="meta-sep">·</span>Feb 21, 2026</span>
+        </div>
+      </article>
+
+      <!-- Stats / "read all on Facebook" CTA -->
+      <article class="review-card stats">
+        <div class="review-source" style="padding-bottom: 8px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+          <span>By the numbers</span>
+        </div>
+        <div class="review-stats">
+          <div class="review-stat">
+            <div class="review-stat-num">4.9</div>
+            <div class="review-stat-label">Facebook avg</div>
+          </div>
+          <div class="review-stat">
+            <div class="review-stat-num">100%</div>
+            <div class="review-stat-label">Recommend</div>
+          </div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 24px;">Loved your visit? A few kind words on Facebook means the world to a small business like ours.</p>
+        <a href="https://www.facebook.com/marketplace/profile/1516410125/" target="_blank" rel="noopener" class="review-cta-link">
+          Read all on Facebook
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </article>
+
+      <!-- Smaller review #1 -->
+      <article class="review-card third">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote class="review-quote">"Mark is awesome! Super easy going, easy to work with. Got a great price on a great couch from him and I even recommended him to my family who also bought a couch from him a few days later. I'll be recommending to anyone and everyone. Thanks Mark!"</blockquote>
+        <div class="review-source">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+          <span>Via Facebook</span>
+        </div>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <span><strong>Larry</strong><span class="meta-sep">·</span>Mar 25, 2026</span>
+        </div>
+      </article>
+
+      <!-- Smaller review #2 (dark) -->
+      <article class="review-card dark third">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote class="review-quote">"Mark was an excellent seller! Item was just as described, he was kind enough to showcase the item for me before purchase, and even helped with loading. 10/10 customer service!"</blockquote>
+        <div class="review-source">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+          <span>Via Facebook</span>
+        </div>
+        <div class="review-author">
+          <div class="review-avatar">C</div>
+          <span><strong>Carlos</strong><span class="meta-sep">·</span>Feb 23, 2026</span>
+        </div>
+      </article>
+
+      <!-- Smaller review #3 -->
+      <article class="review-card third">
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote class="review-quote">"My purchase from Mark was exactly as described and gorgeous! So happy with our purchase. Mark was lovely and delivered same day. Couldn't recommend him enough!"</blockquote>
+        <div class="review-source">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+          <span>Via Facebook</span>
+        </div>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <span><strong>Sacha</strong><span class="meta-sep">·</span>Feb 4, 2026</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== BOOKING ========== -->
+<section class="booking" id="book">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">By appointment only</span>
+      <h2>Pick a slot. <em>See it in person.</em></h2>
+      <p>We're a small team and the floor is curated, not crowded. Booking ahead means you get a quiet showroom and someone who actually knows the inventory.</p>
+    </div>
+
+    <div class="booking-grid">
+
+      <div class="booking-info">
+        <dl>
+          <div>
+            <dt>Showroom</dt>
+            <dd>Orange, CA 92865<br/><span style="font-family:'Inter',sans-serif;font-size:14px;color:var(--ink-soft);">Exact street address shared on booking confirmation</span></dd>
+          </div>
+          <div>
+            <dt>Available slots</dt>
+            <dd>7 days a week · By appointment only<br/>30-minute windows</dd>
+          </div>
+          <div>
+            <dt>Talk to a real human</dt>
+            <dd>Text <a href="sms:9495387182" style="color:var(--terracotta);border-bottom:1px solid currentColor;">949.538.7182</a><br/><span style="font-family:'Inter',sans-serif;font-size:14px;color:var(--ink-soft);">No phone tree, no bot. A real person reads every message — text is fastest.</span></dd>
+          </div>
+          <div>
+            <dt>What to bring</dt>
+            <dd>Room dimensions, doorway width, and a tape measure if you have one. We have spares.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="booking-panel">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/mark-gerald-cruz18/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=c2530f"></div>
+        <noscript><p style="padding:24px;text-align:center;color:var(--ink-soft);font-size:14px;">Booking requires JavaScript. Text <a href="sms:9495387182" style="color:var(--terracotta);">949.538.7182</a> to schedule.</p></noscript>
+        <p style="margin-top:18px;padding:14px 18px;background:var(--cream-deep);border-radius:var(--radius);font-size:13.5px;line-height:1.55;color:var(--ink-soft);text-align:center;">
+          <strong style="color:var(--ink);font-weight:600;">Don't see a time that works?</strong> Text <a href="sms:9495387182" style="color:var(--terracotta);border-bottom:1px solid currentColor;">949.538.7182</a> — I'm typically flexible and can usually find a slot that fits.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="products.js"></script>
+<script src="brand-logos.js"></script>
+<script src="chat-widget.js" defer></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  (function() {
+    /* ----- Featured product cards ----- */
+    var grid = document.getElementById('featured-grid');
+    var CONDITION_LABEL = {
+      'overstock': 'Overstock',
+      'open-box': 'Open box',
+      'open-box-with-box': 'New · w/ original box',
+      'open-box-no-box': 'New · no box',
+      'showroom': 'Showroom sample',
+      'like-new': 'Like new',
+      'return': 'Customer return'
+    };
+    function fmtPrice(n) { return '$' + n.toLocaleString('en-US'); }
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, function(c) {
+        return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+      });
+    }
+    function cardHTML(p) {
+      var coverPhoto = (p.photos && p.photos[0]) || '';
+      var photoSrc = coverPhoto ? 'photos/' + escapeHtml(coverPhoto) : '';
+      var conditionLabel = CONDITION_LABEL[p.condition] || p.condition;
+      var detailUrl = 'product.html?id=' + escapeHtml(p.id);
+      var imgMarkup = photoSrc
+        ? '<img src="' + photoSrc + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.parentNode.querySelector(\'.placeholder\').style.display=\'flex\'; this.style.display=\'none\';">'
+        : '';
+      return [
+        '<article class="product">',
+          '<a href="' + detailUrl + '" style="display:contents;">',
+            '<div class="product-art">',
+              '<span class="product-tag ' + escapeHtml(p.condition) + '">' + escapeHtml(conditionLabel) + '</span>',
+              imgMarkup,
+              '<div class="placeholder" style="display:' + (photoSrc ? 'none' : 'flex') + ';">Photo coming soon</div>',
+            '</div>',
+            '<h3>' + escapeHtml(p.name) + '</h3>',
+            (function() {
+              var logo = window.getBrandLogo ? window.getBrandLogo(p.brand) : null;
+              var brandPart = logo
+                ? '<img class="brand-logo" src="' + escapeHtml(logo.src) + '" alt="' + escapeHtml(logo.alt) + '">'
+                : '<span>' + escapeHtml(p.brand) + '</span>';
+              return '<div class="product-meta">' +
+                       '<div class="meta-brand">' + brandPart + '</div>' +
+                       '<div class="meta-dims">' + escapeHtml(p.dimensions) + '</div>' +
+                     '</div>';
+            })(),
+            '<div class="product-price">',
+              '<span class="price-now">' + fmtPrice(p.price) + '</span>',
+              (p.retailPrice ? '<span class="price-was">' + fmtPrice(p.retailPrice) + '</span>' : ''),
+            '</div>',
+          '</a>',
+          '<a href="' + detailUrl + '" class="product-cta">View details →</a>',
+        '</article>'
+      ].join('');
+    }
+    if (grid && window.PRODUCTS) {
+      var featured = window.PRODUCTS.filter(function(p) { return p.featured && p.available !== false; }).slice(0, 3);
+      grid.innerHTML = featured.map(cardHTML).join('');
+    }
+
+    /* (Booking tabs were simplified to a single Calendly embed — no toggle needed.) */
+  })();
+</script>
+
+<!-- ========== FAQ ========== -->
+<section id="faq">
+  <div class="container" style="max-width: 880px;">
+    <div class="section-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Answers, before <em>you ask.</em></h2>
+    </div>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Is this used furniture?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">Some of it. Most of our inventory is overstock (never owned), showroom samples (sat on, never lived with), and customer returns (used briefly, then sent back). We tag every piece with its history so you know exactly what you're getting.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Do you deliver?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">Yes — local delivery within a 30-mile radius for a flat fee, usually next-day. Outside that, we can arrange a regional carrier at cost. You're also welcome to pick up directly from the showroom.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Can I return something if it doesn't fit?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">All sales are final, but we'd rather you measure twice than regret once — bring your dimensions and we'll help you figure out fit before you commit. Floor models can be reserved with a small deposit while you double-check.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          How do prices compare to buying new?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">Generally 30 – 60% off the brand's current retail price. Showroom samples and returns tend to land in the 50%+ range. Overstock that's still sealed in original packaging is closer to 30%.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Why appointment only?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">Two reasons. First, our inventory rotates fast and we want to make sure the piece you came to see is actually still on the floor when you arrive. Second, you get someone's full attention — the history of every piece, the price flexibility, what else just came in. Walk-ins get a much worse version of the same visit.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          What happens after I book?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">You'll get a confirmation email with the address and a calendar invite. The day before, we'll send a quick reminder and confirm the specific piece is still available. If something sells in between, we'll tell you before you drive over and rebook for free.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Do you buy furniture from individuals?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <p class="faq-a">Not yet. Our inventory comes directly from retail partners. If that changes, we'll announce it on our newsletter — sign up at the bottom of the page.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BAND ========== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>New pieces, every Wednesday.</h2>
+    <p>Sign up and we'll send you the week's drop before it hits the floor — first dibs, no spam.</p>
+    <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thanks — you&rsquo;re on the list';" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;max-width:440px;margin:0 auto;">
+      <input type="email" required placeholder="your@email.com" style="flex:1;min-width:220px;padding:14px 18px;border-radius:4px;border:none;font-family:inherit;font-size:14px;color:var(--ink);" />
+      <button type="submit" class="btn btn-primary">Notify me</button>
+    </form>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo-light.svg" alt="Loft Theory — Orange County"></a>
+        <p>Premium furniture, smarter prices. Brand-new overstock alongside inspected like-new pieces from the brands you were already shopping in Orange County.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=couches">Couches</a></li>
+          <li><a href="shop.html?cat=chairs">Chairs</a></li>
+          <li><a href="shop.html?cat=tables">Tables</a></li>
+          <li><a href="shop.html?cat=beds">Beds</a></li>
+          <li><a href="sold.html">Recently sold</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#book">Book a viewing</a></li>
+          <li><a href="#book">Schedule a pickup</a></li>
+          <li><a href="#book">Directions</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/lofttheory.oc" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="mailto:hello@lofttheoryoc.com">Email us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 LoftTheory.OC. All rights reserved.</span>
+      <span>Curated in Orange County · Made for the long haul</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop — LoftTheory.OC</title>
+<meta name="description" content="Browse LoftTheory.OC inventory. Overstock and like-new furniture from Castlery, West Elm, Poly &amp; Bark, Albany Park, and more. Book a viewing at the Orange County showroom." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-deep: #F2ECE1;
+    --beige: #E8DFD3;
+    --taupe: #8B7355;
+    --terracotta: #d96a1f;
+    --terracotta-deep: #c2530f;
+    --ink: #2A2622;
+    --ink-soft: #5A5048;
+    --line: #DDD3C4;
+    --shadow: 0 1px 2px rgba(42, 38, 34, 0.04), 0 8px 24px rgba(42, 38, 34, 0.06);
+    --radius: 4px;
+    --radius-lg: 8px;
+    --max: 1200px;
+    --pad: clamp(20px, 5vw, 64px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    gap: 32px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+  }
+  .logo img { height: 56px; width: auto; display: block; }
+  @media (max-width: 600px) { .logo img { height: 44px; } }
+  .foot-brand .logo img { height: 70px; }
+  .nav-links {
+    display: none;
+    gap: 28px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-links a { color: var(--ink-soft); transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--terracotta); }
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--ink); color: var(--cream); }
+  .btn-primary:hover { background: var(--terracotta-deep); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------- SHOP HEADER ---------- */
+  .shop-header {
+    padding: clamp(48px, 8vw, 88px) 0 32px;
+    text-align: left;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 16px;
+  }
+  .shop-header h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .shop-header h1 em { font-style: italic; color: var(--terracotta); }
+  .shop-header p {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin-bottom: 8px;
+  }
+  .shop-meta { font-size: 13px; color: var(--ink-soft); }
+
+  /* ---------- FILTERS ---------- */
+  .filter-bar {
+    position: sticky;
+    top: 64px;
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+    z-index: 40;
+    margin-bottom: 48px;
+  }
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-pill {
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    background: var(--cream);
+    transition: all 0.15s;
+  }
+  .filter-pill:hover { border-color: var(--ink); color: var(--ink); }
+  .filter-pill[aria-pressed="true"] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--cream);
+  }
+  .filter-count {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- GRID ---------- */
+  .shop-section { padding-bottom: clamp(64px, 8vw, 96px); }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px 24px;
+  }
+  @media (min-width: 600px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 960px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .product-art {
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+  }
+  .product-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .product:hover .product-art img { transform: scale(1.03); }
+  .product-art .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream-deep);
+    color: var(--taupe);
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .product-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--terracotta);
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+  .product-tag.return { background: var(--taupe); }
+  .product-tag.overstock { background: var(--ink); }
+  .product-tag.showroom { background: var(--terracotta-deep); }
+  .product-tag.open-box,
+  .product-tag.open-box-with-box,
+  .product-tag.open-box-no-box { background: var(--ink); }
+
+  .product h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+  .product-meta {
+    color: var(--ink-soft);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .product-meta .meta-brand {
+    display: flex;
+    align-items: center;
+    min-height: 18px;
+  }
+  .product-meta .brand-logo {
+    height: 18px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+  }
+  .product-meta .meta-dims {
+    line-height: 1.4;
+  }
+  .product-price {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: 'Fraunces', serif;
+  }
+  .price-now { font-size: 22px; color: var(--ink); font-weight: 500; }
+  .price-was { font-size: 14px; color: var(--ink-soft); text-decoration: line-through; }
+  .product-cta {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .product-cta:hover { color: var(--terracotta); border-color: var(--terracotta); }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    padding: 64px 24px;
+    text-align: center;
+    color: var(--ink-soft);
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+  }
+  .empty-state h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band { background: var(--terracotta); color: var(--cream); text-align: center; padding: 72px 0; }
+  .cta-band h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--cream); margin-bottom: 12px; }
+  .cta-band p { color: rgba(250, 247, 242, 0.85); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-band .btn { background: var(--cream); color: var(--ink); }
+  .cta-band .btn:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--ink); color: rgba(250, 247, 242, 0.7); padding: 64px 0 32px; font-size: 14px; }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
+  @media (min-width: 768px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+  .foot-brand .logo { color: var(--cream); margin-bottom: 16px; display: block; }
+  .foot-brand p { max-width: 320px; }
+  .foot-col h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--cream); margin-bottom: 16px; font-weight: 500;
+  }
+  .foot-col ul { list-style: none; display: grid; gap: 10px; }
+  .foot-col a:hover { color: var(--terracotta); }
+  .foot-bottom {
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo.svg" alt="Loft Theory — Orange County"></a>
+    <ul class="nav-links">
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="sold.html">Sold</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#book">Visit us</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <a href="index.html#book" class="btn btn-primary">Book a viewing</a>
+  </div>
+</nav>
+
+<!-- ========== HEADER ========== -->
+<header class="shop-header">
+  <div class="container">
+    <span class="eyebrow">The full floor</span>
+    <h1>What's in <em>this week.</em></h1>
+    <p>Inventory rotates as new pieces arrive from our retail partners. Photos are honest — we shoot what's actually on the floor, condition flaws and all.</p>
+    <p class="shop-meta">Found something? Book a viewing to come see it in person before it sells.</p>
+  </div>
+</header>
+
+<!-- ========== FILTER BAR ========== -->
+<div class="filter-bar">
+  <div class="container">
+    <div class="filters" id="filters">
+      <button class="filter-pill" data-cat="all" aria-pressed="true">All</button>
+      <button class="filter-pill" data-cat="couches" aria-pressed="false">Couches</button>
+      <button class="filter-pill" data-cat="chairs" aria-pressed="false">Chairs</button>
+      <button class="filter-pill" data-cat="tables" aria-pressed="false">Tables</button>
+      <button class="filter-pill" data-cat="beds" aria-pressed="false">Beds</button>
+      <span class="filter-count" id="filter-count"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== GRID ========== -->
+<section class="shop-section">
+  <div class="container">
+    <div class="product-grid" id="product-grid">
+      <!-- Cards rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BAND ========== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>See something? Come sit on it.</h2>
+    <p>The floor is by appointment only — pick a slot and we'll have your piece set aside when you arrive.</p>
+    <a href="index.html#book" class="btn btn-primary">Book a viewing</a>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo-light.svg" alt="Loft Theory — Orange County"></a>
+        <p>Premium furniture, smarter prices. Brand-new overstock alongside inspected like-new pieces from the brands you were already shopping in Orange County.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=couches">Couches</a></li>
+          <li><a href="shop.html?cat=chairs">Chairs</a></li>
+          <li><a href="shop.html?cat=tables">Tables</a></li>
+          <li><a href="shop.html?cat=beds">Beds</a></li>
+          <li><a href="sold.html">Recently sold</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="index.html#book">Book a viewing</a></li>
+          <li><a href="index.html#book">Schedule a pickup</a></li>
+          <li><a href="index.html#book">Directions</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/lofttheory.oc" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="mailto:hello@lofttheoryoc.com">Email us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 LoftTheory.OC. All rights reserved.</span>
+      <span>Curated in Orange County · Made for the long haul</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="brand-logos.js"></script>
+<script src="chat-widget.js" defer></script>
+<script>
+(function() {
+  var grid = document.getElementById('product-grid');
+  var pills = document.querySelectorAll('.filter-pill');
+  var countEl = document.getElementById('filter-count');
+
+  var CONDITION_LABEL = {
+    'overstock': 'Overstock',
+    'open-box': 'Open box',
+    'open-box-with-box': 'New · w/ original box',
+    'open-box-no-box': 'New · no box',
+    'showroom': 'Showroom sample',
+    'like-new': 'Like new',
+    'return': 'Customer return'
+  };
+
+  function fmtPrice(n) {
+    return '$' + n.toLocaleString('en-US');
+  }
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function cardHTML(p) {
+    var coverPhoto = (p.photos && p.photos[0]) || '';
+    var photoSrc = coverPhoto ? 'photos/' + escapeHtml(coverPhoto) : '';
+    var conditionLabel = CONDITION_LABEL[p.condition] || p.condition;
+    var conditionClass = p.condition;
+
+    var imgMarkup = photoSrc
+      ? '<img src="' + photoSrc + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.parentNode.querySelector(\'.placeholder\').style.display=\'flex\'; this.style.display=\'none\';">'
+      : '';
+
+    var detailUrl = 'product.html?id=' + escapeHtml(p.id);
+    return [
+      '<article class="product" data-cat="' + escapeHtml(p.category) + '">',
+        '<a href="' + detailUrl + '" style="display:contents;">',
+          '<div class="product-art">',
+            '<span class="product-tag ' + escapeHtml(conditionClass) + '">' + escapeHtml(conditionLabel) + '</span>',
+            imgMarkup,
+            '<div class="placeholder" style="display:' + (photoSrc ? 'none' : 'flex') + ';">Photo coming soon</div>',
+          '</div>',
+          '<h3>' + escapeHtml(p.name) + '</h3>',
+          (function() {
+            var logo = window.getBrandLogo ? window.getBrandLogo(p.brand) : null;
+            var brandPart = logo
+              ? '<img class="brand-logo" src="' + escapeHtml(logo.src) + '" alt="' + escapeHtml(logo.alt) + '">'
+              : '<span>' + escapeHtml(p.brand) + '</span>';
+            return '<div class="product-meta">' +
+                     '<div class="meta-brand">' + brandPart + '</div>' +
+                     '<div class="meta-dims">' + escapeHtml(p.dimensions) + '</div>' +
+                   '</div>';
+          })(),
+          '<div class="product-price">',
+            '<span class="price-now">' + fmtPrice(p.price) + '</span>',
+            (p.retailPrice ? '<span class="price-was">' + fmtPrice(p.retailPrice) + '</span>' : ''),
+          '</div>',
+        '</a>',
+        '<a href="' + detailUrl + '" class="product-cta">View details →</a>',
+      '</article>'
+    ].join('');
+  }
+
+  function render(category) {
+    var items = (window.PRODUCTS || []).filter(function(p) {
+      return p.available !== false && (category === 'all' || p.category === category);
+    });
+    items.sort(function(a, b) {
+      if (a.featured !== b.featured) return a.featured ? -1 : 1;
+      return a.price - b.price;
+    });
+
+    if (items.length === 0) {
+      grid.innerHTML = '<div class="empty-state"><h3>Nothing in this category right now.</h3><p>New pieces arrive every Wednesday. Check back soon or sign up for the drop list.</p></div>';
+    } else {
+      grid.innerHTML = items.map(cardHTML).join('');
+    }
+    countEl.textContent = items.length + (items.length === 1 ? ' piece' : ' pieces');
+  }
+
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      pills.forEach(function(p) { p.setAttribute('aria-pressed', p === pill ? 'true' : 'false'); });
+      var cat = pill.getAttribute('data-cat');
+      render(cat);
+      var url = new URL(window.location);
+      if (cat === 'all') url.searchParams.delete('cat');
+      else url.searchParams.set('cat', cat);
+      history.replaceState({}, '', url);
+    });
+  });
+
+  // Read ?cat= from URL on load
+  var initial = new URLSearchParams(window.location.search).get('cat') || 'all';
+  var initialPill = document.querySelector('.filter-pill[data-cat="' + initial + '"]') || document.querySelector('.filter-pill[data-cat="all"]');
+  pills.forEach(function(p) { p.setAttribute('aria-pressed', p === initialPill ? 'true' : 'false'); });
+  render(initialPill.getAttribute('data-cat'));
+})();
+</script>
+
+</body>
+</html>

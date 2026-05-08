@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recently Sold — LoftTheory.OC</title>
+<meta name="description" content="Pieces we've already sold. A look at the kinds of furniture we move through the LoftTheory.OC showroom — and proof of what tends to come in." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-deep: #F2ECE1;
+    --beige: #E8DFD3;
+    --taupe: #8B7355;
+    --terracotta: #d96a1f;
+    --terracotta-deep: #c2530f;
+    --ink: #2A2622;
+    --ink-soft: #5A5048;
+    --line: #DDD3C4;
+    --shadow: 0 1px 2px rgba(42, 38, 34, 0.04), 0 8px 24px rgba(42, 38, 34, 0.06);
+    --radius: 4px;
+    --radius-lg: 8px;
+    --max: 1200px;
+    --pad: clamp(20px, 5vw, 64px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    gap: 32px;
+  }
+  .logo { display: inline-flex; align-items: center; line-height: 0; }
+  .logo img { height: 56px; width: auto; display: block; }
+  @media (max-width: 600px) { .logo img { height: 44px; } }
+  .foot-brand .logo img { height: 70px; }
+  .nav-links { display: none; gap: 28px; list-style: none; font-size: 14px; font-weight: 500; }
+  .nav-links a { color: var(--ink-soft); transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--terracotta); }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--ink); color: var(--cream); }
+  .btn-primary:hover { background: var(--terracotta-deep); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------- HEADER ---------- */
+  .sold-header {
+    padding: clamp(48px, 8vw, 88px) 0 32px;
+    text-align: left;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 16px;
+  }
+  .sold-header h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .sold-header h1 em { font-style: italic; color: var(--terracotta); }
+  .sold-header p {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin-bottom: 8px;
+  }
+  .sold-meta { font-size: 13px; color: var(--ink-soft); }
+
+  /* ---------- STAT STRIP ---------- */
+  .stat-strip {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--cream-deep);
+    padding: 28px 0;
+    margin: 16px 0 48px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  @media (max-width: 600px) { .stats { grid-template-columns: 1fr; gap: 16px; } }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .stat-num em { font-style: italic; color: var(--terracotta); }
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  /* ---------- FILTER ---------- */
+  .filter-bar {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+    margin-bottom: 48px;
+  }
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-pill {
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    background: var(--cream);
+    transition: all 0.15s;
+  }
+  .filter-pill:hover { border-color: var(--ink); color: var(--ink); }
+  .filter-pill[aria-pressed="true"] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--cream);
+  }
+  .filter-count {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- GRID ---------- */
+  .sold-section { padding-bottom: clamp(64px, 8vw, 96px); }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px 24px;
+  }
+  @media (min-width: 600px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 960px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    opacity: 0.92;
+  }
+  .product-art {
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+  }
+  .product-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.78) brightness(0.96);
+    transition: filter 0.3s ease, transform 0.4s ease;
+  }
+  .product:hover .product-art img { filter: saturate(1) brightness(1); transform: scale(1.02); }
+  .product-art .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream-deep);
+    color: var(--taupe);
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .sold-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+  .sold-date {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(250, 247, 242, 0.95);
+    color: var(--ink-soft);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+
+  .product h3 { font-size: 19px; font-weight: 500; margin-top: 4px; }
+  .product-meta {
+    color: var(--ink-soft);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .product-meta .meta-brand {
+    display: flex;
+    align-items: center;
+    min-height: 18px;
+  }
+  .product-meta .brand-logo {
+    height: 18px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+  }
+  .product-meta .meta-dims {
+    line-height: 1.4;
+  }
+  .product-price {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: 'Fraunces', serif;
+  }
+  .price-now {
+    font-size: 18px;
+    color: var(--ink-soft);
+    font-weight: 500;
+    text-decoration: line-through;
+    text-decoration-color: var(--terracotta);
+  }
+  .price-was { font-size: 13px; color: var(--ink-soft); text-decoration: line-through; }
+  .product-cta {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .product-cta:hover { color: var(--terracotta); border-color: var(--terracotta); }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    padding: 64px 24px;
+    text-align: center;
+    color: var(--ink-soft);
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+  }
+  .empty-state h3 { font-size: 24px; margin-bottom: 8px; font-weight: 400; }
+
+  /* ---------- CTA BAND ---------- */
+  .cta-band { background: var(--terracotta); color: var(--cream); text-align: center; padding: 72px 0; }
+  .cta-band h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--cream); margin-bottom: 12px; }
+  .cta-band em { font-style: italic; color: var(--cream-deep); }
+  .cta-band p { color: rgba(250, 247, 242, 0.9); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .cta-band .btn { background: var(--cream); color: var(--ink); }
+  .cta-band .btn:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--ink); color: rgba(250, 247, 242, 0.7); padding: 64px 0 32px; font-size: 14px; }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
+  @media (min-width: 768px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+  .foot-brand .logo { margin-bottom: 16px; display: block; }
+  .foot-brand p { max-width: 320px; }
+  .foot-col h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--cream); margin-bottom: 16px; font-weight: 500;
+  }
+  .foot-col ul { list-style: none; display: grid; gap: 10px; }
+  .foot-col a:hover { color: var(--terracotta); }
+  .foot-bottom {
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+    padding-top: 24px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo.svg" alt="Loft Theory — Orange County"></a>
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sold.html" class="active">Sold</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#book">Visit us</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <a href="index.html#book" class="btn btn-primary">Book a viewing</a>
+  </div>
+</nav>
+
+<!-- ========== HEADER ========== -->
+<header class="sold-header">
+  <div class="container">
+    <span class="eyebrow">The archive</span>
+    <h1>Pieces we've <em>already sold.</em></h1>
+    <p>An archive of what we've moved through the showroom — proof of the kinds of pieces we tend to source, and a feel for how fast the good ones go. Inventory rotates weekly; the shop page has what's still available now.</p>
+  </div>
+</header>
+
+<!-- ========== STATS ========== -->
+<div class="stat-strip">
+  <div class="container">
+    <div class="stats" id="sold-stats">
+      <div>
+        <span class="stat-num" id="stat-count"><em>—</em></span>
+        <span class="stat-label">Pieces sold</span>
+      </div>
+      <div>
+        <span class="stat-num" id="stat-brands"><em>—</em></span>
+        <span class="stat-label">Brands sourced</span>
+      </div>
+      <div>
+        <span class="stat-num" id="stat-savings"><em>—</em></span>
+        <span class="stat-label">Avg. off retail</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FILTER BAR ========== -->
+<div class="filter-bar">
+  <div class="container">
+    <div class="filters" id="filters">
+      <button class="filter-pill" data-cat="all" aria-pressed="true">All</button>
+      <button class="filter-pill" data-cat="couches" aria-pressed="false">Couches</button>
+      <button class="filter-pill" data-cat="chairs" aria-pressed="false">Chairs</button>
+      <button class="filter-pill" data-cat="tables" aria-pressed="false">Tables</button>
+      <button class="filter-pill" data-cat="beds" aria-pressed="false">Beds</button>
+      <span class="filter-count" id="filter-count"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== GRID ========== -->
+<section class="sold-section">
+  <div class="container">
+    <div class="product-grid" id="product-grid">
+      <!-- Cards rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BAND ========== -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Like what you see? Come grab <em>the next one.</em></h2>
+    <p>Pieces like these come in every week. Book a viewing and we'll let you know what just landed before it goes up.</p>
+    <a href="index.html#book" class="btn btn-primary">Book a viewing</a>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo-light.svg" alt="Loft Theory — Orange County"></a>
+        <p>Premium furniture, smarter prices. Brand-new overstock alongside inspected like-new pieces from the brands you were already shopping in Orange County.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=couches">Couches</a></li>
+          <li><a href="shop.html?cat=chairs">Chairs</a></li>
+          <li><a href="shop.html?cat=tables">Tables</a></li>
+          <li><a href="shop.html?cat=beds">Beds</a></li>
+          <li><a href="sold.html">Recently sold</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="index.html#book">Book a viewing</a></li>
+          <li><a href="index.html#book">Schedule a pickup</a></li>
+          <li><a href="index.html#book">Directions</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/lofttheory.oc" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="mailto:hello@lofttheoryoc.com">Email us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 LoftTheory.OC. All rights reserved.</span>
+      <span>Curated in Orange County · Made for the long haul</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="brand-logos.js"></script>
+<script src="chat-widget.js" defer></script>
+<script>
+(function() {
+  var grid = document.getElementById('product-grid');
+  var pills = document.querySelectorAll('.filter-pill');
+  var countEl = document.getElementById('filter-count');
+
+  function fmtPrice(n) { return '$' + n.toLocaleString('en-US'); }
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function(c) {
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+    });
+  }
+  function fmtSoldDate(dateStr) {
+    if (!dateStr) return '';
+    var d = new Date(dateStr);
+    if (isNaN(d.getTime())) return escapeHtml(dateStr);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return months[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
+  // Pull only sold items
+  function getSoldProducts() {
+    return (window.PRODUCTS || []).filter(function(p) { return p.available === false; });
+  }
+
+  function cardHTML(p) {
+    var coverPhoto = (p.photos && p.photos[0]) || '';
+    var photoSrc = coverPhoto ? 'photos/' + escapeHtml(coverPhoto) : '';
+    var imgMarkup = photoSrc
+      ? '<img src="' + photoSrc + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.parentNode.querySelector(\'.placeholder\').style.display=\'flex\'; this.style.display=\'none\';">'
+      : '';
+    var soldDate = p.soldDate ? '<span class="sold-date">' + fmtSoldDate(p.soldDate) + '</span>' : '';
+    var detailUrl = 'product.html?id=' + escapeHtml(p.id);
+    return [
+      '<article class="product" data-cat="' + escapeHtml(p.category) + '">',
+        '<a href="' + detailUrl + '" style="display:contents;">',
+          '<div class="product-art">',
+            '<span class="sold-tag">Sold</span>',
+            soldDate,
+            imgMarkup,
+            '<div class="placeholder" style="display:' + (photoSrc ? 'none' : 'flex') + ';">Photo coming soon</div>',
+          '</div>',
+          '<h3>' + escapeHtml(p.name) + '</h3>',
+          (function() {
+            var logo = window.getBrandLogo ? window.getBrandLogo(p.brand) : null;
+            var brandPart = logo
+              ? '<img class="brand-logo" src="' + escapeHtml(logo.src) + '" alt="' + escapeHtml(logo.alt) + '">'
+              : '<span>' + escapeHtml(p.brand) + '</span>';
+            var hasDims = p.dimensions && p.dimensions !== 'Measurements available on request';
+            var dimsPart = hasDims ? '<div class="meta-dims">' + escapeHtml(p.dimensions) + '</div>' : '';
+            return '<div class="product-meta">' +
+                     '<div class="meta-brand">' + brandPart + '</div>' +
+                     dimsPart +
+                   '</div>';
+          })(),
+          '<div class="product-price">',
+            '<span class="price-now">' + fmtPrice(p.price) + '</span>',
+            (p.retailPrice ? '<span class="price-was">' + fmtPrice(p.retailPrice) + '</span>' : ''),
+          '</div>',
+        '</a>',
+        '<a href="shop.html?cat=' + escapeHtml(p.category) + '" class="product-cta">See similar →</a>',
+      '</article>'
+    ].join('');
+  }
+
+  function render(category) {
+    var sold = getSoldProducts();
+    var items = sold.filter(function(p) {
+      return category === 'all' || p.category === category;
+    });
+    // Sort: most recently sold first, then by name
+    items.sort(function(a, b) {
+      if (a.soldDate && b.soldDate) {
+        return new Date(b.soldDate) - new Date(a.soldDate);
+      }
+      if (a.soldDate) return -1;
+      if (b.soldDate) return 1;
+      return a.name.localeCompare(b.name);
+    });
+
+    if (items.length === 0) {
+      var msg = sold.length === 0
+        ? '<h3>Nothing in the archive yet.</h3><p>Once pieces start moving through the showroom, they\'ll show up here. Check back, or <a href="shop.html" style="color:var(--terracotta);border-bottom:1px solid currentColor;">see what\'s available now →</a></p>'
+        : '<h3>Nothing in this category yet.</h3><p>Try another filter, or <a href="shop.html" style="color:var(--terracotta);border-bottom:1px solid currentColor;">see what\'s available now →</a></p>';
+      grid.innerHTML = '<div class="empty-state">' + msg + '</div>';
+    } else {
+      grid.innerHTML = items.map(cardHTML).join('');
+    }
+    countEl.textContent = items.length + (items.length === 1 ? ' piece' : ' pieces');
+  }
+
+  function renderStats() {
+    var sold = getSoldProducts();
+    document.getElementById('stat-count').innerHTML = '<em>' + sold.length + '</em>';
+
+    var brandSet = {};
+    sold.forEach(function(p) { if (p.brand) brandSet[p.brand] = true; });
+    document.getElementById('stat-brands').innerHTML = '<em>' + Object.keys(brandSet).length + '</em>';
+
+    var savingsTotal = 0, savingsCount = 0;
+    sold.forEach(function(p) {
+      if (p.retailPrice && p.price && p.retailPrice > p.price) {
+        savingsTotal += (1 - p.price / p.retailPrice);
+        savingsCount++;
+      }
+    });
+    var avgSavings = savingsCount > 0 ? Math.round((savingsTotal / savingsCount) * 100) : 0;
+    document.getElementById('stat-savings').innerHTML = '<em>' + avgSavings + '%</em>';
+  }
+
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      pills.forEach(function(p) { p.setAttribute('aria-pressed', p === pill ? 'true' : 'false'); });
+      var cat = pill.getAttribute('data-cat');
+      render(cat);
+      var url = new URL(window.location);
+      if (cat === 'all') url.searchParams.delete('cat');
+      else url.searchParams.set('cat', cat);
+      history.replaceState({}, '', url);
+    });
+  });
+
+  // Initial render
+  var initial = new URLSearchParams(window.location.search).get('cat') || 'all';
+  var initialPill = document.querySelector('.filter-pill[data-cat="' + initial + '"]') || document.querySelector('.filter-pill[data-cat="all"]');
+  pills.forEach(function(p) { p.setAttribute('aria-pressed', p === initialPill ? 'true' : 'false'); });
+  renderStats();
+  render(initialPill.getAttribute('data-cat'));
+})();
+</script>
+
+</body>
+</html>

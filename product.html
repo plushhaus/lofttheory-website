@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product — LoftTheory.OC</title>
+<meta name="description" content="View product details and book a viewing at the LoftTheory.OC showroom in Orange County." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --cream-deep: #F2ECE1;
+    --beige: #E8DFD3;
+    --taupe: #8B7355;
+    --terracotta: #d96a1f;
+    --terracotta-deep: #c2530f;
+    --ink: #2A2622;
+    --ink-soft: #5A5048;
+    --line: #DDD3C4;
+    --shadow: 0 1px 2px rgba(42, 38, 34, 0.04), 0 8px 24px rgba(42, 38, 34, 0.06);
+    --radius: 4px;
+    --radius-lg: 8px;
+    --max: 1200px;
+    --pad: clamp(20px, 5vw, 64px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+    z-index: 50;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    gap: 32px;
+  }
+  .logo { display: inline-flex; align-items: center; line-height: 0; }
+  .logo img { height: 56px; width: auto; display: block; }
+  @media (max-width: 600px) { .logo img { height: 44px; } }
+  .foot-brand .logo img { height: 70px; }
+  .nav-links { display: none; gap: 28px; list-style: none; font-size: 14px; font-weight: 500; }
+  .nav-links a { color: var(--ink-soft); transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--terracotta); }
+  @media (min-width: 768px) { .nav-links { display: flex; } }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 26px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--ink); color: var(--cream); }
+  .btn-primary:hover { background: var(--terracotta-deep); transform: translateY(-1px); }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--cream); }
+
+  /* ---------- BREADCRUMB ---------- */
+  .breadcrumb {
+    padding: 28px 0 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .breadcrumb a:hover { color: var(--terracotta); }
+  .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+
+  /* ---------- DETAIL ---------- */
+  .detail { padding: 32px 0 80px; }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .detail-grid { grid-template-columns: 1.15fr 1fr; gap: 64px; }
+  }
+
+  /* Gallery */
+  .gallery { display: flex; flex-direction: column; gap: 12px; }
+  .gallery-main {
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+  }
+  .gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-main .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--taupe);
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .gallery-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--terracotta);
+    color: var(--cream);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .gallery-tag.return { background: var(--taupe); }
+  .gallery-tag.overstock { background: var(--ink); }
+  .gallery-tag.showroom { background: var(--terracotta-deep); }
+  .gallery-tag.open-box,
+  .gallery-tag.open-box-with-box,
+  .gallery-tag.open-box-no-box { background: var(--ink); }
+  .gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+  .thumb {
+    aspect-ratio: 1 / 1;
+    background: var(--cream-deep);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, opacity 0.2s;
+    opacity: 0.7;
+  }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .thumb:hover { opacity: 1; }
+  .thumb[aria-current="true"] { border-color: var(--ink); opacity: 1; }
+
+  /* Info */
+  .detail-info { padding-top: 8px; }
+  .info-brand {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .info-brand-logo {
+    display: block;
+    height: 28px;
+    width: auto;
+    max-width: 180px;
+    margin-bottom: 14px;
+    object-fit: contain;
+    object-position: left center;
+  }
+  .product-card .product-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    min-height: 18px;
+  }
+  .product-card .brand-logo {
+    height: 16px;
+    width: auto;
+    max-width: 90px;
+    object-fit: contain;
+    object-position: left center;
+  }
+  .product-card .brand-text { font-size: 13px; color: var(--ink-soft); }
+  .info-name {
+    font-size: clamp(32px, 4.5vw, 48px);
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+  .info-price {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 8px;
+  }
+  .info-price .now { font-size: 32px; color: var(--ink); font-weight: 500; }
+  .info-price .was { font-size: 17px; color: var(--ink-soft); text-decoration: line-through; }
+  .info-savings {
+    font-size: 13px;
+    color: var(--terracotta);
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .info-desc {
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  /* ---------- RETAILER BLOCK ---------- */
+  .retailer-block {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--cream-deep);
+    border-radius: var(--radius);
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .retailer-block-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .retailer-block-logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .retailer-block-logo img {
+    height: 22px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.82;
+    display: block;
+  }
+  .retailer-block-logo span {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .retailer-block-link {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--terracotta-deep);
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    flex-shrink: 0;
+    transition: color 0.15s;
+    white-space: nowrap;
+  }
+  .retailer-block-link:hover { color: var(--rust, var(--terracotta)); }
+  @media (max-width: 480px) {
+    .retailer-block-link { margin-left: 0; width: 100%; }
+  }
+
+  .info-specs {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 36px;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    font-size: 14px;
+  }
+  .spec-label {
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    padding-top: 2px;
+  }
+  .spec-value { color: var(--ink); font-family: 'Fraunces', serif; font-size: 16px; }
+  .info-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .info-fineprint {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .info-fineprint strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- RELATED ---------- */
+  .related { background: var(--cream-deep); padding: 80px 0; border-top: 1px solid var(--line); }
+  .related-head { margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; }
+  .related-head h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 300; }
+  .related-head h2 em { font-style: italic; color: var(--terracotta); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px 24px;
+  }
+  @media (min-width: 600px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 960px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+  .product-card { display: block; }
+  .product-card .product-art {
+    aspect-ratio: 1 / 1;
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 14px;
+  }
+  .product-card .product-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .product-card:hover .product-art img { transform: scale(1.03); }
+  .product-card .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream);
+    color: var(--taupe);
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .product-card .product-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--terracotta);
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+  .product-card .product-tag.return { background: var(--taupe); }
+  .product-card .product-tag.overstock { background: var(--ink); }
+  .product-card .product-tag.showroom { background: var(--terracotta-deep); }
+  .product-card .product-tag.open-box,
+  .product-card .product-tag.open-box-with-box,
+  .product-card .product-tag.open-box-no-box { background: var(--ink); }
+  .product-card h3 { font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+  .product-card .meta { font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; }
+  .product-card .price { font-family: 'Fraunces', serif; font-size: 18px; }
+  .product-card .price .was { font-size: 13px; color: var(--ink-soft); text-decoration: line-through; margin-left: 8px; }
+
+  /* ---------- 404 ---------- */
+  .not-found {
+    padding: clamp(80px, 14vw, 160px) 0;
+    text-align: center;
+  }
+  .not-found h1 { font-size: clamp(40px, 6vw, 64px); font-weight: 300; margin-bottom: 16px; }
+  .not-found h1 em { font-style: italic; color: var(--terracotta); }
+  .not-found p { font-size: 17px; color: var(--ink-soft); max-width: 480px; margin: 0 auto 32px; }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--ink); color: rgba(250, 247, 242, 0.7); padding: 64px 0 32px; font-size: 14px; }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
+  @media (min-width: 768px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+  .foot-brand .logo { color: var(--cream); margin-bottom: 16px; display: block; }
+  .foot-brand p { max-width: 320px; }
+  .foot-col h4 { font-family: 'Inter', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--cream); margin-bottom: 16px; font-weight: 500; }
+  .foot-col ul { list-style: none; display: grid; gap: 10px; }
+  .foot-col a:hover { color: var(--terracotta); }
+  .foot-bottom { border-top: 1px solid rgba(250, 247, 242, 0.12); padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo.svg" alt="Loft Theory — Orange County"></a>
+    <ul class="nav-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="sold.html">Sold</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#book">Visit us</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <a href="index.html#book" class="btn btn-primary">Book a viewing</a>
+  </div>
+</nav>
+
+<div id="root">
+  <!-- Rendered by JS -->
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" aria-label="LoftTheory.OC home"><img src="logo-light.svg" alt="Loft Theory — Orange County"></a>
+        <p>Premium furniture, smarter prices. Brand-new overstock alongside inspected like-new pieces from the brands you were already shopping in Orange County.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html?cat=couches">Couches</a></li>
+          <li><a href="shop.html?cat=chairs">Chairs</a></li>
+          <li><a href="shop.html?cat=tables">Tables</a></li>
+          <li><a href="shop.html?cat=beds">Beds</a></li>
+          <li><a href="sold.html">Recently sold</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="index.html#book">Book a viewing</a></li>
+          <li><a href="index.html#book">Schedule a pickup</a></li>
+          <li><a href="index.html#book">Directions</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/lofttheory.oc" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="mailto:hello@lofttheoryoc.com">Email us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 LoftTheory.OC. All rights reserved.</span>
+      <span>Curated in Orange County · Made for the long haul</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="brand-logos.js"></script>
+<script src="chat-widget.js" defer></script>
+<script>
+(function() {
+  var CONDITION_LABEL = {
+    'overstock': 'Overstock',
+    'open-box': 'Open box',
+    'open-box-with-box': 'New · w/ original box',
+    'open-box-no-box': 'New · no box',
+    'showroom': 'Showroom sample',
+    'like-new': 'Like new',
+    'return': 'Customer return'
+  };
+  var CONDITION_BLURB = {
+    'overstock': 'Sealed in original packaging. Never owned, never assembled. Listed at the best discount because it cost the brand more to store than to let go.',
+    'open-box': 'Brand new — unboxed and assembled by the original buyer, but never actually used (usually a fit issue or change of mind). Functionally identical to a new unit, full hardware included, original packaging available where noted.',
+    'open-box-with-box': 'Brand new — opened by the original buyer, taken out, then returned because it didn’t suit their space. Never used. Comes with the original box and packaging, ready for transport.',
+    'open-box-no-box': 'Brand new — opened by the original buyer, taken out, then returned because it didn’t suit their space. Never used. Original box is no longer included; we’ll wrap it for safe transport on delivery or pickup.',
+    'showroom': 'Used as a floor model in a retailer’s showroom. Sat on, photographed, occasionally moved — but never lived with. Any minor wear is noted in the description above.',
+    'like-new': 'Lightly used in a real home for less than 90 days, then returned. Inspected end-to-end. We’ll tell you exactly what we found.',
+    'return': 'A customer return that came back to the brand within their trial window. Briefly used, sometimes never. We confirm the condition before pricing.'
+  };
+  var CATEGORY_LABEL = {
+    'couches': 'Couches',
+    'chairs': 'Chairs',
+    'tables': 'Tables',
+    'beds': 'Beds'
+  };
+
+  function fmtPrice(n) { return '$' + n.toLocaleString('en-US'); }
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function(c) {
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+    });
+  }
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function notFoundHTML() {
+    return [
+      '<section class="not-found">',
+        '<div class="container">',
+          '<h1>This piece is <em>already sold.</em></h1>',
+          '<p>The product you’re looking for is no longer available, or the link may be wrong. Inventory rotates fast — take a look at what’s on the floor right now.</p>',
+          '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">',
+            '<a href="shop.html" class="btn btn-primary">Browse the shop</a>',
+            '<a href="index.html" class="btn btn-secondary">Back to home</a>',
+          '</div>',
+        '</div>',
+      '</section>'
+    ].join('');
+  }
+
+  function brandMarkup(brand) {
+    var logo = window.getBrandLogo ? window.getBrandLogo(brand) : null;
+    if (logo) {
+      return '<img class="brand-logo" src="' + escapeHtml(logo.src) + '" alt="' + escapeHtml(logo.alt) + '">';
+    }
+    return '<span class="brand-text">' + escapeHtml(brand) + '</span>';
+  }
+
+  function relatedCardHTML(p) {
+    var coverPhoto = (p.photos && p.photos[0]) || '';
+    var photoSrc = coverPhoto ? 'photos/' + escapeHtml(coverPhoto) : '';
+    var conditionLabel = CONDITION_LABEL[p.condition] || p.condition;
+    var imgMarkup = photoSrc
+      ? '<img src="' + photoSrc + '" alt="' + escapeHtml(p.name) + '" loading="lazy" onerror="this.parentNode.querySelector(\'.placeholder\').style.display=\'flex\'; this.style.display=\'none\';">'
+      : '';
+    return [
+      '<a class="product-card" href="product.html?id=' + escapeHtml(p.id) + '">',
+        '<div class="product-art">',
+          '<span class="product-tag ' + escapeHtml(p.condition) + '">' + escapeHtml(conditionLabel) + '</span>',
+          imgMarkup,
+          '<div class="placeholder" style="display:' + (photoSrc ? 'none' : 'flex') + ';">Photo coming soon</div>',
+        '</div>',
+        '<h3>' + escapeHtml(p.name) + '</h3>',
+        '<p class="product-meta-row">' + brandMarkup(p.brand) + '</p>',
+        '<p class="price">' + fmtPrice(p.price) + (p.retailPrice ? '<span class="was">' + fmtPrice(p.retailPrice) + '</span>' : '') + '</p>',
+      '</a>'
+    ].join('');
+  }
+
+  function detailHTML(product) {
+    var photos = (product.photos && product.photos.length) ? product.photos : [''];
+    var conditionLabel = CONDITION_LABEL[product.condition] || product.condition;
+    var conditionBlurb = CONDITION_BLURB[product.condition] || '';
+    var savings = product.retailPrice ? Math.round((1 - product.price / product.retailPrice) * 100) : 0;
+
+    var coverPhoto = photos[0] || '';
+    var coverSrc = coverPhoto ? 'photos/' + escapeHtml(coverPhoto) : '';
+    var mainImgMarkup = coverSrc
+      ? '<img id="main-img" src="' + coverSrc + '" alt="' + escapeHtml(product.name) + '" onerror="this.parentNode.querySelector(\'.placeholder\').style.display=\'flex\'; this.style.display=\'none\';">'
+      : '';
+
+    var thumbsHTML = '';
+    if (photos.length > 1) {
+      thumbsHTML = '<div class="gallery-thumbs">' + photos.map(function(photo, i) {
+        var src = photo ? 'photos/' + escapeHtml(photo) : '';
+        return '<button class="thumb" data-photo="' + escapeHtml(src) + '" aria-current="' + (i === 0 ? 'true' : 'false') + '">' +
+                 (src ? '<img src="' + src + '" alt="View ' + (i+1) + '" onerror="this.style.opacity=0.3;">' : '') +
+               '</button>';
+      }).join('') + '</div>';
+    }
+
+    var availabilityNote = product.available === false
+      ? '<p class="info-fineprint" style="color: var(--terracotta-deep); margin-bottom: 24px;"><strong>Sold.</strong> This one\'s gone. <a href="shop.html" style="border-bottom:1px solid currentColor;">See what else is on the floor →</a></p>'
+      : '';
+
+    var ctaButton = product.available === false
+      ? '<a href="shop.html?cat=' + escapeHtml(product.category) + '" class="btn btn-primary">See similar pieces</a>'
+      : '<a href="index.html#book" class="btn btn-primary">Book a viewing</a>';
+
+    return [
+      '<div class="container">',
+        '<nav class="breadcrumb">',
+          '<a href="index.html">Home</a>',
+          '<span class="sep">/</span>',
+          '<a href="shop.html">Shop</a>',
+          '<span class="sep">/</span>',
+          '<a href="shop.html?cat=' + escapeHtml(product.category) + '">' + escapeHtml(CATEGORY_LABEL[product.category] || product.category) + '</a>',
+          '<span class="sep">/</span>',
+          '<span>' + escapeHtml(product.name) + '</span>',
+        '</nav>',
+      '</div>',
+
+      '<section class="detail">',
+        '<div class="container">',
+          '<div class="detail-grid">',
+            '<div class="gallery">',
+              '<div class="gallery-main">',
+                '<span class="gallery-tag ' + escapeHtml(product.condition) + '">' + escapeHtml(conditionLabel) + '</span>',
+                mainImgMarkup,
+                '<div class="placeholder" style="display:' + (coverSrc ? 'none' : 'flex') + ';">Photo coming soon</div>',
+              '</div>',
+              thumbsHTML,
+            '</div>',
+
+            '<div class="detail-info">',
+              '<div class="info-brand">' + escapeHtml(product.brand) + '</div>',
+              '<h1 class="info-name">' + escapeHtml(product.name) + '</h1>',
+              '<div class="info-price">',
+                '<span class="now">' + fmtPrice(product.price) + '</span>',
+                (product.retailPrice ? '<span class="was">' + fmtPrice(product.retailPrice) + '</span>' : ''),
+              '</div>',
+              (savings > 0 ? '<p class="info-savings">You save ' + savings + '% off retail</p>' : '<div style="margin-bottom:24px;"></div>'),
+              availabilityNote,
+              '<p class="info-desc">' + escapeHtml(product.description) + '</p>',
+
+              (function() {
+                var logo = window.getBrandLogo ? window.getBrandLogo(product.brand) : null;
+                if (!logo && !product.retailerUrl) return '';
+                var logoMarkup = logo
+                  ? '<img src="' + escapeHtml(logo.src) + '" alt="' + escapeHtml(logo.alt) + '">'
+                  : '<span>' + escapeHtml(product.brand) + '</span>';
+                var linkMarkup = product.retailerUrl
+                  ? '<a class="retailer-block-link" href="' + escapeHtml(product.retailerUrl) + '" target="_blank" rel="noopener">View on ' + escapeHtml(product.brand) + ' →</a>'
+                  : '';
+                return '<div class="retailer-block">' +
+                         '<span class="retailer-block-label">Originally sold by</span>' +
+                         '<span class="retailer-block-logo">' + logoMarkup + '</span>' +
+                         linkMarkup +
+                       '</div>';
+              })(),
+
+              '<dl class="info-specs">',
+                '<div class="spec-row"><dt class="spec-label">Brand</dt><dd class="spec-value">' + escapeHtml(product.brand) + '</dd></div>',
+                '<div class="spec-row"><dt class="spec-label">Category</dt><dd class="spec-value">' + escapeHtml(CATEGORY_LABEL[product.category] || product.category) + '</dd></div>',
+                '<div class="spec-row"><dt class="spec-label">Dimensions</dt><dd class="spec-value">' + escapeHtml(product.dimensions) + '</dd></div>',
+                '<div class="spec-row"><dt class="spec-label">Condition</dt><dd class="spec-value">' + escapeHtml(conditionLabel) + '</dd></div>',
+              '</dl>',
+
+              '<div class="info-ctas">',
+                ctaButton,
+                '<a href="mailto:hello@lofttheoryoc.com?subject=Question about ' + encodeURIComponent(product.name) + '" class="btn btn-secondary">Ask a question</a>',
+              '</div>',
+              '<p class="info-fineprint"><strong>What does &ldquo;' + escapeHtml(conditionLabel.toLowerCase()) + '&rdquo; mean?</strong> ' + escapeHtml(conditionBlurb) + '</p>',
+            '</div>',
+          '</div>',
+        '</div>',
+      '</section>'
+    ].join('');
+  }
+
+  function relatedHTML(currentProduct, allProducts) {
+    var related = allProducts.filter(function(p) {
+      return p.id !== currentProduct.id && p.available !== false && p.category === currentProduct.category;
+    }).slice(0, 3);
+
+    if (related.length === 0) {
+      // Fall back to other available products from any category
+      related = allProducts.filter(function(p) {
+        return p.id !== currentProduct.id && p.available !== false;
+      }).slice(0, 3);
+      if (related.length === 0) return '';
+    }
+
+    return [
+      '<section class="related">',
+        '<div class="container">',
+          '<div class="related-head">',
+            '<h2>More like <em>this one.</em></h2>',
+            '<a href="shop.html?cat=' + escapeHtml(currentProduct.category) + '" class="btn btn-secondary">See all ' + escapeHtml((CATEGORY_LABEL[currentProduct.category] || currentProduct.category).toLowerCase()) + '</a>',
+          '</div>',
+          '<div class="related-grid">',
+            related.map(relatedCardHTML).join(''),
+          '</div>',
+        '</div>',
+      '</section>'
+    ].join('');
+  }
+
+  /* ----- Render ----- */
+  var root = document.getElementById('root');
+  var products = window.PRODUCTS || [];
+  var id = getParam('id');
+  var product = products.find(function(p) { return p.id === id; });
+
+  if (!product) {
+    root.innerHTML = notFoundHTML();
+    document.title = 'Not found — LoftTheory.OC';
+    return;
+  }
+
+  document.title = product.name + ' · ' + product.brand + ' — LoftTheory.OC';
+  root.innerHTML = detailHTML(product) + relatedHTML(product, products);
+
+  /* ----- Wire thumbnail clicks ----- */
+  var mainImg = document.getElementById('main-img');
+  var thumbs = document.querySelectorAll('.thumb');
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var src = thumb.getAttribute('data-photo');
+      if (!src || !mainImg) return;
+      mainImg.src = src;
+      thumbs.forEach(function(t) { t.setAttribute('aria-current', t === thumb ? 'true' : 'false'); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
