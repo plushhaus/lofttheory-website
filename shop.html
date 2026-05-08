@@ -355,7 +355,7 @@
   <div class="container">
     <div class="filters" id="filters">
       <button class="filter-pill" data-cat="all" aria-pressed="true">All</button>
-      <button class="filter-pill" data-cat="couches" aria-pressed="false">Couches</button>
+      <button class="filter-pill" data-cat="sectionals" aria-pressed="false">Sectionals</button>
       <button class="filter-pill" data-cat="chairs" aria-pressed="false">Chairs</button>
       <button class="filter-pill" data-cat="tables" aria-pressed="false">Tables</button>
       <button class="filter-pill" data-cat="beds" aria-pressed="false">Beds</button>
@@ -393,7 +393,7 @@
       <div class="foot-col">
         <h4>Shop</h4>
         <ul>
-          <li><a href="shop.html?cat=couches">Couches</a></li>
+          <li><a href="shop.html?cat=sectionals">Sectionals</a></li>
           <li><a href="shop.html?cat=chairs">Chairs</a></li>
           <li><a href="shop.html?cat=tables">Tables</a></li>
           <li><a href="shop.html?cat=beds">Beds</a></li>
@@ -503,7 +503,7 @@
     });
 
     if (items.length === 0) {
-      grid.innerHTML = '<div class="empty-state"><h3>Nothing in this category right now.</h3><p>New pieces arrive every Wednesday. Check back soon or sign up for the drop list.</p></div>';
+      grid.innerHTML = '<div class="empty-state"><h3>Nothing in this category right now.</h3><p>New pieces arrive whenever we get them in. Check back soon or sign up to be notified.</p></div>';
     } else {
       grid.innerHTML = items.map(cardHTML).join('');
     }

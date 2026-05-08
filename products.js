@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-06 from MJ Flips · Website tab (3 active listings)
+   Last sync: 2026-05-08 from MJ Flips · Website tab (4 active listings)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -17,7 +17,7 @@
                     product appears (cards + detail page) — the mapping lives
                     in /brand-logos.js. If the brand isn't mapped yet, drop
                     the SVG in /logos and add a line to brand-logos.js.
-     category     — one of: "couches" | "chairs" | "tables" | "beds" | "lighting" | "decor"
+     category     — one of: "sectionals" | "chairs" | "tables" | "beds" | "lighting" | "decor"
      condition    — one of: "overstock" | "open-box-with-box" | "open-box-no-box" |
                               "open-box" | "showroom" | "like-new" | "return"
                     (overstock = sealed in original packaging /
@@ -46,11 +46,12 @@ window.PRODUCTS = [
     name: "Castlery Harper Dining Table 86\"",
     brand: "Castlery",
     category: "tables",
-    condition: "open-box-no-box",
+    condition: "open-box-with-box",
+    color: "Chestnut",
     price: 900,
     retailPrice: 1600,
     dimensions: "86.6\"W × 41.3\"D × 29.9\"H",
-    description: "Castlery's Harper dining table in chestnut, 86 inches long. Open-box — assembled by the original buyer, then returned because it didn't fit their space. Never actually used; brand-new condition with all original hardware. Original box is no longer included; we'll wrap it for safe transport.",
+    description: "Castlery Harper dining table in chestnut, 86 inches long. New, open-box — the customer opened it but it was too big for their place. Never used; brand-new condition with all original hardware.",
     retailerUrl: "https://www.castlery.com/us/products/harper-dining-table?color_option=chestnut_oak&length=2_2m",
     photos: [
       "castlery-harper-diningtable-86/01.jpg",
@@ -67,41 +68,22 @@ window.PRODUCTS = [
   },
 
   {
-    id: "roveconcepts-maria-coffee-table",
-    name: "Maria Coffee Table",
-    brand: "Rove Concepts",
-    category: "tables",
-    condition: "open-box-no-box",
-    price: 800,
-    retailPrice: 1600,
-    dimensions: "48\"W × 32\"D × 14.1\"H",
-    description: "Rove Concepts' Maria coffee table in Alabaster Concrete — sculptural pedestal base, oval top in soft off-white. Open-box from a customer return; brand-new condition with no flaws. Original packaging not included; we'll wrap it for safe transport.",
-    retailerUrl: "https://www.roveconcepts.com/maria-coffee-table",
-    photos: [
-      "roveconcepts-maria-coffee-table/01.jpg",
-      "roveconcepts-maria-coffee-table/02.jpg",
-      "roveconcepts-maria-coffee-table/03.jpg",
-      "roveconcepts-maria-coffee-table/04.jpg",
-      "roveconcepts-maria-coffee-table/05.jpg"
-    ],
-    featured: true,
-    available: true
-  },
-
-  {
     id: "polyandbark-bo-lounger-chairs",
-    name: "Bo Lounge Chairs (Set of 2)",
+    name: "Poly & Bark Bo Lounger Chairs (Set of 2)",
     brand: "Poly & Bark",
     category: "chairs",
     condition: "open-box-with-box",
+    color: "Cognac Tan",
     price: 900,
     retailPrice: 1748,
-    dimensions: "28.8\"W × 32.5\"D × 27.25\"H (each)",
-    description: "Pair of Poly & Bark Bo Lounge Chairs in Cognac Tan top-grain leather with a slim black metal frame. Open-box — taken out by the original buyer but didn't fit their space. Never used; brand-new condition with original box included. Sold as a set.",
+    dimensions: "28.8\"W × 32.5\"D × 27.25\"H",
+    description: "Pair of Poly & Bark Bo lounge chairs in cognac tan leather. New, still in the original box.",
     retailerUrl: "https://www.polyandbark.com/products/bo-leather-lounge-chair-cognac-tan",
     photos: [
-      "polyandbark-bo-lounger-chairs/02.jpg",
+      "polyandbark-bo-lounger-chairs/09.jpg",
+      "polyandbark-bo-lounger-chairs/10.jpg",
       "polyandbark-bo-lounger-chairs/01.jpg",
+      "polyandbark-bo-lounger-chairs/02.jpg",
       "polyandbark-bo-lounger-chairs/03.jpg",
       "polyandbark-bo-lounger-chairs/04.jpg",
       "polyandbark-bo-lounger-chairs/05.jpg",
@@ -113,134 +95,48 @@ window.PRODUCTS = [
     available: true
   },
 
-  /* ----- SOLD (manually preserved — add these to the sheet to manage from there) ----- */
-
   {
-    id: "castlery-dawson-l-sofa-storage-ottoman",
-    name: "Dawson L-Sofa with Storage Ottoman",
-    brand: "Castlery",
-    category: "couches",
-    condition: "like-new",
-    price: 2800,
-    retailPrice: 3970,
-    dimensions: "Measurements available on request",
-    description: "L-shape Dawson configuration with the matching storage ottoman. Lightly used, no flaws.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2025-12-20"
-  },
-
-  {
-    id: "castlery-jonathan-6pc-extended-chaise",
-    name: "Jonathan 6-Piece Extended Chaise",
-    brand: "Castlery",
-    category: "couches",
-    condition: "like-new",
-    price: 2400,
-    retailPrice: 3894,
-    dimensions: "Measurements available on request",
-    description: "Six-piece Jonathan configuration with the extended chaise. Strong frame, clean upholstery, ready to install.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2026-01-04"
-  },
-
-  {
-    id: "west-elm-harmony-xl-blue",
-    name: "Harmony XL Sofa (Blue)",
-    brand: "West Elm",
-    category: "couches",
-    condition: "like-new",
-    price: 800,
-    retailPrice: 2500,
-    dimensions: "Measurements available on request",
-    description: "Deep-seat Harmony XL in blue. Lightly used, structurally perfect.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2026-01-03"
-  },
-
-  {
-    id: "rh-white-sectional",
-    name: "White Sectional Sofa",
-    brand: "RH",
-    category: "couches",
-    condition: "like-new",
-    price: 700,
-    retailPrice: 4500,
-    dimensions: "Measurements available on request",
-    description: "Restoration Hardware sectional in clean white. Inspected end-to-end.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2026-01-01"
-  },
-
-  {
-    id: "castlery-seb-extendable-dining-set",
-    name: "Seb Extendable Dining Set",
-    brand: "Castlery",
+    id: "roveconcepts-maria-coffee-table",
+    name: "Rove Concepts Maria Coffee Table",
+    brand: "Rove Concepts",
     category: "tables",
-    condition: "like-new",
-    price: 1400,
-    retailPrice: 2800,
-    dimensions: "Measurements available on request",
-    description: "Extendable Seb dining table with chairs. Whole set, in good order.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2026-01-09"
-  },
-
-  {
-    id: "castlery-crescent-6-drawer-dresser",
-    name: "Crescent 6-Drawer Dresser",
-    brand: "Castlery",
-    category: "beds",
-    condition: "like-new",
+    condition: "open-box-no-box",
+    color: "Alabaster Concrete",
     price: 800,
     retailPrice: 1600,
-    dimensions: "Measurements available on request",
-    description: "Six-drawer Crescent dresser. Drawers run smooth, finish is clean.",
-    photos: [],
+    dimensions: "48\"W × 32\"D × 14.1\"H",
+    description: "Rove Concepts Maria coffee table in alabaster concrete. New condition, original box no longer included; we'll wrap it for safe transport.",
+    retailerUrl: "https://www.roveconcepts.com/maria-coffee-table",
+    photos: [
+      "roveconcepts-maria-coffee-table/01.jpg",
+      "roveconcepts-maria-coffee-table/02.jpg",
+      "roveconcepts-maria-coffee-table/03.jpg",
+      "roveconcepts-maria-coffee-table/04.jpg",
+      "roveconcepts-maria-coffee-table/05.jpg"
+    ],
     featured: false,
-    available: false,
-    soldDate: "2026-01-11"
+    available: true
   },
 
   {
-    id: "castlery-hamilton-sofa-white",
-    name: "Hamilton Sofa (White)",
-    brand: "Castlery",
-    category: "couches",
-    condition: "like-new",
-    price: 700,
-    retailPrice: 1950,
-    dimensions: "Measurements available on request",
-    description: "Hamilton sofa in white performance fabric. Light use, no stains.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2026-01-24"
-  },
-
-  {
-    id: "rove-concepts-aulus-dining-chairs",
-    name: "Aulus Dining Chairs (Set of 4)",
-    brand: "Rove Concepts",
-    category: "chairs",
-    condition: "like-new",
-    price: 750,
-    retailPrice: 1300,
-    dimensions: "Set of 4",
-    description: "Set of four Aulus dining chairs from Rove Concepts. All four in matching condition.",
-    photos: [],
-    featured: false,
-    available: false,
-    soldDate: "2026-01-26"
+    id: "lovesac-sactional-6piece-darkgrey",
+    name: "Lovesac Sactional 6-Piece",
+    brand: "Lovesac",
+    category: "sectionals",
+    condition: "open-box-no-box",
+    color: "Charcoal Grey Corded Velvet",
+    price: 2500,
+    retailPrice: 8700,
+    dimensions: "117\"W × 117\"D × 29\"H",
+    description: "Lovesac Sactional 6-piece in charcoal grey corded velvet. New condition, no original box — modular configuration so you can arrange as L-shape, straight, or U-shape.",
+    retailerUrl: "https://www.lovesac.com/sactionals/build/6-seats-8-sides2-sactional-sky-grey-corded-velvet",
+    photos: [
+      "lovesac-sactional-6piece-darkgrey/01.jpg",
+      "lovesac-sactional-6piece-darkgrey/02.jpg",
+      "lovesac-sactional-6piece-darkgrey/03.jpg"
+    ],
+    featured: true,
+    available: true
   }
 
 ];
