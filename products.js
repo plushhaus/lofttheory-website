@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-08 from MJ Flips · Website tab (5 active listings)
+   Last sync: 2026-05-10 from MJ Flips · Website tab (6 listings — 3 live, 3 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -142,7 +142,7 @@ window.PRODUCTS = [
       "lovesac-sactional-6piece-darkgrey/03.jpg"
     ],
     featured: true,
-    available: true
+    available: false
   },
 
   {
@@ -168,6 +168,30 @@ window.PRODUCTS = [
       "castlery-dalton-king-size-storage-bed/08.jpg"
     ],
     featured: true,
+    available: false
+  },
+
+  {
+    id: "castlery-marlow-sofa",
+    name: "Castlery Marlow Performance Boucle Sofa",
+    brand: "Castlery",
+    category: "sectionals",
+    condition: "overstock",
+    color: "Performance Infinity Boucle, Rust",
+    price: 1000,
+    retailPrice: 1700,
+    dimensions: "70.1\"W × 38.6\"D × 29.9\"H",
+    description: "Castlery Marlow armless 2-seater sofa in performance infinity boucle, rust. New condition.",
+    retailerUrl: "https://www.castlery.com/us/products/marlow-performance-boucle-armless-2-seater-sofa?material=performance_ginger&leg_color=caramel",
+    photos: [
+      "castlery-marlow-sofa/01.jpg",
+      "castlery-marlow-sofa/02.jpg",
+      "castlery-marlow-sofa/03.jpg",
+      "castlery-marlow-sofa/04.jpg",
+      "castlery-marlow-sofa/05.jpg",
+      "castlery-marlow-sofa/06.jpg"
+    ],
+    featured: false,
     available: false
   }
 
