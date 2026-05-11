@@ -208,8 +208,15 @@ window.PRODUCTS = [
     dimensions: "33\"W × 36\"D × 32\"H",
     description: "Pair of Lulu and Georgia Cleary swivel chairs in sky blue velvet. Open-box — taken out by the original buyer but didn't suit their space. Never used; brand-new condition. Original box not included.",
     retailerUrl: "https://www.luluandgeorgia.com/products/cleary-swivel-chair",
-    photos: [],
-    featured: false,
+    photos: [
+      "lulu-and-georgia-cleary-swivel-chairs/01.jpg",
+      "lulu-and-georgia-cleary-swivel-chairs/02.jpg",
+      "lulu-and-georgia-cleary-swivel-chairs/03.jpg",
+      "lulu-and-georgia-cleary-swivel-chairs/04.jpg",
+      "lulu-and-georgia-cleary-swivel-chairs/05.jpg",
+      "lulu-and-georgia-cleary-swivel-chairs/06.jpg"
+    ],
+    featured: true,
     available: true
   }
 
