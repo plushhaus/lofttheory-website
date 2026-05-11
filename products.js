@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-10 from MJ Flips · Website tab (6 listings — 3 live, 3 sold)
+   Last sync: 2026-05-11 from MJ Flips · Website tab (10 listings — 6 live, 4 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -242,6 +242,54 @@ window.PRODUCTS = [
       "bench-made-modern-skinnyfat/07.jpg"
     ],
     featured: true,
+    available: true
+  },
+
+  {
+    id: "lulu-and-georgia-tasia-swivel-chair",
+    name: "Lulu and Georgia Tasia Swivel Chair",
+    brand: "Lulu and Georgia",
+    category: "chairs",
+    condition: "return",
+    color: "Boucle",
+    price: 1000,
+    retailPrice: 2400,
+    dimensions: "43.5\"W × 36.5\"D × 30.5\"H",
+    description: "Lulu and Georgia Tasia swivel chair in boucle. Like-new customer return — gently used, no visible wear.",
+    retailerUrl: "https://www.luluandgeorgia.com/products/tasia-swivel-chair",
+    photos: [
+      "lulu-and-georgia-tasia-swivel-chair/01.jpg",
+      "lulu-and-georgia-tasia-swivel-chair/02.jpg",
+      "lulu-and-georgia-tasia-swivel-chair/03.jpg",
+      "lulu-and-georgia-tasia-swivel-chair/04.jpg",
+      "lulu-and-georgia-tasia-swivel-chair/05.jpg",
+      "lulu-and-georgia-tasia-swivel-chair/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-desmond-chair",
+    name: "Castlery Desmond Armchair",
+    brand: "Castlery",
+    category: "chairs",
+    condition: "open-box-no-box",
+    color: "Performance Mixed-Yarn Chenille, Cream",
+    price: 375,
+    retailPrice: 799,
+    dimensions: "29.5\"W × 30.3\"D × 32.7\"H",
+    description: "Castlery Desmond armchair in performance mixed-yarn chenille, cream. Open-box — opened by the buyer but never used. Brand-new condition; original box no longer included.",
+    retailerUrl: "https://www.castlery.com/us/products/desmond-armchair",
+    photos: [
+      "castlery-desmond-chair/01.jpg",
+      "castlery-desmond-chair/02.jpg",
+      "castlery-desmond-chair/03.jpg",
+      "castlery-desmond-chair/04.jpg",
+      "castlery-desmond-chair/05.jpg",
+      "castlery-desmond-chair/06.jpg"
+    ],
+    featured: false,
     available: true
   }
 
