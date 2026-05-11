@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 30" role="img" aria-label="BenchMade Modern">
+  <text x="110" y="13"
+        text-anchor="middle"
+        font-family="'Helvetica Neue', 'Arial Narrow', -apple-system, sans-serif"
+        font-size="13"
+        font-weight="700"
+        fill="#3a3830"
+        letter-spacing="3.5">BENCHMADE</text>
+  <text x="110" y="26"
+        text-anchor="middle"
+        font-family="'Helvetica Neue', 'Arial Narrow', -apple-system, sans-serif"
+        font-size="9"
+        font-weight="400"
+        fill="#3a3830"
+        letter-spacing="6">MODERN</text>
+</svg>
