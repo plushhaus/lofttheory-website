@@ -218,6 +218,31 @@ window.PRODUCTS = [
     ],
     featured: true,
     available: true
+  },
+
+  {
+    id: "bench-made-modern-skinnyfat",
+    name: "Skinny Fat Sofa & Chair Set",
+    brand: "Bench Made Modern",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Ponti Butterscotch",
+    price: 2895,
+    retailPrice: 8146,
+    dimensions: "Sofa: 85\"W × 37\"D × 33\"H · Chair: 45\"W × 37\"D × 33\"H",
+    description: "Bench Made Modern Skinny Fat sofa and matching chair, sold as a set. Ponti Butterscotch top-grain leather over solid wood frames with mid-century tapered legs. Open-box — never actually used; brand-new condition. Original packaging not included.",
+    retailerUrl: "",
+    photos: [
+      "bench-made-modern-skinnyfat/01.jpg",
+      "bench-made-modern-skinnyfat/02.jpg",
+      "bench-made-modern-skinnyfat/03.jpg",
+      "bench-made-modern-skinnyfat/04.jpg",
+      "bench-made-modern-skinnyfat/05.jpg",
+      "bench-made-modern-skinnyfat/06.jpg",
+      "bench-made-modern-skinnyfat/07.jpg"
+    ],
+    featured: true,
+    available: true
   }
 
 ];

@@ -29,6 +29,7 @@
     'lovesac':        'logos/lovesac-seeklogo.png',
     'roveconcepts':   'logos/roveconcepts.svg',
     'rove':           'logos/roveconcepts.svg'
+    // Bench Made Modern: no logo file yet — falls back to brand text.
     // Brands without a logo file yet (RH, Rove Concepts, etc.) will fall
     // back to the brand text. Drop the SVG into /logos and add a line above
     // to enable the logo.
