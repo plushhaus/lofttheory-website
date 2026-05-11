@@ -51,7 +51,7 @@ window.PRODUCTS = [
     name: "Castlery Harper Dining Table 86\"",
     brand: "Castlery",
     category: "tables",
-    condition: "open-box-with-box",
+    condition: "open-box-no-box",
     color: "Chestnut",
     price: 900,
     retailPrice: 1600,
@@ -85,11 +85,8 @@ window.PRODUCTS = [
     description: "Pair of Poly & Bark Bo lounge chairs in cognac tan leather. New, still in the original box.",
     retailerUrl: "https://www.polyandbark.com/products/bo-leather-lounge-chair-cognac-tan",
     photos: [
-      "polyandbark-bo-lounger-chairs/00.jpg",
-      "polyandbark-bo-lounger-chairs/09.jpg",
-      "polyandbark-bo-lounger-chairs/10.jpg",
-      "polyandbark-bo-lounger-chairs/01.jpg",
       "polyandbark-bo-lounger-chairs/02.jpg",
+      "polyandbark-bo-lounger-chairs/01.jpg",
       "polyandbark-bo-lounger-chairs/03.jpg",
       "polyandbark-bo-lounger-chairs/04.jpg",
       "polyandbark-bo-lounger-chairs/05.jpg",
@@ -97,8 +94,9 @@ window.PRODUCTS = [
       "polyandbark-bo-lounger-chairs/07.jpg",
       "polyandbark-bo-lounger-chairs/08.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false,
+    soldDate: "2026-05-10"
   },
 
   {
@@ -128,7 +126,7 @@ window.PRODUCTS = [
     id: "lovesac-sactional-6piece-darkgrey",
     name: "Lovesac Sactional 6-Piece",
     brand: "Lovesac",
-    category: "sectionals",
+    category: "couches",
     condition: "open-box-no-box",
     color: "Charcoal Grey Corded Velvet",
     price: 2500,
@@ -141,8 +139,9 @@ window.PRODUCTS = [
       "lovesac-sactional-6piece-darkgrey/02.jpg",
       "lovesac-sactional-6piece-darkgrey/03.jpg"
     ],
-    featured: true,
-    available: false
+    featured: false,
+    available: false,
+    soldDate: "2026-05-10"
   },
 
   {
@@ -167,15 +166,16 @@ window.PRODUCTS = [
       "castlery-dalton-king-size-storage-bed/07.jpg",
       "castlery-dalton-king-size-storage-bed/08.jpg"
     ],
-    featured: true,
-    available: false
+    featured: false,
+    available: false,
+    soldDate: "2026-05-10"
   },
 
   {
     id: "castlery-marlow-sofa",
     name: "Castlery Marlow Performance Boucle Sofa",
     brand: "Castlery",
-    category: "sectionals",
+    category: "couches",
     condition: "overstock",
     color: "Performance Infinity Boucle, Rust",
     price: 1000,
@@ -192,7 +192,25 @@ window.PRODUCTS = [
       "castlery-marlow-sofa/06.jpg"
     ],
     featured: false,
-    available: false
+    available: false,
+    soldDate: "2026-05-10"
+  },
+
+  {
+    id: "lulu-and-georgia-cleary-swivel-chairs",
+    name: "Cleary Swivel Chairs (Set of 2)",
+    brand: "Lulu and Georgia",
+    category: "chairs",
+    condition: "open-box-no-box",
+    color: "Sky Blue Velvet",
+    price: 1600,
+    retailPrice: 4596,
+    dimensions: "33\"W × 36\"D × 32\"H",
+    description: "Pair of Lulu and Georgia Cleary swivel chairs in sky blue velvet. Open-box — taken out by the original buyer but didn't suit their space. Never used; brand-new condition. Original box not included.",
+    retailerUrl: "https://www.luluandgeorgia.com/products/cleary-swivel-chair",
+    photos: [],
+    featured: false,
+    available: true
   }
 
 ];
