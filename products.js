@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-11 from MJ Flips · Website tab (10 listings — 6 live, 4 sold)
+   Last sync: 2026-05-11 from MJ Flips · Website tab (12 listings — 8 live, 4 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -288,6 +288,56 @@ window.PRODUCTS = [
       "castlery-desmond-chair/04.jpg",
       "castlery-desmond-chair/05.jpg",
       "castlery-desmond-chair/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "tikamoon-patio-tv-stand",
+    name: "Tikamoon Patio Solid Teak TV Stand",
+    brand: "Tikamoon",
+    category: "decor",
+    condition: "open-box-no-box",
+    color: "Certified Solid Teak",
+    price: 600,
+    retailPrice: 1700,
+    dimensions: "78\"W × 19\"D × 19\"H",
+    description: "Tikamoon Patio TV stand in certified solid teak. Open-box — minor shipping damage to the back cover (purely cosmetic, structure is solid and the damage isn't visible once installed). Beautifully built piece for a third of retail.",
+    retailerUrl: "https://www.tikamoon.co/art-patio-solid-teak-tv-stand-884.htm",
+    photos: [
+      "tikamoon-patio-tv-stand/01.jpg",
+      "tikamoon-patio-tv-stand/02.jpg",
+      "tikamoon-patio-tv-stand/03.jpg",
+      "tikamoon-patio-tv-stand/04.jpg",
+      "tikamoon-patio-tv-stand/05.jpg",
+      "tikamoon-patio-tv-stand/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "sundays-showcase-cabinet",
+    name: "Sundays Showcase Cabinet",
+    brand: "Sundays",
+    category: "decor",
+    condition: "open-box-no-box",
+    color: "White Oak",
+    price: 600,
+    retailPrice: 2450,
+    dimensions: "44\"W × 18\"D × 72\"H",
+    description: "Sundays Showcase cabinet in white oak — tall display cabinet, perfect for dining room or entryway. Open-box with minor shipping damage; functionally and structurally perfect.",
+    retailerUrl: "https://www.sundays-company.com/products/showcase-cabinet-white-oak",
+    photos: [
+      "sundays-showcase-cabinet/01.jpg",
+      "sundays-showcase-cabinet/02.jpg",
+      "sundays-showcase-cabinet/03.jpg",
+      "sundays-showcase-cabinet/04.jpg",
+      "sundays-showcase-cabinet/05.jpg",
+      "sundays-showcase-cabinet/06.jpg",
+      "sundays-showcase-cabinet/07.jpg",
+      "sundays-showcase-cabinet/08.jpg"
     ],
     featured: false,
     available: true
