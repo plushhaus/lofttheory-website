@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-11 from MJ Flips · Website tab (12 listings — 8 live, 4 sold)
+   Last sync: 2026-05-11 from MJ Flips · Website tab (13 listings — 9 live, 4 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -338,6 +338,31 @@ window.PRODUCTS = [
       "sundays-showcase-cabinet/06.jpg",
       "sundays-showcase-cabinet/07.jpg",
       "sundays-showcase-cabinet/08.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "havenly-faulkner-4-door-cabinet",
+    name: "Havenly Faulkner 4-Door Cabinet",
+    brand: "Havenly",
+    category: "decor",
+    condition: "open-box-no-box",
+    color: "Oak Grain",
+    price: 500,
+    retailPrice: 2760,
+    dimensions: "68\"W × 19\"D × 32\"H",
+    description: "Havenly (Uttermost) Faulkner 4-door cabinet in oak grain. Open-box — never used; brand-new condition. Original packaging not included.",
+    retailerUrl: "https://uttermost.com/faulkner-4-door-cabinet-50054",
+    photos: [
+      "havenly-faulkner-4-door-cabinet/01.jpg",
+      "havenly-faulkner-4-door-cabinet/02.jpg",
+      "havenly-faulkner-4-door-cabinet/03.jpg",
+      "havenly-faulkner-4-door-cabinet/04.jpg",
+      "havenly-faulkner-4-door-cabinet/05.jpg",
+      "havenly-faulkner-4-door-cabinet/06.jpg",
+      "havenly-faulkner-4-door-cabinet/07.jpg"
     ],
     featured: false,
     available: true
