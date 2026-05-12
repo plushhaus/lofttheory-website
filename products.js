@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-11 from MJ Flips · Website tab (13 listings — 9 live, 4 sold)
+   Last sync: 2026-05-11 from MJ Flips · Website tab (15 listings — 10 live, 5 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -68,8 +68,9 @@ window.PRODUCTS = [
       "castlery-harper-diningtable-86/07.jpg",
       "castlery-harper-diningtable-86/08.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false,
+    soldDate: "2026-05-11"
   },
 
   {
@@ -364,6 +365,46 @@ window.PRODUCTS = [
       "havenly-faulkner-4-door-cabinet/06.jpg",
       "havenly-faulkner-4-door-cabinet/07.jpg"
     ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "albany-park-6Pc-Fog",
+    name: "Albany Park Kova Pillow Cushion U-Shape (6Pc)",
+    brand: "Albany Park",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Fog Performance Brushed Canvas",
+    price: 1800,
+    retailPrice: 5994,
+    dimensions: "158.5\"W × 79\"D × 39\"H",
+    description: "Albany Park Kova 6-piece pillow-cushion U-shape sectional in fog performance brushed canvas. Open-box — never used; brand-new condition. Massive U-configuration, modular layout.",
+    retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-u-shape?variant=42806622912563",
+    photos: [
+      "albany-park-6Pc-Fog/01.jpg",
+      "albany-park-6Pc-Fog/02.jpg",
+      "albany-park-6Pc-Fog/03.jpg",
+      "albany-park-6Pc-Fog/04.jpg",
+      "albany-park-6Pc-Fog/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "rovelabs-m1-sofa",
+    name: "Rove Lab M1 Sofa (Three Seater)",
+    brand: "Rove Lab",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Hydrogen Blue",
+    price: 500,
+    retailPrice: 1995,
+    dimensions: "102\"W × 37.7\"D × 24.8\"H",
+    description: "Rove Lab M1 three-seater modular sofa in Hydrogen Blue. Open-box — never used; brand-new condition. SmartFoam comfort, spill-resistant OEKO-TEX fabric, tool-free zip-together assembly.",
+    retailerUrl: "https://rovelab.com/collections/m1-sofa-collection/products/m1-sofa-three-seater",
+    photos: [],
     featured: false,
     available: true
   }

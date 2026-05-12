@@ -30,7 +30,9 @@
     'roveconcepts':   'logos/roveconcepts.svg',
     'rove':           'logos/roveconcepts.svg',
     'benchmademodern':'logos/benchmademodern.svg',
-    'benchmade':      'logos/benchmademodern.svg'
+    'benchmade':      'logos/benchmademodern.svg',
+    'rovelab':        'logos/rovelab.svg',
+    'rovelabs':       'logos/rovelab.svg'
     // Brands without a logo file yet (RH, Rove Concepts, etc.) will fall
     // back to the brand text. Drop the SVG into /logos and add a line above
     // to enable the logo.
