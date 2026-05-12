@@ -404,7 +404,12 @@ window.PRODUCTS = [
     dimensions: "102\"W × 37.7\"D × 24.8\"H",
     description: "Rove Lab M1 three-seater modular sofa in Hydrogen Blue. Open-box — never used; brand-new condition. SmartFoam comfort, spill-resistant OEKO-TEX fabric, tool-free zip-together assembly.",
     retailerUrl: "https://rovelab.com/collections/m1-sofa-collection/products/m1-sofa-three-seater",
-    photos: [],
+    photos: [
+      "rovelabs-m1-sofa/01.jpg",
+      "rovelabs-m1-sofa/02.jpg",
+      "rovelabs-m1-sofa/03.jpg",
+      "rovelabs-m1-sofa/04.jpg"
+    ],
     featured: false,
     available: true
   }
