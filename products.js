@@ -252,11 +252,11 @@ window.PRODUCTS = [
     brand: "Lulu and Georgia",
     category: "chairs",
     condition: "like-new",
-    color: "Boucle",
+    color: "Natural Oatmeal Boucle",
     price: 1000,
     retailPrice: 2400,
     dimensions: "43.5\"W × 36.5\"D × 30.5\"H",
-    description: "Lulu and Georgia Tasia swivel chair in textured boucle. Like-new customer return — lightly used, inspected end-to-end, no visible wear.",
+    description: "Lulu and Georgia Tasia swivel chair in natural oatmeal boucle with a flecked weave — sculptural curved silhouette over a smooth swivel base. Like-new customer return; lightly used, inspected end-to-end, no visible wear.",
     retailerUrl: "https://www.luluandgeorgia.com/products/tasia-swivel-chair",
     photos: [
       "lulu-and-georgia-tasia-swivel-chair/01.png",
