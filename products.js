@@ -251,20 +251,20 @@ window.PRODUCTS = [
     name: "Lulu and Georgia Tasia Swivel Chair",
     brand: "Lulu and Georgia",
     category: "chairs",
-    condition: "return",
+    condition: "like-new",
     color: "Boucle",
     price: 1000,
     retailPrice: 2400,
     dimensions: "43.5\"W × 36.5\"D × 30.5\"H",
-    description: "Lulu and Georgia Tasia swivel chair in boucle. Like-new customer return — gently used, no visible wear.",
+    description: "Lulu and Georgia Tasia swivel chair in textured boucle. Like-new customer return — lightly used, inspected end-to-end, no visible wear.",
     retailerUrl: "https://www.luluandgeorgia.com/products/tasia-swivel-chair",
     photos: [
-      "lulu-and-georgia-tasia-swivel-chair/01.jpg",
-      "lulu-and-georgia-tasia-swivel-chair/02.jpg",
-      "lulu-and-georgia-tasia-swivel-chair/03.jpg",
-      "lulu-and-georgia-tasia-swivel-chair/04.jpg",
-      "lulu-and-georgia-tasia-swivel-chair/05.jpg",
-      "lulu-and-georgia-tasia-swivel-chair/06.jpg"
+      "lulu-and-georgia-tasia-swivel-chair/01.png",
+      "lulu-and-georgia-tasia-swivel-chair/02.png",
+      "lulu-and-georgia-tasia-swivel-chair/03.png",
+      "lulu-and-georgia-tasia-swivel-chair/04.png",
+      "lulu-and-georgia-tasia-swivel-chair/05.png",
+      "lulu-and-georgia-tasia-swivel-chair/06.png"
     ],
     featured: false,
     available: true
@@ -315,7 +315,8 @@ window.PRODUCTS = [
       "tikamoon-patio-tv-stand/06.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-12"
   },
 
   {
@@ -366,7 +367,8 @@ window.PRODUCTS = [
       "havenly-faulkner-4-door-cabinet/07.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-12"
   },
 
   {
@@ -409,6 +411,77 @@ window.PRODUCTS = [
       "rovelabs-m1-sofa/02.jpg",
       "rovelabs-m1-sofa/03.jpg",
       "rovelabs-m1-sofa/04.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "rove-labs-marshbello-sectional",
+    name: "Marshbello Sectional Sofa",
+    brand: "Rove Lab",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Hydrogen Blue",
+    price: 800,
+    retailPrice: 3995,
+    dimensions: "120\"W × 80\"D × 26\"H",
+    description: "Rove Lab Marshbello modular tufted sectional in Hydrogen Blue chenille — Camaleonda-style soft puffs, fully modular configuration. Open-box; never used.",
+    retailerUrl: "",
+    photos: [
+      "rove-labs-marshbello-sectional/01.jpg",
+      "rove-labs-marshbello-sectional/02.jpg",
+      "rove-labs-marshbello-sectional/03.jpg",
+      "rove-labs-marshbello-sectional/04.jpg",
+      "rove-labs-marshbello-sectional/05.jpg",
+      "rove-labs-marshbello-sectional/06.jpg",
+      "rove-labs-marshbello-sectional/07.jpg"
+    ],
+    featured: true,
+    available: true
+  },
+
+  {
+    id: "lovesac-sactional-6piece-vintageblue",
+    name: "Lovesac Sactional 6-Piece (Vintage Blue)",
+    brand: "Lovesac",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Vintage Blue",
+    price: 2000,
+    retailPrice: 8700,
+    dimensions: "117\"W × 117\"D × 29\"H",
+    description: "Lovesac Sactional 6-piece in Vintage Blue chenille — modular sectional with 6 seats and 8 sides. Configure as L-shape, straight, or U-shape. Open-box, never used.",
+    retailerUrl: "https://www.lovesac.com/sactionals/build/6-seats-8-sides2-sactional-sky-grey-corded-velvet",
+    photos: [
+      "lovesac-sactional-6piece-vintageblue/01.jpg",
+      "lovesac-sactional-6piece-vintageblue/02.jpg",
+      "lovesac-sactional-6piece-vintageblue/03.jpg",
+      "lovesac-sactional-6piece-vintageblue/04.jpg",
+      "lovesac-sactional-6piece-vintageblue/05.jpg"
+    ],
+    featured: true,
+    available: true
+  },
+
+  {
+    id: "albany-park-3Pc-dune",
+    name: "Albany Park Kova 3-Piece Sofa (Dune)",
+    brand: "Albany Park",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Dune Performance Linen",
+    price: 1000,
+    retailPrice: 3561,
+    dimensions: "122\"W × 42.5\"D × 39\"H",
+    description: "Albany Park Kova 3-piece sofa in Dune Performance Linen. Open-box from a customer return; brand-new condition with cream linen upholstery over a clean modern frame.",
+    retailerUrl: "",
+    photos: [
+      "albany-park-3Pc-dune/01.jpg",
+      "albany-park-3Pc-dune/02.jpg",
+      "albany-park-3Pc-dune/03.jpg",
+      "albany-park-3Pc-dune/04.jpg",
+      "albany-park-3Pc-dune/05.jpg"
     ],
     featured: false,
     available: true

@@ -30,7 +30,8 @@
     'roveconcepts':   'logos/roveconcepts.svg',
     'rove':           'logos/roveconcepts.svg',
     'benchmademodern':'logos/benchmademodern.svg',
-    'benchmade':      'logos/benchmademodern.svg',
+    'benchmade':      'logos/benchmademodern.svg'
+    // Tikamoon, Sundays, Havenly, Rove Labs: no logo files yet — fall back to brand text.,
     'rovelab':        'logos/rovelab.svg',
     'rovelabs':       'logos/rovelab.svg'
     // Brands without a logo file yet (RH, Rove Concepts, etc.) will fall
