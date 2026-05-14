@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-13 from MJ Flips · Website tab (19 listings — 11 live, 8 sold)
+   Last sync: 2026-05-13 from MJ Flips · Website tab (19 listings — 10 live, 9 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -485,7 +485,8 @@ window.PRODUCTS = [
       "albany-park-3Pc-dune/05.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-13"
   },
 
   {
