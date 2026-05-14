@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="Rove Lab">
-  <text x="100" y="40"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" role="img" aria-label="Rove Lab">
+  <text x="110" y="40"
         text-anchor="middle"
-        font-family="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-family="'Helvetica Neue', 'Inter', Arial, sans-serif"
         font-size="30"
-        font-weight="600"
+        font-weight="500"
         fill="#1a1a1a"
-        letter-spacing="-0.5">Rove Lab<tspan font-size="14" baseline-shift="super" font-weight="400">™</tspan></text>
+        letter-spacing="-0.8">Rove Lab<tspan font-size="13" baseline-shift="super" font-weight="400" dx="2">™</tspan></text>
 </svg>

@@ -33,7 +33,8 @@
     'benchmade':      'logos/benchmademodern.svg'
     // Tikamoon, Sundays, Havenly, Rove Labs: no logo files yet — fall back to brand text.,
     'rovelab':        'logos/rovelab.svg',
-    'rovelabs':       'logos/rovelab.svg'
+    'rovelabs':       'logos/rovelab.svg',
+    'burrow':         'logos/burrow.svg'
     // Brands without a logo file yet (RH, Rove Concepts, etc.) will fall
     // back to the brand text. Drop the SVG into /logos and add a line above
     // to enable the logo.
