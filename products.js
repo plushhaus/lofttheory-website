@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-11 from MJ Flips · Website tab (15 listings — 10 live, 5 sold)
+   Last sync: 2026-05-13 from MJ Flips · Website tab (19 listings — 11 live, 8 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -120,7 +120,8 @@ window.PRODUCTS = [
       "roveconcepts-maria-coffee-table/05.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-13"
   },
 
   {
@@ -482,6 +483,31 @@ window.PRODUCTS = [
       "albany-park-3Pc-dune/03.jpg",
       "albany-park-3Pc-dune/04.jpg",
       "albany-park-3Pc-dune/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "burrow-nomad-leather-sofa-and-chair",
+    name: "Burrow Nomad Leather Sofa and Chair",
+    brand: "Burrow",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Slate Gray Top Grain Leather",
+    price: 2200,
+    retailPrice: 5038,
+    dimensions: "85\"W × 35\"D × 33\"H",
+    description: "Burrow Nomad sofa and matching chair in Slate Gray top grain leather with walnut block legs. New, no original box. Modular tool-free assembly.",
+    retailerUrl: "https://burrow.com/products/nomad-plus-leather-sofa-with-ottoman?Fabric=Slate+-+Top+Grain+Leather&Leg+Finish=Walnut+-+Wood&Arm+Style=Block",
+    photos: [
+      "burrow-nomad-leather-sofa-and-chair/01.jpg",
+      "burrow-nomad-leather-sofa-and-chair/02.jpg",
+      "burrow-nomad-leather-sofa-and-chair/03.jpg",
+      "burrow-nomad-leather-sofa-and-chair/04.jpg",
+      "burrow-nomad-leather-sofa-and-chair/05.jpg",
+      "burrow-nomad-leather-sofa-and-chair/06.jpg",
+      "burrow-nomad-leather-sofa-and-chair/07.jpg"
     ],
     featured: false,
     available: true
