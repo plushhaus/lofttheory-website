@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-13 from MJ Flips · Website tab (19 listings — 10 live, 9 sold)
+   Last sync: 2026-05-14 from MJ Flips · Website tab (22 listings — 12 live, 10 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -121,7 +121,7 @@ window.PRODUCTS = [
     ],
     featured: false,
     available: false,
-    soldDate: "2026-05-13"
+    soldDate: "2026-05-12"
   },
 
   {
@@ -438,8 +438,9 @@ window.PRODUCTS = [
       "rove-labs-marshbello-sectional/06.jpg",
       "rove-labs-marshbello-sectional/07.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false,
+    soldDate: "2026-05-14"
   },
 
   {
@@ -509,6 +510,75 @@ window.PRODUCTS = [
       "burrow-nomad-leather-sofa-and-chair/05.jpg",
       "burrow-nomad-leather-sofa-and-chair/06.jpg",
       "burrow-nomad-leather-sofa-and-chair/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-esse-counter-stools",
+    name: "Article Esse Counter Stools (Set of 2)",
+    brand: "Article",
+    category: "chairs",
+    condition: "open-box-no-box",
+    color: "Light Oak",
+    price: 300,
+    retailPrice: 500,
+    dimensions: "17\"W × 13\"D × 27.25\"H",
+    description: "Pair of Article Esse counter stools in light oak — solid wood with a curved saddle seat and sculptural splayed legs. New, never used; original boxes not included.",
+    retailerUrl: "https://www.article.com/product/29885/esse-counter-stool-light-oak",
+    photos: [
+      "article-esse-counter-stools/01.jpg",
+      "article-esse-counter-stools/02.jpg",
+      "article-esse-counter-stools/03.jpg",
+      "article-esse-counter-stools/04.jpg",
+      "article-esse-counter-stools/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-zina-outdoor-chairs",
+    name: "Article Zina Outdoor Chairs (Set of 6)",
+    brand: "Article",
+    category: "chairs",
+    condition: "like-new",
+    color: "Indigo Blue",
+    price: 600,
+    retailPrice: 1074,
+    dimensions: "21\"W × 25\"D × 35\"H",
+    description: "Set of six Article Zina outdoor stackable dining chairs in indigo blue cord over a powder-coated steel frame. Like-new customer return — lightly used, inspected end-to-end, no visible wear.",
+    retailerUrl: "https://www.article.com/product/18172/zina-outdoor-stackable-dining-chair-indigo-blue",
+    photos: [
+      "article-zina-outdoor-chairs/01.jpg",
+      "article-zina-outdoor-chairs/02.jpg",
+      "article-zina-outdoor-chairs/03.jpg",
+      "article-zina-outdoor-chairs/04.jpg",
+      "article-zina-outdoor-chairs/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "burrow-prospect-nightstands",
+    name: "Burrow Prospect Nightstands (Set of 2)",
+    brand: "Burrow",
+    category: "beds",
+    condition: "open-box-no-box",
+    color: "Oak",
+    price: 400,
+    retailPrice: 1078,
+    dimensions: "20\"W × 17.7\"D × 24\"H",
+    description: "Pair of Burrow Prospect nightstands in oak — a single drawer over an open shelf, with a raised lip top and rounded legs. New, never used; original boxes not included.",
+    retailerUrl: "https://burrow.com/products/prospect-nightstand",
+    photos: [
+      "burrow-prospect-nightstands/01.jpg",
+      "burrow-prospect-nightstands/02.jpg",
+      "burrow-prospect-nightstands/03.jpg",
+      "burrow-prospect-nightstands/04.jpg",
+      "burrow-prospect-nightstands/05.jpg"
     ],
     featured: false,
     available: true
