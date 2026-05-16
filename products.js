@@ -608,7 +608,7 @@ window.PRODUCTS = [
       "castlery-jonathan-leather-sectional/08.jpg",
       "castlery-jonathan-leather-sectional/09.jpg"
     ],
-    featured: false,
+    featured: true,
     available: true
   }
 

@@ -1595,7 +1595,7 @@
       ].join('');
     }
     if (grid && window.PRODUCTS) {
-      var featured = window.PRODUCTS.filter(function(p) { return p.featured && p.available !== false; }).slice(0, 3);
+      var featured = window.PRODUCTS.filter(function(p) { return p.featured && p.available !== false; }).slice(0, 4);
       grid.innerHTML = featured.map(cardHTML).join('');
     }
 
