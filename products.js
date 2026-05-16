@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-16 from MJ Flips · Website tab (23 listings — 12 live, 11 sold)
+   Last sync: 2026-05-16 from MJ Flips · Website tab (23 listings — 12 live, 11 sold) — Jonathan pricing filled
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -592,11 +592,11 @@ window.PRODUCTS = [
     category: "couches",
     condition: "open-box-no-box",
     color: "Caramel",
-    price: 0,
-    retailPrice: 0,
-    dimensions: "Measurements available on request",
-    description: "Castlery Jonathan leather sectional in caramel. New, no original box. Pricing and final configuration being confirmed — text us for current details.",
-    retailerUrl: "",
+    price: 3400,
+    retailPrice: 7594,
+    dimensions: "123.2\"W × 39.4\"D × 27.6\"H",
+    description: "Castlery Jonathan modular leather sectional in caramel — top-grain leather over a low-profile wood frame, configurable layout. New, no original box.",
+    retailerUrl: "https://www.castlery.com/us/products/jonathan-sectional",
     photos: [
       "castlery-jonathan-leather-sectional/01.jpg",
       "castlery-jonathan-leather-sectional/02.jpg",
