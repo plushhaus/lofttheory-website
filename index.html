@@ -330,7 +330,10 @@
     gap: 32px;
   }
   @media (min-width: 768px) {
-    .featured-grid { grid-template-columns: repeat(3, 1fr); }
+    .featured-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1100px) {
+    .featured-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
   }
   .product {
     display: flex;
@@ -1595,7 +1598,7 @@
       ].join('');
     }
     if (grid && window.PRODUCTS) {
-      var featured = window.PRODUCTS.filter(function(p) { return p.featured && p.available !== false; }).slice(0, 3);
+      var featured = window.PRODUCTS.filter(function(p) { return p.featured && p.available !== false; }).slice(0, 4);
       grid.innerHTML = featured.map(cardHTML).join('');
     }
 
