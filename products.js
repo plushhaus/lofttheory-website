@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-14 from MJ Flips · Website tab (22 listings — 12 live, 10 sold)
+   Last sync: 2026-05-16 from MJ Flips · Website tab (23 listings — 12 live, 11 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -579,6 +579,34 @@ window.PRODUCTS = [
       "burrow-prospect-nightstands/03.jpg",
       "burrow-prospect-nightstands/04.jpg",
       "burrow-prospect-nightstands/05.jpg"
+    ],
+    featured: false,
+    available: false,
+    soldDate: "2026-05-15"
+  },
+
+  {
+    id: "castlery-jonathan-leather-sectional",
+    name: "Castlery Jonathan Leather Sectional",
+    brand: "Castlery",
+    category: "couches",
+    condition: "open-box-no-box",
+    color: "Caramel",
+    price: 0,
+    retailPrice: 0,
+    dimensions: "Measurements available on request",
+    description: "Castlery Jonathan leather sectional in caramel. New, no original box. Pricing and final configuration being confirmed — text us for current details.",
+    retailerUrl: "",
+    photos: [
+      "castlery-jonathan-leather-sectional/01.jpg",
+      "castlery-jonathan-leather-sectional/02.jpg",
+      "castlery-jonathan-leather-sectional/03.jpg",
+      "castlery-jonathan-leather-sectional/04.jpg",
+      "castlery-jonathan-leather-sectional/05.jpg",
+      "castlery-jonathan-leather-sectional/06.jpg",
+      "castlery-jonathan-leather-sectional/07.jpg",
+      "castlery-jonathan-leather-sectional/08.jpg",
+      "castlery-jonathan-leather-sectional/09.jpg"
     ],
     featured: false,
     available: true
