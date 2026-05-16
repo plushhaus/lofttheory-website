@@ -243,7 +243,7 @@ window.PRODUCTS = [
       "bench-made-modern-skinnyfat/06.jpg",
       "bench-made-modern-skinnyfat/07.jpg"
     ],
-    featured: true,
+    featured: false,
     available: true
   },
 
