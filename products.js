@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-16 from MJ Flips · Website tab (23 listings — 12 live, 11 sold) — Jonathan pricing filled
+   Last sync: 2026-05-17 from MJ Flips · Website tab (24 listings — 13 live, 11 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -609,6 +609,31 @@ window.PRODUCTS = [
       "castlery-jonathan-leather-sectional/09.jpg"
     ],
     featured: true,
+    available: true
+  },
+
+  {
+    id: "castlery-dean-armchair",
+    name: "Castlery Dean Leather Recliner Armchairs (Set of 2)",
+    brand: "Castlery",
+    category: "chairs",
+    condition: "open-box-no-box",
+    color: "Caramel",
+    price: 1200,
+    retailPrice: 2598,
+    dimensions: "32.7\"W × 37.8\"D",
+    description: "Pair of Castlery Dean leather recliner armchairs in caramel. New, no original box. Smooth recline mechanism, top-grain leather over a wood frame.",
+    retailerUrl: "https://www.castlery.com/us/products/dean-leather-recliner-armchair?quantity=set_of_2&material=caramel",
+    photos: [
+      "castlery-dean-armchair/01.jpg",
+      "castlery-dean-armchair/02.jpg",
+      "castlery-dean-armchair/03.jpg",
+      "castlery-dean-armchair/04.jpg",
+      "castlery-dean-armchair/05.jpg",
+      "castlery-dean-armchair/06.jpg",
+      "castlery-dean-armchair/07.jpg"
+    ],
+    featured: false,
     available: true
   }
 
