@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-17 from MJ Flips · Website tab (25 listings — 14 live, 11 sold)
+   Last sync: 2026-05-17 from MJ Flips · Website tab (25 listings — 14 live, 11 sold) — Maribo pricing filled
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -638,24 +638,24 @@ window.PRODUCTS = [
   },
 
   {
-    id: "article-maribo-storage-ottoman",
+    id: "article-maribo-storage",
     name: "Article Maribo 48\" Storage Ottoman",
     brand: "Article",
     category: "decor",
-    condition: "open-box-no-box",
+    condition: "overstock",
     color: "Ivory Boucle",
-    price: 0,
-    retailPrice: 0,
-    dimensions: "Measurements available on request",
-    description: "Article Maribo 48\" storage ottoman in ivory boucle. New, no original box. Pricing being finalized — text us for current details.",
-    retailerUrl: "https://www.article.com/product/29886/maribo-storage-ottoman-ivory-boucle",
+    price: 250,
+    retailPrice: 400,
+    dimensions: "48\"W × 15.5\"D × 18.5\"H",
+    description: "Article Maribo 48\" storage ottoman in ivory boucle — sculptural rounded base with a lift-off lid for hidden storage. New, sealed in original box.",
+    retailerUrl: "https://www.article.com/product/29603/maribo-48-storage-ottoman-ivory-boucle",
     photos: [
-      "article-maribo-storage-ottoman/01.jpg",
-      "article-maribo-storage-ottoman/02.jpg",
-      "article-maribo-storage-ottoman/03.jpg",
-      "article-maribo-storage-ottoman/04.jpg",
-      "article-maribo-storage-ottoman/05.jpg",
-      "article-maribo-storage-ottoman/06.jpg"
+      "article-maribo-storage/01.jpg",
+      "article-maribo-storage/02.jpg",
+      "article-maribo-storage/03.jpg",
+      "article-maribo-storage/04.jpg",
+      "article-maribo-storage/05.jpg",
+      "article-maribo-storage/06.jpg"
     ],
     featured: false,
     available: true
