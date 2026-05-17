@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-17 from MJ Flips · Website tab (24 listings — 13 live, 11 sold)
+   Last sync: 2026-05-17 from MJ Flips · Website tab (25 listings — 14 live, 11 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -632,6 +632,30 @@ window.PRODUCTS = [
       "castlery-dean-armchair/05.jpg",
       "castlery-dean-armchair/06.jpg",
       "castlery-dean-armchair/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-maribo-storage-ottoman",
+    name: "Article Maribo 48\" Storage Ottoman",
+    brand: "Article",
+    category: "decor",
+    condition: "open-box-no-box",
+    color: "Ivory Boucle",
+    price: 0,
+    retailPrice: 0,
+    dimensions: "Measurements available on request",
+    description: "Article Maribo 48\" storage ottoman in ivory boucle. New, no original box. Pricing being finalized — text us for current details.",
+    retailerUrl: "https://www.article.com/product/29886/maribo-storage-ottoman-ivory-boucle",
+    photos: [
+      "article-maribo-storage-ottoman/01.jpg",
+      "article-maribo-storage-ottoman/02.jpg",
+      "article-maribo-storage-ottoman/03.jpg",
+      "article-maribo-storage-ottoman/04.jpg",
+      "article-maribo-storage-ottoman/05.jpg",
+      "article-maribo-storage-ottoman/06.jpg"
     ],
     featured: false,
     available: true
