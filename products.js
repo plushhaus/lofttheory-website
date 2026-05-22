@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-17 from MJ Flips · Website tab (25 listings — 14 live, 11 sold) — Maribo pricing filled
+   Last sync: 2026-05-22 from MJ Flips · Website tab (27 listings — 12 live, 15 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -292,7 +292,8 @@ window.PRODUCTS = [
       "castlery-desmond-chair/06.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-22"
   },
 
   {
@@ -535,7 +536,8 @@ window.PRODUCTS = [
       "article-esse-counter-stools/05.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-17"
   },
 
   {
@@ -558,7 +560,8 @@ window.PRODUCTS = [
       "article-zina-outdoor-chairs/05.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-17"
   },
 
   {
@@ -656,6 +659,56 @@ window.PRODUCTS = [
       "article-maribo-storage/04.jpg",
       "article-maribo-storage/05.jpg",
       "article-maribo-storage/06.jpg"
+    ],
+    featured: false,
+    available: false,
+    soldDate: "2026-05-20"
+  },
+
+  {
+    id: "article-cooper-nightstand",
+    name: "Article Cooper 1-Drawer Nightstands (Set of 2)",
+    brand: "Article",
+    category: "beds",
+    condition: "open-box-no-box",
+    color: "Natural Oak",
+    price: 400,
+    retailPrice: 600,
+    dimensions: "19.5\"W × 14.25\"D × 21.5\"H",
+    description: "Pair of Article Cooper 1-drawer nightstands in natural oak — clean Scandinavian lines, single soft-close drawer over an open shelf. New, no original box.",
+    retailerUrl: "https://www.article.com/product/26896/cooper-1-drawer-nightstand-natural-oak",
+    photos: [
+      "article-cooper-nightstand/01.jpg",
+      "article-cooper-nightstand/02.jpg",
+      "article-cooper-nightstand/03.jpg",
+      "article-cooper-nightstand/04.jpg",
+      "article-cooper-nightstand/05.jpg",
+      "article-cooper-nightstand/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "rove-concepts-asher-bed-king",
+    name: "Rove Concepts Asher Bed (King)",
+    brand: "Rove Concepts",
+    category: "beds",
+    condition: "return",
+    color: "Walnut",
+    price: 1200,
+    retailPrice: 2479,
+    dimensions: "67\"W × 87.5\"D × 35\"H",
+    description: "Rove Concepts Asher king bed in walnut — low-profile platform frame with a wrapped upholstered headboard. Like-new customer return; inspected, no visible wear.",
+    retailerUrl: "https://www.roveconcepts.com/asher-bed",
+    photos: [
+      "rove-concepts-asher-bed-king/01.jpg",
+      "rove-concepts-asher-bed-king/02.jpg",
+      "rove-concepts-asher-bed-king/03.jpg",
+      "rove-concepts-asher-bed-king/04.jpg",
+      "rove-concepts-asher-bed-king/05.jpg",
+      "rove-concepts-asher-bed-king/06.jpg",
+      "rove-concepts-asher-bed-king/07.jpg"
     ],
     featured: false,
     available: true
