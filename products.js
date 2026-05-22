@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-22 from MJ Flips · Website tab (28 listings — 13 live, 15 sold)
+   Last sync: 2026-05-22 from MJ Flips · Website tab (31 listings — 16 live, 15 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -734,6 +734,76 @@ window.PRODUCTS = [
       "burrow-opera-media-console/05.jpg",
       "burrow-opera-media-console/06.jpg",
       "burrow-opera-media-console/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "rove-concepts-wishbone-counter-stools",
+    name: "Rove Concepts Wishbone Counter Stools (Set of 2)",
+    brand: "Rove Concepts",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Natural Wood",
+    price: 650,
+    retailPrice: 1488,
+    dimensions: "21.7\"W × 20.3\"D × 37\"H",
+    description: "Pair of Rove Concepts Wishbone counter stools in natural wood — woven seat over a sculptural solid-wood frame. New, no original box.",
+    retailerUrl: "https://www.roveconcepts.com/wishbone-counter-stool",
+    photos: [
+      "rove-concepts-wishbone-counter-stools/01.jpg",
+      "rove-concepts-wishbone-counter-stools/02.jpg",
+      "rove-concepts-wishbone-counter-stools/03.jpg",
+      "rove-concepts-wishbone-counter-stools/04.jpg",
+      "rove-concepts-wishbone-counter-stools/05.jpg",
+      "rove-concepts-wishbone-counter-stools/06.jpg",
+      "rove-concepts-wishbone-counter-stools/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-casa-round-table",
+    name: "Castlery Casa Round Coffee Table",
+    brand: "Castlery",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Solid Acacia Wood",
+    price: 300,
+    retailPrice: 600,
+    dimensions: "33.5\"W × 33.5\"D × 15.7\"H",
+    description: "Castlery Casa round coffee table in solid acacia wood — warm grain, rounded box silhouette. New, no original box.",
+    retailerUrl: "https://www.castlery.com/us/products/casa-round-coffee-table-33-5",
+    photos: [
+      "castlery-casa-round-table/01.jpg",
+      "castlery-casa-round-table/02.jpg",
+      "castlery-casa-round-table/03.jpg",
+      "castlery-casa-round-table/04.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-casa-rectangular-table",
+    name: "Castlery Casa Rectangular Coffee Table",
+    brand: "Castlery",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Solid Acacia Wood",
+    price: 250,
+    retailPrice: 400,
+    dimensions: "35.4\"W × 23.6\"D × 15.7\"H",
+    description: "Castlery Casa rectangular box coffee table in solid acacia wood. New, no original box.",
+    retailerUrl: "https://www.castlery.com/us/products/casa-rectangular-box-coffee-table",
+    photos: [
+      "castlery-casa-rectangular-table/01.jpg",
+      "castlery-casa-rectangular-table/02.jpg",
+      "castlery-casa-rectangular-table/03.jpg",
+      "castlery-casa-rectangular-table/04.jpg",
+      "castlery-casa-rectangular-table/05.jpg"
     ],
     featured: false,
     available: true
