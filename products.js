@@ -741,7 +741,7 @@ window.PRODUCTS = [
 
   {
     id: "rove-concepts-wishbone-counter-stools",
-    name: "Rove Concepts Wishbone Counter Stools (Set of 2)",
+    name: "Rove Concepts Wishbone Counter Stools (Set of 4)",
     brand: "Rove Concepts",
     category: "living-room",
     condition: "open-box-no-box",
@@ -749,11 +749,11 @@ window.PRODUCTS = [
     price: 650,
     retailPrice: 1488,
     dimensions: "21.7\"W × 20.3\"D × 37\"H",
-    description: "Pair of Rove Concepts Wishbone counter stools in natural wood — woven seat over a sculptural solid-wood frame. New, no original box.",
+    description: "Set of 4 Rove Concepts Wishbone counter stools in natural wood — woven cord seat over a sculptural solid-wood frame. New, no original box.",
     retailerUrl: "https://www.roveconcepts.com/wishbone-counter-stool",
     photos: [
-      "rove-concepts-wishbone-counter-stools/01.jpg",
       "rove-concepts-wishbone-counter-stools/02.jpg",
+      "rove-concepts-wishbone-counter-stools/01.jpg",
       "rove-concepts-wishbone-counter-stools/03.jpg",
       "rove-concepts-wishbone-counter-stools/04.jpg",
       "rove-concepts-wishbone-counter-stools/05.jpg",
