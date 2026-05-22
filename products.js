@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-22 from MJ Flips · Website tab (27 listings — 12 live, 15 sold)
+   Last sync: 2026-05-22 from MJ Flips · Website tab (28 listings — 13 live, 15 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -709,6 +709,31 @@ window.PRODUCTS = [
       "rove-concepts-asher-bed-king/05.jpg",
       "rove-concepts-asher-bed-king/06.jpg",
       "rove-concepts-asher-bed-king/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "burrow-opera-media-console",
+    name: "Burrow Opera Media Console (70\")",
+    brand: "Burrow",
+    category: "living-room",
+    condition: "overstock",
+    color: "Walnut",
+    price: 600,
+    retailPrice: 1149,
+    dimensions: "70\"W",
+    description: "Burrow Opera 70\" media console in walnut — wire-managed cabinet with soft-close doors and modular tool-free assembly. New, in original box.",
+    retailerUrl: "https://burrow.com/products/opera-media-console?Wood+Finish=Walnut+-+Wood",
+    photos: [
+      "burrow-opera-media-console/01.jpg",
+      "burrow-opera-media-console/02.jpg",
+      "burrow-opera-media-console/03.jpg",
+      "burrow-opera-media-console/04.jpg",
+      "burrow-opera-media-console/05.jpg",
+      "burrow-opera-media-console/06.jpg",
+      "burrow-opera-media-console/07.jpg"
     ],
     featured: false,
     available: true
