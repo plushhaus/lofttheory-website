@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-22 from MJ Flips · Website tab (31 listings — 16 live, 15 sold)
+   Last sync: 2026-05-22 from MJ Flips · Website tab (32 listings — 17 live, 15 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -804,6 +804,35 @@ window.PRODUCTS = [
       "castlery-casa-rectangular-table/03.jpg",
       "castlery-casa-rectangular-table/04.jpg",
       "castlery-casa-rectangular-table/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-seb-dining-4chairs",
+    name: "Castlery Seb Extendable Dining Table Set w/ 4 Chairs",
+    brand: "Castlery",
+    category: "dining",
+    condition: "return",
+    color: "Solid Acacia Wood",
+    price: 1400,
+    retailPrice: 2115,
+    dimensions: "74.8\"–94.5\"W × 39.4\"D × 29.5\"H",
+    description: "Castlery Seb extendable dining table in solid acacia with 4 matching wood chairs. Extends from 74.8\" to 94.5\" for 6–8 seats. Like-new customer return; inspected, no visible wear.",
+    retailerUrl: "https://www.castlery.com/us/products/seb-extendable-dining-set-for-6-8",
+    photos: [
+      "castlery-seb-dining-4chairs/01.jpg",
+      "castlery-seb-dining-4chairs/02.jpg",
+      "castlery-seb-dining-4chairs/03.jpg",
+      "castlery-seb-dining-4chairs/04.jpg",
+      "castlery-seb-dining-4chairs/05.jpg",
+      "castlery-seb-dining-4chairs/06.jpg",
+      "castlery-seb-dining-4chairs/07.jpg",
+      "castlery-seb-dining-4chairs/08.jpg",
+      "castlery-seb-dining-4chairs/09.jpg",
+      "castlery-seb-dining-4chairs/10.jpg",
+      "castlery-seb-dining-4chairs/11.jpg"
     ],
     featured: false,
     available: true
