@@ -9,3 +9,6 @@ Thumbs.db
 *.bak
 *.tmp
 *~
+
+# Listing captions working doc — not part of the website
+LoftTheory_Listings_Captions.docx
