@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Loft Theory">
+  <defs>
+    <linearGradient id="cushion" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e08348"/>
+      <stop offset="100%" stop-color="#c2530f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rounded tile background (brand cream) -->
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#faf5ee"/>
+
+  <!-- Mid-century chair mark, centered & scaled -->
+  <g transform="translate(-0.2,3.25) scale(1.15)">
+    <!-- back rest cushion -->
+    <path d="M14 6 Q14 2 18 2 L36 2 Q40 2 40 6 L40 22 Q40 26 36 26 L18 26 Q14 26 14 22 Z"
+          fill="url(#cushion)"/>
+    <!-- left arm/wood frame curve -->
+    <path d="M6 14 Q6 32 14 32 L42 32 Q50 32 50 14"
+          stroke="#3d2817" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <!-- seat cushion -->
+    <path d="M10 24 Q10 22 13 22 L43 22 Q46 22 46 24 L46 32 Q46 34 43 34 L13 34 Q10 34 10 32 Z"
+          fill="url(#cushion)"/>
+    <!-- front legs -->
+    <line x1="12" y1="34" x2="9"  y2="46" stroke="#3d2817" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="44" y1="34" x2="47" y2="46" stroke="#3d2817" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- back legs -->
+    <line x1="18" y1="34" x2="16" y2="44" stroke="#2a1d12" stroke-width="2"  stroke-linecap="round"/>
+    <line x1="38" y1="34" x2="40" y2="44" stroke="#2a1d12" stroke-width="2"  stroke-linecap="round"/>
+  </g>
+</svg>
