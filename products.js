@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-22 from MJ Flips · Website tab (32 listings — 17 live, 15 sold)
+   Last sync: 2026-05-22 from MJ Flips · Website tab (32 listings — 15 live, 17 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -806,7 +806,7 @@ window.PRODUCTS = [
       "castlery-casa-rectangular-table/05.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -835,7 +835,7 @@ window.PRODUCTS = [
       "castlery-seb-dining-4chairs/11.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   }
 
 ];
