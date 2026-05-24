@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-22 from MJ Flips · Website tab (32 listings — 15 live, 17 sold)
+   Last sync: 2026-05-24 from MJ Flips · Website tab (32 listings — 14 live, 18 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -415,7 +415,8 @@ window.PRODUCTS = [
       "rovelabs-m1-sofa/04.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-24"
   },
 
   {
