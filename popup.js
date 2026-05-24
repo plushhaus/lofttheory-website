@@ -23,9 +23,9 @@
    ========================================================================= */
 (function() {
   var CONFIG = {
-    enabled: false,                  // ← flip to true once Mailchimp is wired
-    mailchimpUrl: '',                // ← paste Mailchimp form action URL
-    mailchimpHoneypot: '',           // ← paste b_USERID_LISTID field name
+    enabled: true,                   // ← LIVE
+    mailchimpUrl: 'https://lofttheoryoc.us18.list-manage.com/subscribe/post?u=fd2dd930724aed179d43d8ad1&id=4ce68c23da&f_id=0032a3e6f0',
+    mailchimpHoneypot: 'b_fd2dd930724aed179d43d8ad1_4ce68c23da',
 
     image: 'photos/lulu-and-georgia-cleary-swivel-chairs/01.jpg',
     delayMs: 8000,                   // show after 8 seconds on the page
@@ -92,7 +92,7 @@
     '}' +
     '.lt-pop-eyebrow {' +
     '  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;' +
-    '  color: #C8745A; font-weight: 600;' +
+    '  color: #d96a1f; font-weight: 600;' +
     '  margin: 0 0 14px;' +
     '}' +
     '.lt-pop-heading {' +
@@ -101,7 +101,7 @@
     '  letter-spacing: -0.015em;' +
     '  margin: 0 0 14px;' +
     '}' +
-    '.lt-pop-heading em { color: #C8745A; font-style: italic; }' +
+    '.lt-pop-heading em { color: #d96a1f; font-style: italic; }' +
     '.lt-pop-sub {' +
     '  font-size: 14px; line-height: 1.55; color: #5A5048;' +
     '  margin: 0 0 22px;' +
@@ -117,19 +117,19 @@
     '  box-sizing: border-box;' +
     '}' +
     '#lt-pop-form input[type="email"]:focus {' +
-    '  outline: none; border-color: #C8745A;' +
-    '  box-shadow: 0 0 0 3px rgba(200,116,90,0.16);' +
+    '  outline: none; border-color: #d96a1f;' +
+    '  box-shadow: 0 0 0 3px rgba(217,106,31,0.16);' +
     '}' +
     '#lt-pop-form button[type="submit"] {' +
     '  width: 100%; padding: 14px 16px;' +
-    '  background: #C8745A; color: #FAF7F2;' +
+    '  background: #d96a1f; color: #FAF7F2;' +
     '  border: none; border-radius: 8px;' +
     '  font: inherit; font-size: 14px; font-weight: 600;' +
     '  letter-spacing: 0.04em; text-transform: uppercase;' +
     '  cursor: pointer;' +
     '  transition: background 0.15s, transform 0.1s;' +
     '}' +
-    '#lt-pop-form button[type="submit"]:hover { background: #A55A42; }' +
+    '#lt-pop-form button[type="submit"]:hover { background: #c2530f; }' +
     '#lt-pop-form button[type="submit"]:active { transform: translateY(1px); }' +
 
     '#lt-pop-dismiss {' +
@@ -163,7 +163,7 @@
     '  font-family: "Fraunces", Georgia, serif;' +
     '  font-size: 24px; font-weight: 400; margin: 0 0 8px; color: #2A2622;' +
     '}' +
-    '#lt-pop-thanks h3 em { color: #C8745A; font-style: italic; }' +
+    '#lt-pop-thanks h3 em { color: #d96a1f; font-style: italic; }' +
     '#lt-pop-thanks p {' +
     '  font-size: 14px; color: #5A5048; line-height: 1.55; margin: 0;' +
     '}' +
