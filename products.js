@@ -860,8 +860,7 @@ window.PRODUCTS = [
       "rovelabs-m1-loveseat-outdoor/05.jpg",
       "rovelabs-m1-loveseat-outdoor/06.jpg",
       "rovelabs-m1-loveseat-outdoor/07.jpg",
-      "rovelabs-m1-loveseat-outdoor/08.jpg",
-      "rovelabs-m1-loveseat-outdoor/09.jpg"
+      "rovelabs-m1-loveseat-outdoor/08.jpg"
     ],
     featured: false,
     available: true
@@ -885,7 +884,8 @@ window.PRODUCTS = [
       "polyandbark-laso-nightstand/03.jpg",
       "polyandbark-laso-nightstand/04.jpg",
       "polyandbark-laso-nightstand/05.jpg",
-      "polyandbark-laso-nightstand/06.jpg"
+      "polyandbark-laso-nightstand/06.jpg",
+      "polyandbark-laso-nightstand/07.jpg"
     ],
     featured: false,
     available: true
