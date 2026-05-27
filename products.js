@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-25 from MJ Flips · Website tab (32 listings — 11 live, 21 sold)
+   Last sync: 2026-05-26 from MJ Flips · Website tab (34 listings — 12 live, 22 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -737,7 +737,8 @@ window.PRODUCTS = [
       "burrow-opera-media-console/07.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-05-26"
   },
 
   {
@@ -837,6 +838,57 @@ window.PRODUCTS = [
     ],
     featured: false,
     available: false
+  },
+
+  {
+    id: "rovelabs-m1-loveseat-outdoor",
+    name: "Rove Lab M1 Outdoor Loveseat Sofa (w/ Cover)",
+    brand: "Rove Lab",
+    category: "outdoor",
+    condition: "open-box-no-box",
+    color: "Celestial Stone",
+    price: 600,
+    retailPrice: 2097,
+    dimensions: "Measurements available on request",
+    description: "Rove Lab M1 outdoor loveseat sofa in Celestial Stone — a modular two-seat design with deep weatherproof cushions and a low, boxy profile. Includes the fitted Rove Lab outdoor cover. New, no original box.",
+    retailerUrl: "",
+    photos: [
+      "rovelabs-m1-loveseat-outdoor/01.jpg",
+      "rovelabs-m1-loveseat-outdoor/02.jpg",
+      "rovelabs-m1-loveseat-outdoor/03.jpg",
+      "rovelabs-m1-loveseat-outdoor/04.jpg",
+      "rovelabs-m1-loveseat-outdoor/05.jpg",
+      "rovelabs-m1-loveseat-outdoor/06.jpg",
+      "rovelabs-m1-loveseat-outdoor/07.jpg",
+      "rovelabs-m1-loveseat-outdoor/08.jpg",
+      "rovelabs-m1-loveseat-outdoor/09.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "polyandbark-laso-nightstand",
+    name: "Poly & Bark Laso Nightstand",
+    brand: "Poly & Bark",
+    category: "bedroom",
+    condition: "like-new",
+    color: "Black & Solid Mango Wood",
+    price: 200,
+    retailPrice: 437,
+    dimensions: "24\"W × 16\"D × 24\"H",
+    description: "Poly & Bark Laso nightstand — a single deep drawer with a glossy black faceted geometric front set into a warm solid mango wood frame. Like-new customer return; inspected end-to-end, no visible wear.",
+    retailerUrl: "",
+    photos: [
+      "polyandbark-laso-nightstand/01.jpg",
+      "polyandbark-laso-nightstand/02.jpg",
+      "polyandbark-laso-nightstand/03.jpg",
+      "polyandbark-laso-nightstand/04.jpg",
+      "polyandbark-laso-nightstand/05.jpg",
+      "polyandbark-laso-nightstand/06.jpg"
+    ],
+    featured: false,
+    available: true
   }
 
 ];
