@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-26 from MJ Flips · Website tab (34 listings — 12 live, 22 sold)
+   Last sync: 2026-05-27 from MJ Flips · Website tab (37 listings — 15 live, 22 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -886,6 +886,78 @@ window.PRODUCTS = [
       "polyandbark-laso-nightstand/05.jpg",
       "polyandbark-laso-nightstand/06.jpg",
       "polyandbark-laso-nightstand/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-nera-nightstand",
+    name: "Article Nera 1-Drawer Nightstand",
+    brand: "Article",
+    category: "bedroom",
+    condition: "overstock",
+    color: "Oak",
+    price: 200,
+    retailPrice: 350,
+    dimensions: "23\"W × 16.75\"D × 22\"H",
+    description: "Article Nera 1-drawer nightstand in oak — a single soft-close drawer with a slim metal pull over an open shelf, set into a clean rectangular oak frame. New, sealed in original box.",
+    retailerUrl: "https://www.article.com/product/25362/nera-1-drawer-nightstand-oak",
+    photos: [
+      "article-nera-nightstand/01.jpg",
+      "article-nera-nightstand/02.jpg",
+      "article-nera-nightstand/03.jpg",
+      "article-nera-nightstand/04.jpg",
+      "article-nera-nightstand/05.jpg",
+      "article-nera-nightstand/06.jpg",
+      "article-nera-nightstand/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-nosh-dining-chairs-green",
+    name: "Article Nosh Dining Chairs (Set of 4)",
+    brand: "Article",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Hemlock Green & Walnut",
+    price: 400,
+    retailPrice: 600,
+    dimensions: "20\"W × 21\"D × 31\"H",
+    description: "Set of four Article Nosh dining chairs in Hemlock Green with a walnut frame — mid-century silhouette with a tweed upholstered back and seat over solid wood legs. New, no original box.",
+    retailerUrl: "https://www.article.com/product/24359/nosh-dining-chair-walnut-and-hemlock-green",
+    photos: [
+      "article-nosh-dining-chairs-green/01.jpg",
+      "article-nosh-dining-chairs-green/02.jpg",
+      "article-nosh-dining-chairs-green/03.jpg",
+      "article-nosh-dining-chairs-green/04.jpg",
+      "article-nosh-dining-chairs-green/05.jpg",
+      "article-nosh-dining-chairs-green/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-vincent-dining-table-59",
+    name: "Castlery Vincent Dining Table 59\"",
+    brand: "Castlery",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Solid American White Oak",
+    price: 550,
+    retailPrice: 800,
+    dimensions: "59\"W × 31.5\"D × 29.9\"H",
+    description: "Castlery Vincent dining table in solid American white oak, 59 inches long — soft rounded edges and tapered round legs for a clean Scandinavian profile. New, no original box.",
+    retailerUrl: "https://www.castlery.com/us/products/vincent-dining-table-oak",
+    photos: [
+      "castlery-vincent-dining-table-59/01.jpg",
+      "castlery-vincent-dining-table-59/02.jpg",
+      "castlery-vincent-dining-table-59/03.jpg",
+      "castlery-vincent-dining-table-59/04.jpg",
+      "castlery-vincent-dining-table-59/05.jpg"
     ],
     featured: false,
     available: true
