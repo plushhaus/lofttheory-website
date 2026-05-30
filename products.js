@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-27 from MJ Flips · Website tab (37 listings — 15 live, 22 sold)
+   Last sync: 2026-05-29 from MJ Flips · Website tab (37 listings — 11 live, 26 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -218,8 +218,8 @@ window.PRODUCTS = [
       "lulu-and-georgia-cleary-swivel-chairs/05.jpg",
       "lulu-and-georgia-cleary-swivel-chairs/06.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false
   },
 
   {
@@ -243,8 +243,8 @@ window.PRODUCTS = [
       "bench-made-modern-skinnyfat/06.jpg",
       "bench-made-modern-skinnyfat/07.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false
   },
 
   {
@@ -513,7 +513,7 @@ window.PRODUCTS = [
       "burrow-nomad-leather-sofa-and-chair/06.jpg",
       "burrow-nomad-leather-sofa-and-chair/07.jpg"
     ],
-    featured: false,
+    featured: true,
     available: true
   },
 
@@ -637,7 +637,7 @@ window.PRODUCTS = [
       "castlery-dean-armchair/06.jpg",
       "castlery-dean-armchair/07.jpg"
     ],
-    featured: false,
+    featured: true,
     available: true
   },
 
@@ -687,7 +687,7 @@ window.PRODUCTS = [
       "article-cooper-nightstand/06.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -712,7 +712,7 @@ window.PRODUCTS = [
       "rove-concepts-asher-bed-king/07.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
