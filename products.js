@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-29 from MJ Flips · Website tab (37 listings — 11 live, 26 sold)
+   Last sync: 2026-05-29 from MJ Flips · Website tab (39 listings — 13 live, 26 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -958,6 +958,55 @@ window.PRODUCTS = [
       "castlery-vincent-dining-table-59/03.jpg",
       "castlery-vincent-dining-table-59/04.jpg",
       "castlery-vincent-dining-table-59/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "rove-concepts-norman-counter-stools",
+    name: "Rove Concepts Norman Counter Stools (Set of 3)",
+    brand: "Rove Concepts",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Walnut",
+    price: 650,
+    retailPrice: 1200,
+    dimensions: "17.3\"W × 20.1\"D × 40.6\"H",
+    description: "Set of three Rove Concepts Norman counter stools in walnut — Cherner-style molded plywood with a sculpted butterfly back and a chrome footrest over splayed wood legs. New, no original box.",
+    retailerUrl: "https://www.roveconcepts.com/norman-counter-stool",
+    photos: [
+      "rove-concepts-norman-counter-stools/01.jpg",
+      "rove-concepts-norman-counter-stools/02.jpg",
+      "rove-concepts-norman-counter-stools/03.jpg",
+      "rove-concepts-norman-counter-stools/04.jpg",
+      "rove-concepts-norman-counter-stools/05.jpg",
+      "rove-concepts-norman-counter-stools/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "rove-concepts-bennett-media-console",
+    name: "Rove Concepts Bennett Media Console 83\"",
+    brand: "Rove Concepts",
+    category: "living-room",
+    condition: "like-new",
+    color: "Walnut",
+    price: 800,
+    retailPrice: 1732,
+    dimensions: "83\"W",
+    description: "Rove Concepts Bennett media console in walnut, 83 inches long — a low-profile cabinet with two doors, a center cabinet, and two side drawers, set on slim black steel hairpin legs. Like-new customer return; inspected end-to-end, no visible wear.",
+    retailerUrl: "",
+    photos: [
+      "rove-concepts-bennett-media-console/01.jpg",
+      "rove-concepts-bennett-media-console/02.jpg",
+      "rove-concepts-bennett-media-console/03.jpg",
+      "rove-concepts-bennett-media-console/04.jpg",
+      "rove-concepts-bennett-media-console/05.jpg",
+      "rove-concepts-bennett-media-console/06.jpg",
+      "rove-concepts-bennett-media-console/07.jpg"
     ],
     featured: false,
     available: true
