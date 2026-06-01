@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-05-29 from MJ Flips · Website tab (39 listings — 13 live, 26 sold)
+   Last sync: 2026-06-01 from MJ Flips · Website tab (40 listings — 12 live, 28 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -612,8 +612,9 @@ window.PRODUCTS = [
       "castlery-jonathan-leather-sectional/08.jpg",
       "castlery-jonathan-leather-sectional/09.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false,
+    soldDate: "2026-06-01"
   },
 
   {
@@ -763,7 +764,8 @@ window.PRODUCTS = [
       "rove-concepts-wishbone-counter-stools/07.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-06-01"
   },
 
   {
@@ -1008,6 +1010,23 @@ window.PRODUCTS = [
       "rove-concepts-bennett-media-console/06.jpg",
       "rove-concepts-bennett-media-console/07.jpg"
     ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "albany-park-kova-oyster-white-5pc",
+    name: "Albany Park Kova L-Shape + Ottoman",
+    brand: "Albany Park",
+    category: "living-room",
+    condition: "overstock",
+    color: "Oyster White Performance Chenille",
+    price: 1995,
+    retailPrice: 5010,
+    dimensions: "122\"W × 79\"D × 39\"H",
+    description: "Albany Park Kova pillow-cushion L-shape sectional with matching ottoman in Oyster White Performance Chenille. New, sealed in original packaging — modular configuration with deep pillow cushions and a clean low profile.",
+    retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-l-shape-ottoman?variant=42806397141043",
+    photos: [],
     featured: false,
     available: true
   }
