@@ -1026,7 +1026,17 @@ window.PRODUCTS = [
     dimensions: "122\"W × 79\"D × 39\"H",
     description: "Albany Park Kova pillow-cushion L-shape sectional with matching ottoman in Oyster White Performance Chenille. New, sealed in original packaging — modular configuration with deep pillow cushions and a clean low profile.",
     retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-l-shape-ottoman?variant=42806397141043",
-    photos: [],
+    photos: [
+      "albany-park-kova-oyster-white-5pc/01.jpg",
+      "albany-park-kova-oyster-white-5pc/02.jpg",
+      "albany-park-kova-oyster-white-5pc/03.jpg",
+      "albany-park-kova-oyster-white-5pc/04.jpg",
+      "albany-park-kova-oyster-white-5pc/05.jpg",
+      "albany-park-kova-oyster-white-5pc/06.jpg",
+      "albany-park-kova-oyster-white-5pc/07.jpg",
+      "albany-park-kova-oyster-white-5pc/08.jpg",
+      "albany-park-kova-oyster-white-5pc/09.jpg"
+    ],
     featured: false,
     available: true
   },
