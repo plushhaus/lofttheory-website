@@ -1043,7 +1043,15 @@ window.PRODUCTS = [
     dimensions: "122\"W × 79\"D × 39\"H",
     description: "Albany Park Kova pillow-cushion sofa (122\") with matching storage ottoman in Bone Performance Chenille — a soft light gray. New, sealed in original packaging — deep pillow cushions, clean low profile, modular.",
     retailerUrl: "https://www.albanypark.com/collections/all/products/kova-pillow-cushion-sofa-ottoman?variant=42806352478259",
-    photos: [],
+    photos: [
+      "albany-park-kova-bone-performance-4pc/01.jpg",
+      "albany-park-kova-bone-performance-4pc/02.jpg",
+      "albany-park-kova-bone-performance-4pc/03.jpg",
+      "albany-park-kova-bone-performance-4pc/04.jpg",
+      "albany-park-kova-bone-performance-4pc/05.jpg",
+      "albany-park-kova-bone-performance-4pc/06.jpg",
+      "albany-park-kova-bone-performance-4pc/07.jpg"
+    ],
     featured: false,
     available: true
   }
