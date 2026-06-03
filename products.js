@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-01 from MJ Flips · Website tab (40 listings — 12 live, 28 sold)
+   Last sync: 2026-06-02 from MJ Flips · Website tab (41 listings — 10 live, 31 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -344,7 +344,7 @@ window.PRODUCTS = [
       "sundays-showcase-cabinet/08.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -939,7 +939,7 @@ window.PRODUCTS = [
       "article-nosh-dining-chairs-green/06.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -961,7 +961,7 @@ window.PRODUCTS = [
       "castlery-vincent-dining-table-59/04.jpg",
       "castlery-vincent-dining-table-59/05.jpg"
     ],
-    featured: false,
+    featured: true,
     available: true
   },
 
@@ -1011,7 +1011,7 @@ window.PRODUCTS = [
       "rove-concepts-bennett-media-console/07.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -1026,6 +1026,23 @@ window.PRODUCTS = [
     dimensions: "122\"W × 79\"D × 39\"H",
     description: "Albany Park Kova pillow-cushion L-shape sectional with matching ottoman in Oyster White Performance Chenille. New, sealed in original packaging — modular configuration with deep pillow cushions and a clean low profile.",
     retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-l-shape-ottoman?variant=42806397141043",
+    photos: [],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "albany-park-kova-bone-performance-4pc",
+    name: "Albany Park Kova Pillow Cushion 122\" + Storage Ottoman",
+    brand: "Albany Park",
+    category: "living-room",
+    condition: "overstock",
+    color: "Bone Performance Chenille (Light Gray)",
+    price: 1795,
+    retailPrice: 4251,
+    dimensions: "122\"W × 79\"D × 39\"H",
+    description: "Albany Park Kova pillow-cushion sofa (122\") with matching storage ottoman in Bone Performance Chenille — a soft light gray. New, sealed in original packaging — deep pillow cushions, clean low profile, modular.",
+    retailerUrl: "https://www.albanypark.com/collections/all/products/kova-pillow-cushion-sofa-ottoman?variant=42806352478259",
     photos: [],
     featured: false,
     available: true
