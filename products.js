@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-07 from MJ Flips · Website tab (46 listings — 13 live, 33 sold)
+   Last sync: 2026-06-07 from MJ Flips · Website tab (46 listings — 14 live, 32 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1103,7 +1103,16 @@ window.PRODUCTS = [
     dimensions: "32\"W × 35\"D × 33\"H",
     description: "Article Burrard 32\" lounge chair in Seasalt Ivory. Brand new, no original box — sculptural low-slung silhouette, mid-century inspired.",
     retailerUrl: "https://www.article.com/product/22422/burrard-32-lounge-chair-seasalt-ivory",
-    photos: [],
+    photos: [
+      "article-burrard-lounge-chair-ivory/01.jpg",
+      "article-burrard-lounge-chair-ivory/02.jpg",
+      "article-burrard-lounge-chair-ivory/03.jpg",
+      "article-burrard-lounge-chair-ivory/04.jpg",
+      "article-burrard-lounge-chair-ivory/05.jpg",
+      "article-burrard-lounge-chair-ivory/06.jpg",
+      "article-burrard-lounge-chair-ivory/07.jpg",
+      "article-burrard-lounge-chair-ivory/08.jpg"
+    ],
     featured: false,
     available: true
   },
@@ -1120,7 +1129,18 @@ window.PRODUCTS = [
     dimensions: "71\"W × 37.5\"D × 29\"H",
     description: "Article Seno 71\" dining table in oak, included with a matching bench and two chairs. Brand new, no original box — clean modern dining set ready to go.",
     retailerUrl: "https://www.article.com/product/27600/seno-71-dining-table-oak",
-    photos: [],
+    photos: [
+      "article-seno-table-oak-71/01.jpg",
+      "article-seno-table-oak-71/02.jpg",
+      "article-seno-table-oak-71/03.jpg",
+      "article-seno-table-oak-71/04.jpg",
+      "article-seno-table-oak-71/05.jpg",
+      "article-seno-table-oak-71/06.jpg",
+      "article-seno-table-oak-71/07.jpg",
+      "article-seno-table-oak-71/08.jpg",
+      "article-seno-table-oak-71/09.jpg",
+      "article-seno-table-oak-71/10.jpg"
+    ],
     featured: false,
     available: true
   },
@@ -1161,9 +1181,15 @@ window.PRODUCTS = [
     dimensions: "69.25\"W × 20.25\"D × 29.75\"H",
     description: "Article Ayra 6-drawer double dresser in walnut. Brand new, no original box — wide low-profile design with smooth metal pulls.",
     retailerUrl: "https://www.article.com/product/27358/ayra-6-drawer-double-dresser-walnut",
-    photos: [],
+    photos: [
+      "article-ayra-6-drawer-dresser-walnut/01.jpg",
+      "article-ayra-6-drawer-dresser-walnut/02.jpg",
+      "article-ayra-6-drawer-dresser-walnut/03.jpg",
+      "article-ayra-6-drawer-dresser-walnut/04.jpg",
+      "article-ayra-6-drawer-dresser-walnut/05.jpg"
+    ],
     featured: false,
-    available: false
+    available: true
   }
 
 ];
