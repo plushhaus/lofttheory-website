@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-07 from MJ Flips · Website tab (46 listings — 14 live, 32 sold)
+   Last sync: 2026-06-07 from MJ Flips · Website tab (46 listings — 13 live, 33 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1189,7 +1189,7 @@ window.PRODUCTS = [
       "article-ayra-6-drawer-dresser-walnut/05.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   }
 
 ];
