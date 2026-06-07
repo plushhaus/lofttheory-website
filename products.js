@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-06 from MJ Flips · Website tab (41 listings — 9 live, 32 sold)
+   Last sync: 2026-06-07 from MJ Flips · Website tab (44 listings — 12 live, 32 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1015,8 +1015,8 @@ window.PRODUCTS = [
   },
 
   {
-    id: "albany-park-kova-oyster-white-5pc",
-    name: "Albany Park Kova L-Shape + Ottoman",
+    id: "albany-park-kova-box-oyster-white-5pc",
+    name: "Albany Park Kova Box Cushion L-Shape + Ottoman",
     brand: "Albany Park",
     category: "living-room",
     condition: "overstock",
@@ -1024,20 +1024,10 @@ window.PRODUCTS = [
     price: 1995,
     retailPrice: 5010,
     dimensions: "122\"W × 79\"D × 39\"H",
-    description: "Albany Park Kova pillow-cushion L-shape sectional with matching ottoman in Oyster White Performance Chenille. New, sealed in original packaging — modular configuration with deep pillow cushions and a clean low profile.",
+    description: "Albany Park Kova box-cushion L-shape sectional with matching ottoman in Oyster White Performance Chenille. New, sealed in original packaging — modular configuration with structured box cushions and a clean low profile.",
     retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-l-shape-ottoman?variant=42806397141043",
-    photos: [
-      "albany-park-kova-oyster-white-5pc/01.jpg",
-      "albany-park-kova-oyster-white-5pc/02.jpg",
-      "albany-park-kova-oyster-white-5pc/03.jpg",
-      "albany-park-kova-oyster-white-5pc/04.jpg",
-      "albany-park-kova-oyster-white-5pc/05.jpg",
-      "albany-park-kova-oyster-white-5pc/06.jpg",
-      "albany-park-kova-oyster-white-5pc/07.jpg",
-      "albany-park-kova-oyster-white-5pc/08.jpg",
-      "albany-park-kova-oyster-white-5pc/09.jpg"
-    ],
-    featured: true,
+    photos: [],
+    featured: false,
     available: true
   },
 
@@ -1062,6 +1052,65 @@ window.PRODUCTS = [
       "albany-park-kova-bone-performance-4pc/06.jpg",
       "albany-park-kova-bone-performance-4pc/07.jpg"
     ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "albany-park-kova-pillow-oyster-white-4pc",
+    name: "Albany Park Kova Pillow Cushion 122\" + Ottoman",
+    brand: "Albany Park",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Oyster White Performance Chenille",
+    price: 1795,
+    retailPrice: 4251,
+    dimensions: "122\"W × 79\"D × 39\"H",
+    description: "Albany Park Kova pillow-cushion 122\" sofa with matching ottoman in Oyster White Performance Chenille. New, no original box — deep pillow cushions, clean low profile, modular configuration.",
+    retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-sofa-ottoman",
+    photos: [
+      "albany-park-kova-pillow-oyster-white-4pc/01.jpg",
+      "albany-park-kova-pillow-oyster-white-4pc/02.jpg",
+      "albany-park-kova-pillow-oyster-white-4pc/03.jpg",
+      "albany-park-kova-pillow-oyster-white-4pc/04.jpg",
+      "albany-park-kova-pillow-oyster-white-4pc/05.jpg",
+      "albany-park-kova-pillow-oyster-white-4pc/06.jpg",
+      "albany-park-kova-pillow-oyster-white-4pc/07.jpg"
+    ],
+    featured: true,
+    available: true
+  },
+
+  {
+    id: "article-burrard-lounge-chair-ivory",
+    name: "Article Burrard 32\" Lounge Chair",
+    brand: "Article",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Seasalt Ivory",
+    price: 800,
+    retailPrice: 1400,
+    dimensions: "32\"W × 35\"D × 33\"H",
+    description: "Article Burrard 32\" lounge chair in Seasalt Ivory. Brand new, no original box — sculptural low-slung silhouette, mid-century inspired.",
+    retailerUrl: "https://www.article.com/product/22422/burrard-32-lounge-chair-seasalt-ivory",
+    photos: [],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-seno-table-oak-71",
+    name: "Article Seno Dining Table 71\" (with Bench + 2 Chairs)",
+    brand: "Article",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Oak",
+    price: 950,
+    retailPrice: 1600,
+    dimensions: "71\"W × 37.5\"D × 29\"H",
+    description: "Article Seno 71\" dining table in oak, included with a matching bench and two chairs. Brand new, no original box — clean modern dining set ready to go.",
+    retailerUrl: "https://www.article.com/product/27600/seno-71-dining-table-oak",
+    photos: [],
     featured: false,
     available: true
   }
