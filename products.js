@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-07 from MJ Flips · Website tab (44 listings — 12 live, 32 sold)
+   Last sync: 2026-06-07 from MJ Flips · Website tab (46 listings — 13 live, 33 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1123,6 +1123,47 @@ window.PRODUCTS = [
     photos: [],
     featured: false,
     available: true
+  },
+
+  {
+    id: "albany-park-kova-pillow-almond-velvet-4pc",
+    name: "Albany Park Kova Pillow Cushion 122\" + Ottoman (Almond Velvet)",
+    brand: "Albany Park",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Almond Performance Velvet",
+    price: 1795,
+    retailPrice: 4251,
+    dimensions: "122\"W × 79\"D × 39\"H",
+    description: "Albany Park Kova pillow-cushion 122\" sofa with matching ottoman in Almond Performance Velvet — a warm, soft tan. Brand new, no original box — deep pillow cushions, clean low profile, modular configuration.",
+    retailerUrl: "https://www.albanypark.com/collections/sectional-sofas/products/kova-pillow-cushion-sofa-ottoman",
+    photos: [
+      "albany-park-kova-pillow-almond-velvet-4pc/01.jpg",
+      "albany-park-kova-pillow-almond-velvet-4pc/02.jpg",
+      "albany-park-kova-pillow-almond-velvet-4pc/03.jpg",
+      "albany-park-kova-pillow-almond-velvet-4pc/04.jpg",
+      "albany-park-kova-pillow-almond-velvet-4pc/05.jpg",
+      "albany-park-kova-pillow-almond-velvet-4pc/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-ayra-6-drawer-dresser-walnut",
+    name: "Article Ayra 6-Drawer Double Dresser",
+    brand: "Article",
+    category: "bedroom",
+    condition: "open-box-no-box",
+    color: "Walnut",
+    price: 950,
+    retailPrice: 1500,
+    dimensions: "69.25\"W × 20.25\"D × 29.75\"H",
+    description: "Article Ayra 6-drawer double dresser in walnut. Brand new, no original box — wide low-profile design with smooth metal pulls.",
+    retailerUrl: "https://www.article.com/product/27358/ayra-6-drawer-double-dresser-walnut",
+    photos: [],
+    featured: false,
+    available: false
   }
 
 ];
