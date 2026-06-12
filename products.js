@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-07 from MJ Flips · Website tab (46 listings — 13 live, 33 sold)
+   Last sync: 2026-06-12 from MJ Flips · Website tab (48 listings — 13 live, 35 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -865,7 +865,8 @@ window.PRODUCTS = [
       "rovelabs-m1-loveseat-outdoor/08.jpg"
     ],
     featured: false,
-    available: true
+    available: false,
+    soldDate: "2026-06-12"
   },
 
   {
@@ -961,8 +962,9 @@ window.PRODUCTS = [
       "castlery-vincent-dining-table-59/04.jpg",
       "castlery-vincent-dining-table-59/05.jpg"
     ],
-    featured: true,
-    available: true
+    featured: false,
+    available: false,
+    soldDate: "2026-06-12"
   },
 
   {
@@ -1190,6 +1192,60 @@ window.PRODUCTS = [
     ],
     featured: false,
     available: false
+  },
+
+  {
+    id: "article-lubek-outdoor-sectional-sand",
+    name: "Article Lubek 82.5\" Outdoor Low Right Sectional",
+    brand: "Article",
+    category: "outdoor",
+    condition: "open-box-no-box",
+    color: "Beach Sand",
+    price: 1100,
+    retailPrice: 1989,
+    dimensions: "82.5\"W × 69.25\"D × 22\"H",
+    description: "Article Lubek 82.5\" outdoor low right sectional in beach sand — a deep, low-slung L-shape on a solid teak frame with weather-resistant sand cushions. Includes the fitted outdoor cover. New, no original box.",
+    retailerUrl: "https://www.article.com/product/28110/lubek-82-5-outdoor-low-right-sectional-beach-sand",
+    photos: [
+      "article-lubek-outdoor-sectional-sand/01.png",
+      "article-lubek-outdoor-sectional-sand/02.png",
+      "article-lubek-outdoor-sectional-sand/03.png",
+      "article-lubek-outdoor-sectional-sand/04.png",
+      "article-lubek-outdoor-sectional-sand/05.png",
+      "article-lubek-outdoor-sectional-sand/06.png",
+      "article-lubek-outdoor-sectional-sand/07.png",
+      "article-lubek-outdoor-sectional-sand/08.png"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-casa-dining-table-w-bench-86",
+    name: "Castlery Casa 86\" Dining Table with Bench Set",
+    brand: "Castlery",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Solid Acacia Wood",
+    price: 950,
+    retailPrice: 1468,
+    dimensions: "86.6\"W × 39.4\"D × 29.9\"H",
+    description: "Castlery Casa 86\" dining table and matching bench set in solid acacia wood — clean rectangular silhouette with rounded chunky legs and a warm natural grain. New, no original box.",
+    retailerUrl: "https://www.castlery.com/us/products/casa-dining-table-with-bench-set?variant=220cm_table_and_180cm_bench",
+    photos: [
+      "castlery-casa-dining-table-w-bench-86/01.png",
+      "castlery-casa-dining-table-w-bench-86/02.png",
+      "castlery-casa-dining-table-w-bench-86/03.png",
+      "castlery-casa-dining-table-w-bench-86/04.png",
+      "castlery-casa-dining-table-w-bench-86/05.png",
+      "castlery-casa-dining-table-w-bench-86/06.png",
+      "castlery-casa-dining-table-w-bench-86/07.png",
+      "castlery-casa-dining-table-w-bench-86/08.png",
+      "castlery-casa-dining-table-w-bench-86/09.png",
+      "castlery-casa-dining-table-w-bench-86/10.png"
+    ],
+    featured: false,
+    available: true
   }
 
 ];
