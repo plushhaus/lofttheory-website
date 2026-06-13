@@ -1260,7 +1260,16 @@ window.PRODUCTS = [
     dimensions: "35.4\"W × 17.7\"D × 46.1\"H",
     description: "Castlery Sloane 5-drawer dresser in grey oak — tall vertical silhouette with sleek metal pulls. Brand new, no original box.",
     retailerUrl: "https://www.castlery.com/us/products/sloane-5-drawer-dresser",
-    photos: [],
+    photos: [
+      "castlery-sloane-5-drawer-dresser/01.jpg",
+      "castlery-sloane-5-drawer-dresser/02.jpg",
+      "castlery-sloane-5-drawer-dresser/03.jpg",
+      "castlery-sloane-5-drawer-dresser/04.jpg",
+      "castlery-sloane-5-drawer-dresser/05.jpg",
+      "castlery-sloane-5-drawer-dresser/06.jpg",
+      "castlery-sloane-5-drawer-dresser/07.jpg",
+      "castlery-sloane-5-drawer-dresser/08.jpg"
+    ],
     featured: false,
     available: true
   },
@@ -1277,7 +1286,14 @@ window.PRODUCTS = [
     dimensions: "75.6\"W × 75.6\"D × 31.5\"H",
     description: "Castlery Callie slipcover storage banquette in Beach Linen — L-shaped corner banquette with hidden storage under the seats. Like-new customer return, inspected end-to-end.",
     retailerUrl: "https://www.castlery.com/us/products/callie-slipcovered-extended-l-shaped-storage-banquette",
-    photos: [],
+    photos: [
+      "castlery-callie-storage-banquette/01.jpg",
+      "castlery-callie-storage-banquette/02.jpg",
+      "castlery-callie-storage-banquette/03.jpg",
+      "castlery-callie-storage-banquette/04.jpg",
+      "castlery-callie-storage-banquette/05.jpg",
+      "castlery-callie-storage-banquette/06.jpg"
+    ],
     featured: false,
     available: true
   },
@@ -1294,7 +1310,15 @@ window.PRODUCTS = [
     dimensions: "Measurements available on request",
     description: "Modus Cade square dining table paired with four matching Cade dining chairs in gun / ash grey. Brand new, no original box.",
     retailerUrl: "",
-    photos: [],
+    photos: [
+      "modus-cade-dining-table-w-four-chairs/01.jpg",
+      "modus-cade-dining-table-w-four-chairs/02.jpg",
+      "modus-cade-dining-table-w-four-chairs/03.jpg",
+      "modus-cade-dining-table-w-four-chairs/04.jpg",
+      "modus-cade-dining-table-w-four-chairs/05.jpg",
+      "modus-cade-dining-table-w-four-chairs/06.jpg",
+      "modus-cade-dining-table-w-four-chairs/07.jpg"
+    ],
     featured: false,
     available: true
   },
@@ -1311,7 +1335,14 @@ window.PRODUCTS = [
     dimensions: "158.5\"W × 79\"D × 39\"H",
     description: "Albany Park Kova 6-piece pillow-cushion U-shape sectional in Sand Basketweave — generous modular U-configuration with deep pillow cushions. Brand new, no original box.",
     retailerUrl: "https://www.albanypark.com/products/kova-pillow-cushion-u-shape",
-    photos: [],
+    photos: [
+      "albany-park-6pc-ushape-sand-basketweave/01.jpg",
+      "albany-park-6pc-ushape-sand-basketweave/02.jpg",
+      "albany-park-6pc-ushape-sand-basketweave/03.jpg",
+      "albany-park-6pc-ushape-sand-basketweave/04.jpg",
+      "albany-park-6pc-ushape-sand-basketweave/05.jpg",
+      "albany-park-6pc-ushape-sand-basketweave/06.jpg"
+    ],
     featured: true,
     available: true
   }
