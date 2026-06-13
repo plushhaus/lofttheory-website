@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-12 from MJ Flips · Website tab (48 listings — 13 live, 35 sold)
+   Last sync: 2026-06-12 from MJ Flips · Website tab (52 listings — 17 live, 35 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1245,6 +1245,74 @@ window.PRODUCTS = [
       "castlery-casa-dining-table-w-bench-86/10.png"
     ],
     featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-sloane-5-drawer-dresser",
+    name: "Castlery Sloane 5-Drawer Dresser",
+    brand: "Castlery",
+    category: "bedroom",
+    condition: "open-box-no-box",
+    color: "Grey Oak",
+    price: 800,
+    retailPrice: 1400,
+    dimensions: "35.4\"W × 17.7\"D × 46.1\"H",
+    description: "Castlery Sloane 5-drawer dresser in grey oak — tall vertical silhouette with sleek metal pulls. Brand new, no original box.",
+    retailerUrl: "https://www.castlery.com/us/products/sloane-5-drawer-dresser",
+    photos: [],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "castlery-callie-storage-banquette",
+    name: "Castlery Callie Slipcover Storage Banquette",
+    brand: "Castlery",
+    category: "dining",
+    condition: "return",
+    color: "Beach Linen",
+    price: 600,
+    retailPrice: 1847,
+    dimensions: "75.6\"W × 75.6\"D × 31.5\"H",
+    description: "Castlery Callie slipcover storage banquette in Beach Linen — L-shaped corner banquette with hidden storage under the seats. Like-new customer return, inspected end-to-end.",
+    retailerUrl: "https://www.castlery.com/us/products/callie-slipcovered-extended-l-shaped-storage-banquette",
+    photos: [],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "modus-cade-dining-table-w-four-chairs",
+    name: "Modus Cade Square Dining Table (with 4 Cade Dining Chairs)",
+    brand: "Modus Furniture",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Gun / Ash Grey",
+    price: 800,
+    retailPrice: 3049,
+    dimensions: "Measurements available on request",
+    description: "Modus Cade square dining table paired with four matching Cade dining chairs in gun / ash grey. Brand new, no original box.",
+    retailerUrl: "",
+    photos: [],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "albany-park-6pc-ushape-sand-basketweave",
+    name: "Albany Park Kova Pillow Cushion U-Shape (6Pc)",
+    brand: "Albany Park",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Sand Basketweave",
+    price: 2100,
+    retailPrice: 5994,
+    dimensions: "158.5\"W × 79\"D × 39\"H",
+    description: "Albany Park Kova 6-piece pillow-cushion U-shape sectional in Sand Basketweave — generous modular U-configuration with deep pillow cushions. Brand new, no original box.",
+    retailerUrl: "https://www.albanypark.com/products/kova-pillow-cushion-u-shape",
+    photos: [],
+    featured: true,
     available: true
   }
 
