@@ -1359,7 +1359,14 @@ window.PRODUCTS = [
     dimensions: "32.5\"W × 20\"D × 33\"H",
     description: "Burrow Prospect 3-drawer low dresser in walnut — clean modern silhouette with sleek pulls and soft-close drawers. Brand new, no original box.",
     retailerUrl: "https://burrow.com/products/prospect-3-drawer-low-dresser",
-    photos: [],
+    photos: [
+      "burrow-prospect-3-drawer-dresser/01.jpg",
+      "burrow-prospect-3-drawer-dresser/02.jpg",
+      "burrow-prospect-3-drawer-dresser/03.jpg",
+      "burrow-prospect-3-drawer-dresser/04.jpg",
+      "burrow-prospect-3-drawer-dresser/05.jpg",
+      "burrow-prospect-3-drawer-dresser/06.jpg"
+    ],
     featured: false,
     available: true
   },
@@ -1376,7 +1383,13 @@ window.PRODUCTS = [
     dimensions: "32.5\"W × 20\"D × 51\"H",
     description: "Burrow Prospect 5-drawer tall dresser in walnut — vertical silhouette with sleek pulls and soft-close drawers, perfect for compact bedrooms. Brand new, no original box.",
     retailerUrl: "https://burrow.com/products/prospect-5-drawer-tall-dresser",
-    photos: [],
+    photos: [
+      "burrow-prospect-5-drawer-dresser/01.jpg",
+      "burrow-prospect-5-drawer-dresser/02.jpg",
+      "burrow-prospect-5-drawer-dresser/03.jpg",
+      "burrow-prospect-5-drawer-dresser/04.jpg",
+      "burrow-prospect-5-drawer-dresser/05.jpg"
+    ],
     featured: false,
     available: true
   }
