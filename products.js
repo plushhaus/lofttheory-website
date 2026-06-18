@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-18 from MJ Flips · Website tab (54 listings — 15 live, 39 sold)
+   Last sync: 2026-06-18 from MJ Flips · Website tab (55 listings — 16 live, 39 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1389,6 +1389,31 @@ window.PRODUCTS = [
       "burrow-prospect-5-drawer-dresser/03.jpg",
       "burrow-prospect-5-drawer-dresser/04.jpg",
       "burrow-prospect-5-drawer-dresser/05.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-abisko-quartz-white",
+    name: "Article Abisko 94.5\" Right Sectional",
+    brand: "Article",
+    category: "living-room",
+    condition: "open-box-no-box",
+    color: "Quartz White",
+    price: 800,
+    retailPrice: 1600,
+    dimensions: "94.5\"W × 63.5\"D × 28\"H",
+    description: "Article Abisko 94.5\" right-facing sectional in quartz white — clean modern silhouette with deep cushions and a chaise on the right. Brand new, no original box.",
+    retailerUrl: "https://www.article.com/product/22595/abisko-94-5-right-sectional-quartz-white",
+    photos: [
+      "article-abisko-quartz-white/01.jpg",
+      "article-abisko-quartz-white/02.jpg",
+      "article-abisko-quartz-white/03.jpg",
+      "article-abisko-quartz-white/04.jpg",
+      "article-abisko-quartz-white/05.jpg",
+      "article-abisko-quartz-white/06.jpg",
+      "article-abisko-quartz-white/07.jpg"
     ],
     featured: false,
     available: true
