@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-12 from MJ Flips · Website tab (52 listings — 17 live, 35 sold)
+   Last sync: 2026-06-18 from MJ Flips · Website tab (54 listings — 15 live, 39 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -1144,7 +1144,7 @@ window.PRODUCTS = [
       "article-seno-table-oak-71/10.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -1217,7 +1217,7 @@ window.PRODUCTS = [
       "article-lubek-outdoor-sectional-sand/08.png"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -1295,7 +1295,7 @@ window.PRODUCTS = [
       "castlery-callie-storage-banquette/06.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -1320,7 +1320,7 @@ window.PRODUCTS = [
       "modus-cade-dining-table-w-four-chairs/07.jpg"
     ],
     featured: false,
-    available: true
+    available: false
   },
 
   {
@@ -1344,6 +1344,40 @@ window.PRODUCTS = [
       "albany-park-6pc-ushape-sand-basketweave/06.jpg"
     ],
     featured: true,
+    available: true
+  },
+
+  {
+    id: "burrow-prospect-3-drawer-dresser",
+    name: "Burrow Prospect 3-Drawer Dresser",
+    brand: "Burrow",
+    category: "bedroom",
+    condition: "open-box-no-box",
+    color: "Walnut",
+    price: 400,
+    retailPrice: 1049,
+    dimensions: "32.5\"W × 20\"D × 33\"H",
+    description: "Burrow Prospect 3-drawer low dresser in walnut — clean modern silhouette with sleek pulls and soft-close drawers. Brand new, no original box.",
+    retailerUrl: "https://burrow.com/products/prospect-3-drawer-low-dresser",
+    photos: [],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "burrow-prospect-5-drawer-dresser",
+    name: "Burrow Prospect 5-Drawer Tall Dresser",
+    brand: "Burrow",
+    category: "bedroom",
+    condition: "open-box-no-box",
+    color: "Walnut",
+    price: 600,
+    retailPrice: 1405,
+    dimensions: "32.5\"W × 20\"D × 51\"H",
+    description: "Burrow Prospect 5-drawer tall dresser in walnut — vertical silhouette with sleek pulls and soft-close drawers, perfect for compact bedrooms. Brand new, no original box.",
+    retailerUrl: "https://burrow.com/products/prospect-5-drawer-tall-dresser",
+    photos: [],
+    featured: false,
     available: true
   }
 
