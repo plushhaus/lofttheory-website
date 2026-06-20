@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-18 from MJ Flips · Website tab (55 listings — 16 live, 39 sold)
+   Last sync: 2026-06-19 from MJ Flips · Website tab (57 listings — 19 live, 38 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -963,8 +963,7 @@ window.PRODUCTS = [
       "castlery-vincent-dining-table-59/05.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-12"
+    available: true
   },
 
   {
@@ -1414,6 +1413,54 @@ window.PRODUCTS = [
       "article-abisko-quartz-white/05.jpg",
       "article-abisko-quartz-white/06.jpg",
       "article-abisko-quartz-white/07.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-nosh-dining-chairs-quarry-gray",
+    name: "Article Nosh Dining Chairs (6) - Quarry Gray",
+    brand: "Article",
+    category: "dining",
+    condition: "open-box-no-box",
+    color: "Quarry Gray & Walnut",
+    price: 400,
+    retailPrice: 600,
+    dimensions: "20\"W × 21\"D × 31\"H",
+    description: "Set of 6 Article Nosh dining chairs in quarry gray with walnut legs — clean mid-century silhouette with soft curved back. Brand new, no original box.",
+    retailerUrl: "https://www.article.com/product/24362/nosh-dining-chair-walnut-and-quarry-gray",
+    photos: [
+      "article-nosh-dining-chairs-quarry-gray/01.jpg",
+      "article-nosh-dining-chairs-quarry-gray/02.jpg",
+      "article-nosh-dining-chairs-quarry-gray/03.jpg",
+      "article-nosh-dining-chairs-quarry-gray/04.jpg",
+      "article-nosh-dining-chairs-quarry-gray/05.jpg",
+      "article-nosh-dining-chairs-quarry-gray/06.jpg"
+    ],
+    featured: false,
+    available: true
+  },
+
+  {
+    id: "article-leif-two-drawer-nightstands",
+    name: "Article Leif 2-Drawer Nightstands",
+    brand: "Article",
+    category: "bedroom",
+    condition: "open-box-no-box",
+    color: "Natural Oak",
+    price: 450,
+    retailPrice: 700,
+    dimensions: "18\"W × 16\"D × 22.5\"H",
+    description: "Article Leif 2-drawer nightstands in natural oak — clean Scandinavian profile with rounded edges and subtle metal pulls. Brand new, no original box.",
+    retailerUrl: "https://www.article.com/product/24868/leif-2-drawer-nightstand-white-oak",
+    photos: [
+      "article-leif-two-drawer-nightstands/01.jpg",
+      "article-leif-two-drawer-nightstands/02.jpg",
+      "article-leif-two-drawer-nightstands/03.jpg",
+      "article-leif-two-drawer-nightstands/04.jpg",
+      "article-leif-two-drawer-nightstands/05.jpg",
+      "article-leif-two-drawer-nightstands/06.jpg"
     ],
     featured: false,
     available: true
