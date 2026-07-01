@@ -1501,7 +1501,13 @@ window.PRODUCTS = [
     dimensions: "18\"W × 19\"D × 32\"H",
     description: "Article Sede leather dining chairs in Toscana tan over walnut wood frames — a mid-century silhouette with a curved leather-wrapped seat and back. New, no original box.",
     retailerUrl: "https://www.article.com/product/22619/sede-leather-dining-chair-walnut-and-toscana-tan",
-    photos: [],
+    photos: [
+      "article-sede-leather-dining-chairs/01.png",
+      "article-sede-leather-dining-chairs/02.png",
+      "article-sede-leather-dining-chairs/03.png",
+      "article-sede-leather-dining-chairs/04.png",
+      "article-sede-leather-dining-chairs/05.png"
+    ],
     featured: false,
     available: true
   },
@@ -1518,7 +1524,11 @@ window.PRODUCTS = [
     dimensions: "64\"W × 20\"D × 33\"H",
     description: "Burrow Prospect 6-drawer low dresser in walnut — long horizontal silhouette with slim edge pulls and modular tool-free assembly. New, no original box.",
     retailerUrl: "https://burrow.com/products/prospect-6-drawer-low-dresser",
-    photos: [],
+    photos: [
+      "burrow-prospect-6-drawer-dresser/01.png",
+      "burrow-prospect-6-drawer-dresser/02.png",
+      "burrow-prospect-6-drawer-dresser/03.png"
+    ],
     featured: false,
     available: true
   },
@@ -1535,7 +1545,17 @@ window.PRODUCTS = [
     dimensions: "76.8\"W × 98.4\"D × 37\"H",
     description: "Castlery Dawson queen storage bed in beach linen — upholstered platform frame with a wrapped headboard and built-in under-platform storage. Like-new customer return; inspected end-to-end, no visible wear.",
     retailerUrl: "https://www.castlery.com/us/products/dawson-storage-bed?material=beach_linen&bed_frame_size=queen",
-    photos: [],
+    photos: [
+      "castlery-dawson-queen-storage-bed/01.png",
+      "castlery-dawson-queen-storage-bed/02.png",
+      "castlery-dawson-queen-storage-bed/03.png",
+      "castlery-dawson-queen-storage-bed/04.png",
+      "castlery-dawson-queen-storage-bed/05.png",
+      "castlery-dawson-queen-storage-bed/06.png",
+      "castlery-dawson-queen-storage-bed/07.png",
+      "castlery-dawson-queen-storage-bed/08.png",
+      "castlery-dawson-queen-storage-bed/09.png"
+    ],
     featured: false,
     available: true
   },
@@ -1552,7 +1572,14 @@ window.PRODUCTS = [
     dimensions: "79\"W × 16.5\"D × 15\"H",
     description: "Article Judith 79\" low media unit in white oak — a long, low-profile media console with soft-close doors and a warm oak grain. New, no original box.",
     retailerUrl: "https://www.article.com/product/24769/judith-79-low-media-unit-white-oak",
-    photos: [],
+    photos: [
+      "article-judith-low-media-unit-79/01.png",
+      "article-judith-low-media-unit-79/02.png",
+      "article-judith-low-media-unit-79/03.png",
+      "article-judith-low-media-unit-79/04.png",
+      "article-judith-low-media-unit-79/05.png",
+      "article-judith-low-media-unit-79/06.png"
+    ],
     featured: false,
     available: true
   },
@@ -1569,7 +1596,13 @@ window.PRODUCTS = [
     dimensions: "92\"W × 94.5\"D × 26\"H",
     description: "Article Cigar 94.5\" reversible sectional in Rawhide Tan top-grain leather — a deep, low-slung modular sectional with a reversible chaise. New, no original box.",
     retailerUrl: "https://www.article.com/product/31732/cigar-94-5-leather-reversible-sectional-rawhide-tan",
-    photos: [],
+    photos: [
+      "article-cigar-leather-reversible-sectional/01.png",
+      "article-cigar-leather-reversible-sectional/02.png",
+      "article-cigar-leather-reversible-sectional/03.png",
+      "article-cigar-leather-reversible-sectional/04.png",
+      "article-cigar-leather-reversible-sectional/05.png"
+    ],
     featured: false,
     available: true
   }
