@@ -7,7 +7,7 @@
    MJ Flips - Website Inventory sheet. Manual edits are fine, but they'll
    be overwritten on the next sync.
 
-   Last sync: 2026-06-30 from MJ Flips · Website tab (63 listings — 19 live, 44 sold)
+   Last sync: 2026-06-19 from MJ Flips · Website tab (57 listings — 19 live, 38 sold)
 
    FIELD GUIDE:
      id           — short unique slug, lowercase, dashes-only. Used in URLs/anchors.
@@ -891,8 +891,7 @@ window.PRODUCTS = [
       "polyandbark-laso-nightstand/07.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-30"
+    available: true
   },
 
   {
@@ -917,8 +916,7 @@ window.PRODUCTS = [
       "article-nera-nightstand/07.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-30"
+    available: true
   },
 
   {
@@ -965,8 +963,7 @@ window.PRODUCTS = [
       "castlery-vincent-dining-table-59/05.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-30"
+    available: true
   },
 
   {
@@ -990,8 +987,7 @@ window.PRODUCTS = [
       "rove-concepts-norman-counter-stools/06.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-30"
+    available: true
   },
 
   {
@@ -1119,8 +1115,7 @@ window.PRODUCTS = [
       "article-burrard-lounge-chair-ivory/08.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-30"
+    available: true
   },
 
   {
@@ -1444,8 +1439,7 @@ window.PRODUCTS = [
       "article-nosh-dining-chairs-quarry-gray/06.jpg"
     ],
     featured: false,
-    available: false,
-    soldDate: "2026-06-30"
+    available: true
   },
 
   {
@@ -1468,108 +1462,6 @@ window.PRODUCTS = [
       "article-leif-two-drawer-nightstands/05.jpg",
       "article-leif-two-drawer-nightstands/06.jpg"
     ],
-    featured: false,
-    available: true
-  },
-
-  {
-    id: "article-leinia-twin-daybed-white-oak",
-    name: "Article Lenia Twin Daybed",
-    brand: "Article",
-    category: "bedroom",
-    condition: "overstock",
-    color: "White Oak",
-    price: 450,
-    retailPrice: 900,
-    dimensions: "79.5\"W × 42.5\"D × 36\"H",
-    description: "Article Lenia twin daybed in white oak — a low-profile platform frame with clean rectangular lines that doubles as a lounge or guest bed. New, sealed in original box.",
-    retailerUrl: "https://www.article.com/product/28886/lenia-twin-daybed-white-oak",
-    photos: [],
-    featured: false,
-    available: true
-  },
-
-  {
-    id: "article-sede-leather-dining-chairs",
-    name: "Article Sede Leather Dining Chairs",
-    brand: "Article",
-    category: "dining",
-    condition: "open-box-no-box",
-    color: "Walnut & Toscana Tan Leather",
-    price: 650,
-    retailPrice: 1200,
-    dimensions: "18\"W × 19\"D × 32\"H",
-    description: "Article Sede leather dining chairs in Toscana tan over walnut wood frames — a mid-century silhouette with a curved leather-wrapped seat and back. New, no original box.",
-    retailerUrl: "https://www.article.com/product/22619/sede-leather-dining-chair-walnut-and-toscana-tan",
-    photos: [],
-    featured: false,
-    available: true
-  },
-
-  {
-    id: "burrow-prospect-6-drawer-dresser",
-    name: "Burrow Prospect 6-Drawer Dresser",
-    brand: "Burrow",
-    category: "bedroom",
-    condition: "open-box-no-box",
-    color: "Walnut",
-    price: 650,
-    retailPrice: 1392,
-    dimensions: "64\"W × 20\"D × 33\"H",
-    description: "Burrow Prospect 6-drawer low dresser in walnut — long horizontal silhouette with slim edge pulls and modular tool-free assembly. New, no original box.",
-    retailerUrl: "https://burrow.com/products/prospect-6-drawer-low-dresser",
-    photos: [],
-    featured: false,
-    available: true
-  },
-
-  {
-    id: "castlery-dawson-queen-storage-bed",
-    name: "Castlery Dawson Queen Storage Bed",
-    brand: "Castlery",
-    category: "bedroom",
-    condition: "like-new",
-    color: "Beach Linen",
-    price: 1000,
-    retailPrice: 1700,
-    dimensions: "76.8\"W × 98.4\"D × 37\"H",
-    description: "Castlery Dawson queen storage bed in beach linen — upholstered platform frame with a wrapped headboard and built-in under-platform storage. Like-new customer return; inspected end-to-end, no visible wear.",
-    retailerUrl: "https://www.castlery.com/us/products/dawson-storage-bed?material=beach_linen&bed_frame_size=queen",
-    photos: [],
-    featured: false,
-    available: true
-  },
-
-  {
-    id: "article-judith-low-media-unit-79",
-    name: "Article Judith 79\" Low Media Unit",
-    brand: "Article",
-    category: "living-room",
-    condition: "open-box-no-box",
-    color: "White Oak",
-    price: 500,
-    retailPrice: 1000,
-    dimensions: "79\"W × 16.5\"D × 15\"H",
-    description: "Article Judith 79\" low media unit in white oak — a long, low-profile media console with soft-close doors and a warm oak grain. New, no original box.",
-    retailerUrl: "https://www.article.com/product/24769/judith-79-low-media-unit-white-oak",
-    photos: [],
-    featured: false,
-    available: true
-  },
-
-  {
-    id: "article-cigar-leather-reversible-sectional",
-    name: "Article Cigar 94.5\" Leather Reversible Sectional",
-    brand: "Article",
-    category: "living-room",
-    condition: "open-box-no-box",
-    color: "Rawhide Tan Leather",
-    price: 2400,
-    retailPrice: 4100,
-    dimensions: "92\"W × 94.5\"D × 26\"H",
-    description: "Article Cigar 94.5\" reversible sectional in Rawhide Tan top-grain leather — a deep, low-slung modular sectional with a reversible chaise. New, no original box.",
-    retailerUrl: "https://www.article.com/product/31732/cigar-94-5-leather-reversible-sectional-rawhide-tan",
-    photos: [],
     featured: false,
     available: true
   }
